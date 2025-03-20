@@ -178,9 +178,456 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S148', 'Supermarket CT', ST_GeomFromText('POINT(-79.0421 -8.1091)')), -- Trujillo, Peru
 ('S149', 'Supermarket CU', ST_GeomFromText('POINT(-67.2510 -55.0512)')), -- Ushuaia, Argentina
 ('S150', 'Supermarket CV', ST_GeomFromText('POINT(-58.3833 -34.6033)')); -- Montevideo, Uruguay
+-- Khu vực Đông Nam Á
+('S151', 'Supermarket SEA1', ST_GeomFromText('POINT(103.851959 1.290270)')), -- Singapore
+('S152', 'Supermarket SEA2', ST_GeomFromText('POINT(100.501765 13.756331)')), -- Bangkok, Thái Lan
+('S153', 'Supermarket SEA3', ST_GeomFromText('POINT(106.865039 -6.175110)')), -- Jakarta, Indonesia
+('S154', 'Supermarket SEA4', ST_GeomFromText('POINT(121.774017 12.879721)')), -- Philippines
+('S155', 'Supermarket SEA5', ST_GeomFromText('POINT(105.318756 10.776889)')), -- Cần Thơ, Việt Nam
+
+-- Khu vực Trung Quốc
+('S156', 'Supermarket CN1', ST_GeomFromText('POINT(116.407396 39.904200)')), -- Bắc Kinh
+('S157', 'Supermarket CN2', ST_GeomFromText('POINT(121.473701 31.230416)')), -- Thượng Hải
+('S158', 'Supermarket CN3', ST_GeomFromText('POINT(113.264435 23.129110)')), -- Quảng Châu
+('S159', 'Supermarket CN4', ST_GeomFromText('POINT(114.169361 22.319304)')), -- Hồng Kông
+('S160', 'Supermarket CN5', ST_GeomFromText('POINT(120.155070 30.274150)')), -- Hàng Châu
+
+-- Khu vực Châu Âu
+('S161', 'Supermarket EU1', ST_GeomFromText('POINT(2.352222 48.856614)')), -- Paris, Pháp
+('S162', 'Supermarket EU2', ST_GeomFromText('POINT(-0.127758 51.507351)')), -- London, Anh
+('S163', 'Supermarket EU3', ST_GeomFromText('POINT(13.4050 52.5200)')), -- Berlin, Đức
+('S164', 'Supermarket EU4', ST_GeomFromText('POINT(12.496366 41.902782)')), -- Rome, Ý
+('S165', 'Supermarket EU5', ST_GeomFromText('POINT(37.6173 55.7558)')), -- Moscow, Nga
+
+-- Khu vực Bắc Mỹ
+('S166', 'Supermarket NA1', ST_GeomFromText('POINT(-74.0060 40.7128)')), -- New York, Mỹ
+('S167', 'Supermarket NA2', ST_GeomFromText('POINT(-118.2437 34.0522)')), -- Los Angeles, Mỹ
+('S168', 'Supermarket NA3', ST_GeomFromText('POINT(-87.6298 41.8781)')), -- Chicago, Mỹ
+('S169', 'Supermarket NA4', ST_GeomFromText('POINT(-123.1216 49.2827)')), -- Vancouver, Canada
+('S170', 'Supermarket NA5', ST_GeomFromText('POINT(-79.3832 43.6532)')), -- Toronto, Canada
+
+-- Khu vực Nam Mỹ
+('S171', 'Supermarket SA1', ST_GeomFromText('POINT(-46.6333 -23.5505)')), -- São Paulo, Brazil
+('S172', 'Supermarket SA2', ST_GeomFromText('POINT(-58.3816 -34.6037)')), -- Buenos Aires, Argentina
+('S173', 'Supermarket SA3', ST_GeomFromText('POINT(-70.6483 -33.4489)')), -- Santiago, Chile
+('S174', 'Supermarket SA4', ST_GeomFromText('POINT(-79.5199 9.1012)')), -- Panama City, Panama
+('S175', 'Supermarket SA5', ST_GeomFromText('POINT(-99.1332 19.4326)')), -- Mexico City, Mexico
+
+-- Khu vực Châu Phi
+('S176', 'Supermarket AF1', ST_GeomFromText('POINT(31.2357 30.0444)')), -- Cairo, Ai Cập
+('S177', 'Supermarket AF2', ST_GeomFromText('POINT(18.4241 -33.9249)')), -- Cape Town, Nam Phi
+('S178', 'Supermarket AF3', ST_GeomFromText('POINT(3.3792 6.5244)')), -- Lagos, Nigeria
+('S179', 'Supermarket AF4', ST_GeomFromText('POINT(36.8219 -1.2921)')), -- Nairobi, Kenya
+('S180', 'Supermarket AF5', ST_GeomFromText('POINT(9.0579 8.6753)')), -- Abuja, Nigeria
+
+-- Khu vực Châu Đại Dương
+('S181', 'Supermarket OC1', ST_GeomFromText('POINT(151.2093 -33.8688)')), -- Sydney, Úc
+('S182', 'Supermarket OC2', ST_GeomFromText('POINT(144.9631 -37.8136)')), -- Melbourne, Úc
+('S183', 'Supermarket OC3', ST_GeomFromText('POINT(174.7633 -36.8485)')), -- Auckland, New Zealand
+('S184', 'Supermarket OC4', ST_GeomFromText('POINT(166.4572 -22.2558)')), -- Nouméa, New Caledonia
+('S185', 'Supermarket OC5', ST_GeomFromText('POINT(159.9552 -31.5180)')), -- Lord Howe Island, Úc
+
+-- Các địa điểm đặc biệt (Bắc Cực, Nam Cực, Sa Mạc, Đảo Xa)
+('S186', 'Supermarket XP1', ST_GeomFromText('POINT(-135.0000 -82.8628)')), -- Trạm Amundsen-Scott, Nam Cực
+('S187', 'Supermarket XP2', ST_GeomFromText('POINT(21.0000 78.0000)')), -- Svalbard, Na Uy (gần Bắc Cực)
+('S188', 'Supermarket XP3', ST_GeomFromText('POINT(-13.0000 27.0000)')), -- Sa mạc Sahara, Châu Phi
+('S189', 'Supermarket XP4', ST_GeomFromText('POINT(-155.5828 19.8968)')), -- Hawaii, Mỹ (đảo xa)
+('S190', 'Supermarket XP5', ST_GeomFromText('POINT(-60.9833 -50.7333)')), -- Falkland Islands
+
+-- Các địa điểm ngẫu nhiên
+('S191', 'Supermarket RD1', ST_GeomFromText('POINT(55.2708 25.2048)')), -- Dubai, UAE
+('S192', 'Supermarket RD2', ST_GeomFromText('POINT(-157.8583 21.3069)')), -- Honolulu, Hawaii
+('S193', 'Supermarket RD3', ST_GeomFromText('POINT(90.4125 23.8103)')), -- Dhaka, Bangladesh
+('S194', 'Supermarket RD4', ST_GeomFromText('POINT(139.6917 35.6895)')), -- Tokyo, Nhật Bản
+('S195', 'Supermarket RD5', ST_GeomFromText('POINT(77.1025 28.7041)')), -- New Delhi, Ấn Độ
+('S196', 'Supermarket RD6', ST_GeomFromText('POINT(-43.1729 -22.9068)')), -- Rio de Janeiro, Brazil
+('S197', 'Supermarket RD7', ST_GeomFromText('POINT(-73.5673 45.5017)')), -- Montreal, Canada
+('S198', 'Supermarket RD8', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Yokohama, Nhật Bản
+('S199', 'Supermarket RD9', ST_GeomFromText('POINT(126.9780 37.5665)')), -- Seoul, Hàn Quốc
+('S200', 'Supermarket RD10', ST_GeomFromText('POINT(100.5168 13.7367)')); -- Bangkok, Thái Lan
+
+-- Các siêu thị ở Bắc Mỹ
+('S201', 'Supermarket A1', ST_GeomFromText('POINT(-118.2437 34.0522)')), -- Los Angeles, USA
+('S202', 'Supermarket A2', ST_GeomFromText('POINT(-123.1216 49.2827)')), -- Vancouver, Canada
+('S203', 'Supermarket A3', ST_GeomFromText('POINT(-95.3698 29.7604)')), -- Houston, USA
+('S204', 'Supermarket A4', ST_GeomFromText('POINT(-79.3832 43.6532)')), -- Toronto, Canada
+('S205', 'Supermarket A5', ST_GeomFromText('POINT(-90.0715 29.9511)')), -- New Orleans, USA
+
+-- Các siêu thị ở Nam Mỹ
+('S206', 'Supermarket B1', ST_GeomFromText('POINT(-58.3816 -34.6037)')), -- Buenos Aires, Argentina
+('S207', 'Supermarket B2', ST_GeomFromText('POINT(-46.6333 -23.5505)')), -- São Paulo, Brazil
+('S208', 'Supermarket B3', ST_GeomFromText('POINT(-74.0721 4.7110)')), -- Bogotá, Colombia
+('S209', 'Supermarket B4', ST_GeomFromText('POINT(-70.6483 -33.4489)')), -- Santiago, Chile
+('S210', 'Supermarket B5', ST_GeomFromText('POINT(-77.0428 -12.0464)')), -- Lima, Peru
+
+-- Các siêu thị ở Châu Âu
+('S211', 'Supermarket C1', ST_GeomFromText('POINT(14.5058 46.0569)')), -- Ljubljana, Slovenia
+('S212', 'Supermarket C2', ST_GeomFromText('POINT(16.3738 48.2082)')), -- Vienna, Austria
+('S213', 'Supermarket C3', ST_GeomFromText('POINT(18.0686 59.3293)')), -- Stockholm, Sweden
+('S214', 'Supermarket C4', ST_GeomFromText('POINT(4.9041 52.3676)')), -- Amsterdam, Netherlands
+('S215', 'Supermarket C5', ST_GeomFromText('POINT(-3.1883 55.9533)')), -- Edinburgh, Scotland
+
+-- Các siêu thị ở Châu Phi
+('S216', 'Supermarket D1', ST_GeomFromText('POINT(31.2357 30.0444)')), -- Cairo, Ai Cập
+('S217', 'Supermarket D2', ST_GeomFromText('POINT(28.0473 -26.2041)')), -- Johannesburg, Nam Phi
+('S218', 'Supermarket D3', ST_GeomFromText('POINT(3.3792 6.5244)')), -- Lagos, Nigeria
+('S219', 'Supermarket D4', ST_GeomFromText('POINT(39.2083 -6.7924)')), -- Dar es Salaam, Tanzania
+('S220', 'Supermarket D5', ST_GeomFromText('POINT(36.8219 -1.2921)')), -- Nairobi, Kenya
+
+-- Các siêu thị ở Châu Á
+('S221', 'Supermarket E1', ST_GeomFromText('POINT(100.5018 13.7563)')), -- Bangkok, Thái Lan
+('S222', 'Supermarket E2', ST_GeomFromText('POINT(77.2090 28.6139)')), -- New Delhi, Ấn Độ
+('S223', 'Supermarket E3', ST_GeomFromText('POINT(126.9780 37.5665)')), -- Seoul, Hàn Quốc
+('S224', 'Supermarket E4', ST_GeomFromText('POINT(103.8198 1.3521)')), -- Singapore
+('S225', 'Supermarket E5', ST_GeomFromText('POINT(144.9631 -37.8136)')), -- Melbourne, Úc
+
+-- Các siêu thị ở Trung Đông
+('S226', 'Supermarket F1', ST_GeomFromText('POINT(35.2350 31.7683)')), -- Jerusalem, Israel
+('S227', 'Supermarket F2', ST_GeomFromText('POINT(51.3890 35.6892)')), -- Tehran, Iran
+('S228', 'Supermarket F3', ST_GeomFromText('POINT(39.1979 21.4858)')), -- Jeddah, Ả Rập Xê Út
+('S229', 'Supermarket F4', ST_GeomFromText('POINT(55.2962 25.2760)')), -- Dubai, UAE
+('S230', 'Supermarket F5', ST_GeomFromText('POINT(46.6753 24.7136)')), -- Riyadh, Ả Rập Xê Út
+
+-- Các siêu thị ở vùng Bắc Cực & Nam Cực
+('S231', 'Supermarket G1', ST_GeomFromText('POINT(-135.0000 -90.0000)')), -- Nam Cực (Giả định có 1 siêu thị cho nhà nghiên cứu :D)
+('S232', 'Supermarket G2', ST_GeomFromText('POINT(-51.9253 64.1835)')), -- Nuuk, Greenland
+('S233', 'Supermarket G3', ST_GeomFromText('POINT(37.6184 55.7512)')), -- Moscow, Nga
+('S234', 'Supermarket G4', ST_GeomFromText('POINT(-134.4197 58.3019)')), -- Juneau, Alaska, USA
+('S235', 'Supermarket G5', ST_GeomFromText('POINT(174.7756 -41.2865)')), -- Wellington, New Zealand
+
+-- Một số siêu thị ở các đảo nổi tiếng
+('S236', 'Supermarket H1', ST_GeomFromText('POINT(-157.8583 21.3069)')), -- Honolulu, Hawaii, USA
+('S237', 'Supermarket H2', ST_GeomFromText('POINT(55.5364 -20.3484)')), -- Port Louis, Mauritius
+('S238', 'Supermarket H3', ST_GeomFromText('POINT(144.9568 -37.8136)')), -- Hamilton, Bermuda
+('S239', 'Supermarket H4', ST_GeomFromText('POINT(-159.7711 -21.2129)')), -- Avarua, Cook Islands
+('S240', 'Supermarket H5', ST_GeomFromText('POINT(-61.2225 13.9094)')), -- Castries, Saint Lucia
+
+-- Một số siêu thị đặt tại các địa điểm kỳ lạ
+('S241', 'Supermarket I1', ST_GeomFromText('POINT(-106.4454 35.0844)')), -- Albuquerque, USA (nơi quay Breaking Bad)
+('S242', 'Supermarket I2', ST_GeomFromText('POINT(30.3351 59.9343)')), -- Saint Petersburg, Nga
+('S243', 'Supermarket I3', ST_GeomFromText('POINT(34.8516 31.0461)')), -- Tel Aviv, Israel
+('S244', 'Supermarket I4', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Yokohama, Nhật Bản
+('S245', 'Supermarket I5', ST_GeomFromText('POINT(30.5234 50.4501)')), -- Kyiv, Ukraine
+('S246', 'Supermarket I6', ST_GeomFromText('POINT(12.5683 55.6761)')), -- Copenhagen, Đan Mạch
+('S247', 'Supermarket I7', ST_GeomFromText('POINT(-46.6253 -23.5338)')), -- Rio de Janeiro, Brazil
+('S248', 'Supermarket I8', ST_GeomFromText('POINT(28.9784 41.0082)')), -- Istanbul, Thổ Nhĩ Kỳ
+('S249', 'Supermarket I9', ST_GeomFromText('POINT(103.8519 1.2903)')), -- Sentosa, Singapore
+('S250', 'Supermarket I10', ST_GeomFromText('POINT(-43.1729 -22.9068)')); -- Rio de Janeiro, Brazil
+
+-- Đông Nam Á
+('S251', 'Supermarket A1', ST_GeomFromText('POINT(103.8198 1.3521)')), -- Singapore
+('S252', 'Supermarket A2', ST_GeomFromText('POINT(100.5018 13.7563)')), -- Bangkok, Thái Lan
+('S253', 'Supermarket A3', ST_GeomFromText('POINT(106.8650 -6.1751)')), -- Jakarta, Indonesia
+('S254', 'Supermarket A4', ST_GeomFromText('POINT(101.6869 3.1390)')), -- Kuala Lumpur, Malaysia
+('S255', 'Supermarket A5', ST_GeomFromText('POINT(104.8922 11.5564)')), -- Phnom Penh, Campuchia
+
+-- Trung Quốc
+('S256', 'Supermarket B1', ST_GeomFromText('POINT(116.4074 39.9042)')), -- Bắc Kinh
+('S257', 'Supermarket B2', ST_GeomFromText('POINT(121.4737 31.2304)')), -- Thượng Hải
+('S258', 'Supermarket B3', ST_GeomFromText('POINT(114.1694 22.3193)')), -- Hồng Kông
+('S259', 'Supermarket B4', ST_GeomFromText('POINT(113.2644 23.1291)')), -- Quảng Châu
+('S260', 'Supermarket B5', ST_GeomFromText('POINT(120.5853 31.2989)')), -- Tô Châu
+
+-- Châu Âu
+('S261', 'Supermarket C1', ST_GeomFromText('POINT(4.9041 52.3676)')), -- Amsterdam, Hà Lan
+('S262', 'Supermarket C2', ST_GeomFromText('POINT(18.0686 59.3293)')), -- Stockholm, Thụy Điển
+('S263', 'Supermarket C3', ST_GeomFromText('POINT(10.7522 59.9139)')), -- Oslo, Na Uy
+('S264', 'Supermarket C4', ST_GeomFromText('POINT(9.1900 45.4642)')), -- Milan, Ý
+('S265', 'Supermarket C5', ST_GeomFromText('POINT(2.1686 41.3874)')), -- Barcelona, Tây Ban Nha
+
+-- Châu Mỹ
+('S266', 'Supermarket D1', ST_GeomFromText('POINT(-99.1332 19.4326)')), -- Mexico City, Mexico
+('S267', 'Supermarket D2', ST_GeomFromText('POINT(-43.1729 -22.9068)')), -- Rio de Janeiro, Brazil
+('S268', 'Supermarket D3', ST_GeomFromText('POINT(-58.3816 -34.6037)')), -- Buenos Aires, Argentina
+('S269', 'Supermarket D4', ST_GeomFromText('POINT(-79.3832 43.6532)')), -- Toronto, Canada
+('S270', 'Supermarket D5', ST_GeomFromText('POINT(-123.1216 49.2827)')), -- Vancouver, Canada
+
+-- Châu Phi
+('S271', 'Supermarket E1', ST_GeomFromText('POINT(31.2357 30.0444)')), -- Cairo, Ai Cập
+('S272', 'Supermarket E2', ST_GeomFromText('POINT(18.4233 -33.9189)')), -- Cape Town, Nam Phi
+('S273', 'Supermarket E3', ST_GeomFromText('POINT(3.3792 6.5244)')), -- Lagos, Nigeria
+('S274', 'Supermarket E4', ST_GeomFromText('POINT(36.8219 -1.2921)')), -- Nairobi, Kenya
+('S275', 'Supermarket E5', ST_GeomFromText('POINT(32.5825 0.3476)')), -- Kampala, Uganda
+
+-- Trung Đông
+('S276', 'Supermarket F1', ST_GeomFromText('POINT(55.2708 25.2048)')), -- Dubai, UAE
+('S277', 'Supermarket F2', ST_GeomFromText('POINT(39.1979 21.4858)')), -- Jeddah, Ả Rập Xê Út
+('S278', 'Supermarket F3', ST_GeomFromText('POINT(51.3890 35.6892)')), -- Tehran, Iran
+('S279', 'Supermarket F4', ST_GeomFromText('POINT(44.3661 33.3152)')), -- Baghdad, Iraq
+('S280', 'Supermarket F5', ST_GeomFromText('POINT(35.2332 31.7683)')), -- Jerusalem, Israel
+
+-- Châu Đại Dương
+('S281', 'Supermarket G1', ST_GeomFromText('POINT(174.7633 -36.8485)')), -- Auckland, New Zealand
+('S282', 'Supermarket G2', ST_GeomFromText('POINT(153.0251 -27.4698)')), -- Brisbane, Australia
+('S283', 'Supermarket G3', ST_GeomFromText('POINT(144.9631 -37.8136)')), -- Melbourne, Australia
+('S284', 'Supermarket G4', ST_GeomFromText('POINT(115.8575 -31.9505)')), -- Perth, Australia
+('S285', 'Supermarket G5', ST_GeomFromText('POINT(166.4572 -22.2758)')), -- Nouméa, New Caledonia
+
+-- Các thành phố ít phổ biến hơn
+('S286', 'Supermarket H1', ST_GeomFromText('POINT(-56.1645 -34.9011)')), -- Montevideo, Uruguay
+('S287', 'Supermarket H2', ST_GeomFromText('POINT(-70.6693 -33.4489)')), -- Santiago, Chile
+('S288', 'Supermarket H3', ST_GeomFromText('POINT(10.7522 59.9139)')), -- Reykjavik, Iceland
+('S289', 'Supermarket H4', ST_GeomFromText('POINT(7.4474 46.9481)')), -- Bern, Thụy Sĩ
+('S290', 'Supermarket H5', ST_GeomFromText('POINT(26.1025 44.4268)')), -- Bucharest, Romania
+
+-- Các khu vực địa lý đặc biệt
+('S291', 'Supermarket I1', ST_GeomFromText('POINT(47.9212 29.3759)')), -- Kuwait City, Kuwait
+('S292', 'Supermarket I2', ST_GeomFromText('POINT(-149.9003 61.2181)')), -- Anchorage, Alaska, USA
+('S293', 'Supermarket I3', ST_GeomFromText('POINT(37.6173 55.7558)')), -- Moscow, Nga
+('S294', 'Supermarket I4', ST_GeomFromText('POINT(125.7635 -8.5569)')), -- Dili, Đông Timor
+('S295', 'Supermarket I5', ST_GeomFromText('POINT(-106.4869 31.7619)')), -- El Paso, Texas, USA
+('S296', 'Supermarket J1', ST_GeomFromText('POINT(-159.4644 22.0964)')), -- Kauai, Hawaii, USA
+('S297', 'Supermarket J2', ST_GeomFromText('POINT(35.6892 139.6917)')), -- Yokohama, Nhật Bản
+('S298', 'Supermarket J3', ST_GeomFromText('POINT(103.8519 1.2801)')), -- Sentosa, Singapore
+('S299', 'Supermarket J4', ST_GeomFromText('POINT(-68.1193 44.3876)')), -- Bar Harbor, Maine, USA
+('S300', 'Supermarket J5', ST_GeomFromText('POINT(-123.3656 48.4284)')); -- Victoria, Canada
 
 
+('S301', 'Supermarket A1', ST_GeomFromText('POINT(-0.118092 51.509865)')), -- London, UK
+('S302', 'Supermarket A2', ST_GeomFromText('POINT(2.1734 41.3851)')), -- Barcelona, Spain
+('S303', 'Supermarket A3', ST_GeomFromText('POINT(37.6173 55.7558)')), -- Moscow, Russia
+('S304', 'Supermarket A4', ST_GeomFromText('POINT(-58.3816 -34.6037)')), -- Buenos Aires, Argentina
+('S305', 'Supermarket A5', ST_GeomFromText('POINT(151.2093 -33.8688)')), -- Sydney, Australia
+
+('S306', 'Supermarket B1', ST_GeomFromText('POINT(103.8198 1.3521)')), -- Singapore
+('S307', 'Supermarket B2', ST_GeomFromText('POINT(106.8650 -6.1751)')), -- Jakarta, Indonesia
+('S308', 'Supermarket B3', ST_GeomFromText('POINT(100.5018 13.7563)')), -- Bangkok, Thailand
+('S309', 'Supermarket B4', ST_GeomFromText('POINT(144.9631 -37.8136)')), -- Melbourne, Australia
+('S310', 'Supermarket B5', ST_GeomFromText('POINT(-46.6333 -23.5505)')), -- São Paulo, Brazil
+
+('S311', 'Supermarket C1', ST_GeomFromText('POINT(174.7633 -36.8485)')), -- Auckland, New Zealand
+('S312', 'Supermarket C2', ST_GeomFromText('POINT(139.6917 35.6895)')), -- Tokyo, Japan
+('S313', 'Supermarket C3', ST_GeomFromText('POINT(116.4074 39.9042)')), -- Beijing, China
+('S314', 'Supermarket C4', ST_GeomFromText('POINT(-79.3832 43.6532)')), -- Toronto, Canada
+('S315', 'Supermarket C5', ST_GeomFromText('POINT(-0.1276 51.5074)')), -- London, UK
+
+('S316', 'Supermarket D1', ST_GeomFromText('POINT(-77.0369 38.9072)')), -- Washington, USA
+('S317', 'Supermarket D2', ST_GeomFromText('POINT(-118.2437 34.0522)')), -- Los Angeles, USA
+('S318', 'Supermarket D3', ST_GeomFromText('POINT(-87.6298 41.8781)')), -- Chicago, USA
+('S319', 'Supermarket D4', ST_GeomFromText('POINT(-122.4194 37.7749)')), -- San Francisco, USA
+('S320', 'Supermarket D5', ST_GeomFromText('POINT(-71.0589 42.3601)')), -- Boston, USA
+
+('S321', 'Supermarket E1', ST_GeomFromText('POINT(28.9784 41.0082)')), -- Istanbul, Turkey
+('S322', 'Supermarket E2', ST_GeomFromText('POINT(34.8516 31.0461)')), -- Tel Aviv, Israel
+('S323', 'Supermarket E3', ST_GeomFromText('POINT(55.2708 25.2048)')), -- Dubai, UAE
+('S324', 'Supermarket E4', ST_GeomFromText('POINT(18.4241 -33.9249)')), -- Cape Town, South Africa
+('S325', 'Supermarket E5', ST_GeomFromText('POINT(31.2357 30.0444)')), -- Cairo, Egypt
+
+('S326', 'Supermarket F1', ST_GeomFromText('POINT(12.4964 41.9028)')), -- Rome, Italy
+('S327', 'Supermarket F2', ST_GeomFromText('POINT(13.4050 52.5200)')), -- Berlin, Germany
+('S328', 'Supermarket F3', ST_GeomFromText('POINT(4.9041 52.3676)')), -- Amsterdam, Netherlands
+('S329', 'Supermarket F4', ST_GeomFromText('POINT(18.0686 59.3293)')), -- Stockholm, Sweden
+('S330', 'Supermarket F5', ST_GeomFromText('POINT(24.7536 59.4370)')), -- Tallinn, Estonia
+
+('S331', 'Supermarket G1', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Yokohama, Japan
+('S332', 'Supermarket G2', ST_GeomFromText('POINT(126.9780 37.5665)')), -- Seoul, South Korea
+('S333', 'Supermarket G3', ST_GeomFromText('POINT(120.9605 23.6978)')), -- Taipei, Taiwan
+('S334', 'Supermarket G4', ST_GeomFromText('POINT(115.8575 -31.9505)')), -- Perth, Australia
+('S335', 'Supermarket G5', ST_GeomFromText('POINT(151.7833 -32.9167)')), -- Newcastle, Australia
+
+('S336', 'Supermarket H1', ST_GeomFromText('POINT(70.9000 26.9124)')), -- Jaipur, India
+('S337', 'Supermarket H2', ST_GeomFromText('POINT(88.3639 22.5726)')), -- Kolkata, India
+('S338', 'Supermarket H3', ST_GeomFromText('POINT(77.2090 28.6139)')), -- New Delhi, India
+('S339', 'Supermarket H4', ST_GeomFromText('POINT(72.8777 19.0760)')), -- Mumbai, India
+('S340', 'Supermarket H5', ST_GeomFromText('POINT(78.4867 17.3850)')), -- Hyderabad, India
+
+('S341', 'Supermarket I1', ST_GeomFromText('POINT(23.7275 37.9838)')), -- Athens, Greece
+('S342', 'Supermarket I2', ST_GeomFromText('POINT(30.5234 50.4501)')), -- Kyiv, Ukraine
+('S343', 'Supermarket I3', ST_GeomFromText('POINT(-9.1399 38.7169)')), -- Lisbon, Portugal
+('S344', 'Supermarket I4', ST_GeomFromText('POINT(-3.7038 40.4168)')), -- Madrid, Spain
+('S345', 'Supermarket I5', ST_GeomFromText('POINT(29.9187 31.2001)')), -- Alexandria, Egypt
+
+('S346', 'Supermarket J1', ST_GeomFromText('POINT(-157.8583 21.3069)')), -- Honolulu, Hawaii
+('S347', 'Supermarket J2', ST_GeomFromText('POINT(-43.1729 -22.9068)')), -- Rio de Janeiro, Brazil
+('S348', 'Supermarket J3', ST_GeomFromText('POINT(11.5819 48.1351)')), -- Munich, Germany
+('S349', 'Supermarket J4', ST_GeomFromText('POINT(135.7681 35.0116)')), -- Kyoto, Japan
+('S350', 'Supermarket J5', ST_GeomFromText('POINT(-0.0879 51.5116)')); -- London, UK
+
+('S351', 'Supermarket J1', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Yokohama, Nhật Bản
+('S352', 'Supermarket J2', ST_GeomFromText('POINT(2.1734 41.3851)')), -- Barcelona, Tây Ban Nha
+('S353', 'Supermarket J3', ST_GeomFromText('POINT(37.6173 55.7558)')), -- Moscow, Nga
+('S354', 'Supermarket J4', ST_GeomFromText('POINT(77.5946 12.9716)')), -- Bangalore, Ấn Độ
+('S355', 'Supermarket J5', ST_GeomFromText('POINT(-99.1332 19.4326)')), -- Mexico City, Mexico
+
+-- Các siêu thị ở Bắc Mỹ
+('S356', 'Supermarket K1', ST_GeomFromText('POINT(-104.9903 39.7392)')), -- Denver, USA
+('S357', 'Supermarket K2', ST_GeomFromText('POINT(-75.6972 45.4215)')), -- Ottawa, Canada
+('S358', 'Supermarket K3', ST_GeomFromText('POINT(-71.0589 42.3601)')), -- Boston, USA
+('S359', 'Supermarket K4', ST_GeomFromText('POINT(-80.1918 25.7617)')), -- Miami, USA
+('S360', 'Supermarket K5', ST_GeomFromText('POINT(-123.3656 48.4284)')), -- Victoria, Canada
+
+-- Các siêu thị ở Nam Mỹ
+('S361', 'Supermarket L1', ST_GeomFromText('POINT(-68.1193 -16.5000)')), -- La Paz, Bolivia
+('S362', 'Supermarket L2', ST_GeomFromText('POINT(-60.6453 -32.9468)')), -- Rosario, Argentina
+('S363', 'Supermarket L3', ST_GeomFromText('POINT(-79.9224 -2.1894)')), -- Guayaquil, Ecuador
+('S364', 'Supermarket L4', ST_GeomFromText('POINT(-43.9378 -19.9227)')), -- Belo Horizonte, Brazil
+('S365', 'Supermarket L5', ST_GeomFromText('POINT(-75.6636 6.2442)')), -- Medellín, Colombia
+
+-- Các siêu thị ở Châu Phi
+('S366', 'Supermarket M1', ST_GeomFromText('POINT(31.2357 30.0444)')), -- Cairo, Ai Cập
+('S367', 'Supermarket M2', ST_GeomFromText('POINT(25.7479 -28.2293)')), -- Pretoria, Nam Phi
+('S368', 'Supermarket M3', ST_GeomFromText('POINT(47.9186 -18.8792)')), -- Antananarivo, Madagascar
+('S369', 'Supermarket M4', ST_GeomFromText('POINT(35.7382 -15.7875)')), -- Lilongwe, Malawi
+('S370', 'Supermarket M5', ST_GeomFromText('POINT(39.2674 -6.7924)')), -- Zanzibar City, Tanzania
+
+-- Các siêu thị ở Châu Âu
+('S371', 'Supermarket N1', ST_GeomFromText('POINT(24.9458 60.1921)')), -- Helsinki, Phần Lan
+('S372', 'Supermarket N2', ST_GeomFromText('POINT(23.7275 37.9838)')), -- Athens, Hy Lạp
+('S373', 'Supermarket N3', ST_GeomFromText('POINT(10.7522 59.9139)')), -- Oslo, Na Uy
+('S374', 'Supermarket N4', ST_GeomFromText('POINT(19.0402 47.4979)')), -- Budapest, Hungary
+('S375', 'Supermarket N5', ST_GeomFromText('POINT(-6.2603 53.3498)')), -- Dublin, Ireland
+
+-- Các siêu thị ở Trung Đông
+('S376', 'Supermarket O1', ST_GeomFromText('POINT(39.1979 21.4858)')), -- Jeddah, Ả Rập Xê Út
+('S377', 'Supermarket O2', ST_GeomFromText('POINT(44.3661 33.3152)')), -- Baghdad, Iraq
+('S378', 'Supermarket O3', ST_GeomFromText('POINT(54.3667 24.4667)')), -- Abu Dhabi, UAE
+('S379', 'Supermarket O4', ST_GeomFromText('POINT(35.9304 31.9632)')), -- Amman, Jordan
+('S380', 'Supermarket O5', ST_GeomFromText('POINT(50.5577 26.2235)')), -- Manama, Bahrain
+
+-- Các siêu thị ở Châu Á
+('S381', 'Supermarket P1', ST_GeomFromText('POINT(103.8519 1.2903)')), -- Sentosa, Singapore
+('S382', 'Supermarket P2', ST_GeomFromText('POINT(106.8650 -6.1751)')), -- Jakarta, Indonesia
+('S383', 'Supermarket P3', ST_GeomFromText('POINT(120.9842 14.5995)')), -- Manila, Philippines
+('S384', 'Supermarket P4', ST_GeomFromText('POINT(116.4074 39.9042)')), -- Bắc Kinh, Trung Quốc
+('S385', 'Supermarket P5', ST_GeomFromText('POINT(121.4737 31.2304)')), -- Thượng Hải, Trung Quốc
+
+-- Các siêu thị ở Úc & các đảo Thái Bình Dương
+('S386', 'Supermarket Q1', ST_GeomFromText('POINT(149.1300 -35.2809)')), -- Canberra, Úc
+('S387', 'Supermarket Q2', ST_GeomFromText('POINT(151.2165 -33.8651)')), -- Sydney, Úc
+('S388', 'Supermarket Q3', ST_GeomFromText('POINT(166.4572 -22.2735)')), -- Nouméa, New Caledonia
+('S389', 'Supermarket Q4', ST_GeomFromText('POINT(159.9670 -9.4272)')), -- Honiara, Solomon Islands
+('S390', 'Supermarket Q5', ST_GeomFromText('POINT(138.6007 -34.9285)')), -- Adelaide, Úc
+
+-- Các siêu thị đặt tại các địa điểm đặc biệt
+('S391', 'Supermarket R1', ST_GeomFromText('POINT(-106.4454 35.0844)')), -- Albuquerque, USA (Breaking Bad)
+('S392', 'Supermarket R2', ST_GeomFromText('POINT(30.5234 50.4501)')), -- Kyiv, Ukraine
+('S393', 'Supermarket R3', ST_GeomFromText('POINT(28.9784 41.0082)')), -- Istanbul, Thổ Nhĩ Kỳ
+('S394', 'Supermarket R4', ST_GeomFromText('POINT(-46.6253 -23.5338)')), -- São Paulo, Brazil
+('S395', 'Supermarket R5', ST_GeomFromText('POINT(-159.7711 -21.2129)')), -- Avarua, Cook Islands
+('S396', 'Supermarket R6', ST_GeomFromText('POINT(-61.2225 13.9094)')), -- Castries, Saint Lucia
+('S397', 'Supermarket R7', ST_GeomFromText('POINT(12.5683 55.6761)')), -- Copenhagen, Đan Mạch
+('S398', 'Supermarket R8', ST_GeomFromText('POINT(174.7756 -41.2865)')), -- Wellington, New Zealand
+('S399', 'Supermarket R9', ST_GeomFromText('POINT(-43.1729 -22.9068)')), -- Rio de Janeiro, Brazil
+('S400', 'Supermarket R10', ST_GeomFromText('POINT(-135.0000 -90.0000)')); -- Nam Cực (Giả định có 1 siêu thị cho nhà nghiên cứu)
 
 
+('S401', 'Supermarket K1', ST_GeomFromText('POINT(12.4964 41.9028)')), -- Rome, Italy
+('S402', 'Supermarket K2', ST_GeomFromText('POINT(19.0402 47.4979)')), -- Budapest, Hungary
+('S403', 'Supermarket K3', ST_GeomFromText('POINT(30.5234 50.4501)')), -- Kyiv, Ukraine
+('S404', 'Supermarket K4', ST_GeomFromText('POINT(23.7275 37.9838)')), -- Athens, Greece
+('S405', 'Supermarket K5', ST_GeomFromText('POINT(24.7536 59.4370)')), -- Tallinn, Estonia
 
+('S406', 'Supermarket L1', ST_GeomFromText('POINT(55.2030 25.2760)')), -- Abu Dhabi, UAE
+('S407', 'Supermarket L2', ST_GeomFromText('POINT(58.4032 23.6143)')), -- Muscat, Oman
+('S408', 'Supermarket L3', ST_GeomFromText('POINT(44.3615 33.3128)')), -- Baghdad, Iraq
+('S409', 'Supermarket L4', ST_GeomFromText('POINT(54.3667 24.4667)')), -- Al Ain, UAE
+('S410', 'Supermarket L5', ST_GeomFromText('POINT(43.7696 15.3530)')), -- Sanaa, Yemen
+
+('S411', 'Supermarket M1', ST_GeomFromText('POINT(-70.1627 -18.4783)')), -- Arica, Chile
+('S412', 'Supermarket M2', ST_GeomFromText('POINT(-74.2973 4.5709)')), -- Bogotá, Colombia
+('S413', 'Supermarket M3', ST_GeomFromText('POINT(-66.9036 10.4806)')), -- Caracas, Venezuela
+('S414', 'Supermarket M4', ST_GeomFromText('POINT(-80.7821 -0.9499)')), -- Manta, Ecuador
+('S415', 'Supermarket M5', ST_GeomFromText('POINT(-77.0428 -12.0464)')), -- Lima, Peru
+
+('S416', 'Supermarket N1', ST_GeomFromText('POINT(151.7751 -32.9264)')), -- Newcastle, Australia
+('S417', 'Supermarket N2', ST_GeomFromText('POINT(147.3294 -42.8821)')), -- Hobart, Australia
+('S418', 'Supermarket N3', ST_GeomFromText('POINT(158.7516 -8.8968)')), -- Honiara, Solomon Islands
+('S419', 'Supermarket N4', ST_GeomFromText('POINT(166.4250 -22.2758)')), -- Noumea, New Caledonia
+('S420', 'Supermarket N5', ST_GeomFromText('POINT(-134.4197 58.3019)')), -- Juneau, Alaska, USA
+
+('S421', 'Supermarket O1', ST_GeomFromText('POINT(9.0579 48.7833)')), -- Stuttgart, Germany
+('S422', 'Supermarket O2', ST_GeomFromText('POINT(14.5058 46.0569)')), -- Ljubljana, Slovenia
+('S423', 'Supermarket O3', ST_GeomFromText('POINT(26.1025 44.4268)')), -- Bucharest, Romania
+('S424', 'Supermarket O4', ST_GeomFromText('POINT(10.7522 59.9139)')), -- Oslo, Norway
+('S425', 'Supermarket O5', ST_GeomFromText('POINT(4.8357 45.7640)')), -- Lyon, France
+
+('S426', 'Supermarket P1', ST_GeomFromText('POINT(31.2304 30.0444)')), -- Cairo, Egypt
+('S427', 'Supermarket P2', ST_GeomFromText('POINT(32.5825 0.3476)')), -- Kampala, Uganda
+('S428', 'Supermarket P3', ST_GeomFromText('POINT(3.0586 36.7538)')), -- Algiers, Algeria
+('S429', 'Supermarket P4', ST_GeomFromText('POINT(9.7489 -0.8040)')), -- Accra, Ghana
+('S430', 'Supermarket P5', ST_GeomFromText('POINT(18.4233 -33.9189)')), -- Cape Town, South Africa
+
+('S431', 'Supermarket Q1', ST_GeomFromText('POINT(85.3240 27.7172)')), -- Kathmandu, Nepal
+('S432', 'Supermarket Q2', ST_GeomFromText('POINT(39.7294 21.3891)')), -- Mecca, Saudi Arabia
+('S433', 'Supermarket Q3', ST_GeomFromText('POINT(100.5018 13.7563)')), -- Bangkok, Thailand
+('S434', 'Supermarket Q4', ST_GeomFromText('POINT(78.9629 20.5937)')), -- Mumbai, India
+('S435', 'Supermarket Q5', ST_GeomFromText('POINT(106.8456 -6.2088)')), -- Jakarta, Indonesia
+
+('S436', 'Supermarket R1', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Tokyo, Japan
+('S437', 'Supermarket R2', ST_GeomFromText('POINT(126.9780 37.5665)')), -- Seoul, South Korea
+('S438', 'Supermarket R3', ST_GeomFromText('POINT(121.4737 31.2304)')), -- Shanghai, China
+('S439', 'Supermarket R4', ST_GeomFromText('POINT(2.3522 48.8566)')), -- Paris, France
+('S440', 'Supermarket R5', ST_GeomFromText('POINT(-0.1276 51.5074)')), -- London, UK
+
+('S441', 'Supermarket S1', ST_GeomFromText('POINT(-118.2437 34.0522)')), -- Los Angeles, USA
+('S442', 'Supermarket S2', ST_GeomFromText('POINT(-74.0060 40.7128)')), -- New York, USA
+('S443', 'Supermarket S3', ST_GeomFromText('POINT(-87.6298 41.8781)')), -- Chicago, USA
+('S444', 'Supermarket S4', ST_GeomFromText('POINT(-71.0589 42.3601)')), -- Boston, USA
+('S445', 'Supermarket S5', ST_GeomFromText('POINT(-122.3321 47.6062)')), -- Seattle, USA
+
+('S446', 'Supermarket T1', ST_GeomFromText('POINT(151.2093 -33.8688)')), -- Sydney, Australia
+('S447', 'Supermarket T2', ST_GeomFromText('POINT(144.9631 -37.8136)')), -- Melbourne, Australia
+('S448', 'Supermarket T3', ST_GeomFromText('POINT(106.7038 10.7769)')), -- Ho Chi Minh City, Vietnam
+('S449', 'Supermarket T4', ST_GeomFromText('POINT(105.8545 21.0285)')), -- Hanoi, Vietnam
+('S450', 'Supermarket T5', ST_GeomFromText('POINT(108.2272 16.0471)')); -- Da Nang, Vietnam
+
+('S451', 'Supermarket K1', ST_GeomFromText('POINT(37.9838 23.7275)')), -- Athens, Hy Lạp
+('S452', 'Supermarket K2', ST_GeomFromText('POINT(30.5234 50.4501)')), -- Kyiv, Ukraine
+('S453', 'Supermarket K3', ST_GeomFromText('POINT(-75.6972 45.4215)')), -- Ottawa, Canada
+('S454', 'Supermarket K4', ST_GeomFromText('POINT(-3.7038 40.4168)')), -- Madrid, Tây Ban Nha
+('S455', 'Supermarket K5', ST_GeomFromText('POINT(18.4241 -33.9249)')), -- Cape Town, Nam Phi
+
+('S456', 'Supermarket L1', ST_GeomFromText('POINT(106.8456 -6.2088)')), -- Jakarta, Indonesia
+('S457', 'Supermarket L2', ST_GeomFromText('POINT(144.7469 -37.8136)')), -- Geelong, Australia
+('S458', 'Supermarket L3', ST_GeomFromText('POINT(-66.9036 10.4806)')), -- Caracas, Venezuela
+('S459', 'Supermarket L4', ST_GeomFromText('POINT(19.0402 47.4979)')), -- Budapest, Hungary
+('S460', 'Supermarket L5', ST_GeomFromText('POINT(-0.1426 51.5079)')), -- London, Anh
+
+('S461', 'Supermarket M1', ST_GeomFromText('POINT(-74.8055 10.9685)')), -- Barranquilla, Colombia
+('S462', 'Supermarket M2', ST_GeomFromText('POINT(90.4125 23.8103)')), -- Dhaka, Bangladesh
+('S463', 'Supermarket M3', ST_GeomFromText('POINT(-61.2249 10.6600)')), -- Port of Spain, Trinidad và Tobago
+('S464', 'Supermarket M4', ST_GeomFromText('POINT(30.0444 31.2357)')), -- Cairo, Ai Cập
+('S465', 'Supermarket M5', ST_GeomFromText('POINT(13.4050 52.5200)')), -- Berlin, Đức
+
+('S466', 'Supermarket N1', ST_GeomFromText('POINT(135.7681 35.0116)')), -- Kyoto, Nhật Bản
+('S467', 'Supermarket N2', ST_GeomFromText('POINT(-70.6483 -33.4569)')), -- Santiago, Chile
+('S468', 'Supermarket N3', ST_GeomFromText('POINT(55.2823 25.2760)')), -- Dubai, UAE
+('S469', 'Supermarket N4', ST_GeomFromText('POINT(151.2153 -33.8568)')), -- Sydney, Úc
+('S470', 'Supermarket N5', ST_GeomFromText('POINT(9.9937 53.5511)')), -- Hamburg, Đức
+
+('S471', 'Supermarket O1', ST_GeomFromText('POINT(-71.0589 42.3601)')), -- Boston, Mỹ
+('S472', 'Supermarket O2', ST_GeomFromText('POINT(28.9784 41.0082)')), -- Istanbul, Thổ Nhĩ Kỳ
+('S473', 'Supermarket O3', ST_GeomFromText('POINT(166.4426 -22.2758)')), -- Nouméa, New Caledonia
+('S474', 'Supermarket O4', ST_GeomFromText('POINT(12.4964 41.9028)')), -- Rome, Ý
+('S475', 'Supermarket O5', ST_GeomFromText('POINT(103.8198 1.3521)')), -- Singapore
+
+('S476', 'Supermarket P1', ST_GeomFromText('POINT(102.6151 17.9757)')), -- Vientiane, Lào
+('S477', 'Supermarket P2', ST_GeomFromText('POINT(76.2711 9.9312)')), -- Kochi, Ấn Độ
+('S478', 'Supermarket P3', ST_GeomFromText('POINT(-58.3772 -34.6132)')), -- Buenos Aires, Argentina
+('S479', 'Supermarket P4', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Tokyo, Nhật Bản
+('S480', 'Supermarket P5', ST_GeomFromText('POINT(77.1025 28.7041)')), -- New Delhi, Ấn Độ
+
+('S481', 'Supermarket Q1', ST_GeomFromText('POINT(-43.2096 -22.9035)')), -- Rio de Janeiro, Brazil
+('S482', 'Supermarket Q2', ST_GeomFromText('POINT(39.1919 -6.7924)')), -- Dar es Salaam, Tanzania
+('S483', 'Supermarket Q3', ST_GeomFromText('POINT(-99.1332 19.4326)')), -- Mexico City, Mexico
+('S484', 'Supermarket Q4', ST_GeomFromText('POINT(121.4737 31.2304)')), -- Thượng Hải, Trung Quốc
+('S485', 'Supermarket Q5', ST_GeomFromText('POINT(27.9475 -26.2041)')), -- Johannesburg, Nam Phi
+
+('S486', 'Supermarket R1', ST_GeomFromText('POINT(-86.8515 21.1619)')), -- Cancún, Mexico
+('S487', 'Supermarket R2', ST_GeomFromText('POINT(-47.8825 -15.7942)')), -- Brasília, Brazil
+('S488', 'Supermarket R3', ST_GeomFromText('POINT(31.1330 -25.7479)')), -- Pretoria, Nam Phi
+('S489', 'Supermarket R4', ST_GeomFromText('POINT(-68.1193 44.3876)')), -- Maine, USA
+('S490', 'Supermarket R5', ST_GeomFromText('POINT(135.5022 34.6937)')), -- Osaka, Nhật Bản
+
+('S491', 'Supermarket S1', ST_GeomFromText('POINT(114.1095 22.3964)')), -- Hong Kong
+('S492', 'Supermarket S2', ST_GeomFromText('POINT(-75.5773 6.2442)')), -- Medellín, Colombia
+('S493', 'Supermarket S3', ST_GeomFromText('POINT(18.0156 59.3293)')), -- Stockholm, Thụy Điển
+('S494', 'Supermarket S4', ST_GeomFromText('POINT(-66.5901 18.4655)')), -- San Juan, Puerto Rico
+('S495', 'Supermarket S5', ST_GeomFromText('POINT(139.7301 35.6895)')), -- Tokyo, Nhật Bản
+
+('S496', 'Supermarket T1', ST_GeomFromText('POINT(101.7072 3.1578)')), -- Kuala Lumpur, Malaysia
+('S497', 'Supermarket T2', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Tokyo, Nhật Bản
+('S498', 'Supermarket T3', ST_GeomFromText('POINT(174.7762 -41.2865)')), -- Wellington, New Zealand
+('S499', 'Supermarket T4', ST_GeomFromText('POINT(114.1577 22.2855)')), -- Hong Kong
+('S500', 'Supermarket T5', ST_GeomFromText('POINT(151.2093 -33.8688)')); -- Sydney, Úc
 
