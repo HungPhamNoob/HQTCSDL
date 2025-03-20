@@ -1,6 +1,6 @@
 use supermarket;
 
--- DROP TABLE Store_Locations;
+DROP TABLE Store_Locations;
 
 CREATE TABLE Store_Locations (
     store_id CHAR(10) NOT NULL PRIMARY KEY,
@@ -151,7 +151,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 -- Châu Á (các địa điểm bổ sung)
 ('S126', 'Supermarket BX', ST_GeomFromText('POINT(126.9780 37.5665)')), -- Seoul, Hàn Quốc
 ('S127', 'Supermarket BY', ST_GeomFromText('POINT(144.9631 -37.8136)')), -- Melbourne, Úc
-('S128', 'Supermarket BZ', ST_GeomFromText('POINT(139.6917 35.6895)')), -- Osaka, Nhật Bản
+('S128', 'Supermarket BZ', ST_GeomFromText('POINT(13.6917 35.6895)')), -- Osaka, Nhật Bản
 ('S129', 'Supermarket CA', ST_GeomFromText('POINT(72.8777 19.0760)')), -- Pune, Ấn Độ
 ('S130', 'Supermarket CB', ST_GeomFromText('POINT(103.8198 1.3521)')), -- Johor Bahru, Malaysia
 
@@ -238,7 +238,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S191', 'Supermarket RD1', ST_GeomFromText('POINT(55.2708 25.2048)')), -- Dubai, UAE
 ('S192', 'Supermarket RD2', ST_GeomFromText('POINT(-157.8583 21.3069)')), -- Honolulu, Hawaii
 ('S193', 'Supermarket RD3', ST_GeomFromText('POINT(90.4125 23.8103)')), -- Dhaka, Bangladesh
-('S194', 'Supermarket RD4', ST_GeomFromText('POINT(139.6917 35.6895)')), -- Tokyo, Nhật Bản
+('S194', 'Supermarket RD4', ST_GeomFromText('POINT(13.6917 35.6895)')), -- Tokyo, Nhật Bản
 ('S195', 'Supermarket RD5', ST_GeomFromText('POINT(77.1025 28.7041)')), -- New Delhi, Ấn Độ
 ('S196', 'Supermarket RD6', ST_GeomFromText('POINT(-43.1729 -22.9068)')), -- Rio de Janeiro, Brazil
 ('S197', 'Supermarket RD7', ST_GeomFromText('POINT(-73.5673 45.5017)')), -- Montreal, Canada
@@ -377,7 +377,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S294', 'Supermarket I4', ST_GeomFromText('POINT(125.7635 -8.5569)')), -- Dili, Đông Timor
 ('S295', 'Supermarket I5', ST_GeomFromText('POINT(-106.4869 31.7619)')), -- El Paso, Texas, USA
 ('S296', 'Supermarket J1', ST_GeomFromText('POINT(-159.4644 22.0964)')), -- Kauai, Hawaii, USA
-('S297', 'Supermarket J2', ST_GeomFromText('POINT(35.6892 139.6917)')), -- Yokohama, Nhật Bản
+('S297', 'Supermarket J2', ST_GeomFromText('POINT(139.6917 35.6892)')), -- Yokohama, Nhật Bản
 ('S298', 'Supermarket J3', ST_GeomFromText('POINT(103.8519 1.2801)')), -- Sentosa, Singapore
 ('S299', 'Supermarket J4', ST_GeomFromText('POINT(-68.1193 44.3876)')), -- Bar Harbor, Maine, USA
 ('S300', 'Supermarket J5', ST_GeomFromText('POINT(-123.3656 48.4284)')), -- Victoria, Canada
@@ -396,7 +396,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S310', 'Supermarket B5', ST_GeomFromText('POINT(-46.6333 -23.5505)')), -- São Paulo, Brazil
 
 ('S311', 'Supermarket C1', ST_GeomFromText('POINT(174.7633 -36.8485)')), -- Auckland, New Zealand
-('S312', 'Supermarket C2', ST_GeomFromText('POINT(139.6917 35.6895)')), -- Tokyo, Japan
+('S312', 'Supermarket C2', ST_GeomFromText('POINT(13.6917 35.6895)')), -- Tokyo, Japan
 ('S313', 'Supermarket C3', ST_GeomFromText('POINT(116.4074 39.9042)')), -- Beijing, China
 ('S314', 'Supermarket C4', ST_GeomFromText('POINT(-79.3832 43.6532)')), -- Toronto, Canada
 ('S315', 'Supermarket C5', ST_GeomFromText('POINT(-0.1276 51.5074)')), -- London, UK
@@ -623,10 +623,11 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S492', 'Supermarket S2', ST_GeomFromText('POINT(-75.5773 6.2442)')), -- Medellín, Colombia
 ('S493', 'Supermarket S3', ST_GeomFromText('POINT(18.0156 59.3293)')), -- Stockholm, Thụy Điển
 ('S494', 'Supermarket S4', ST_GeomFromText('POINT(-66.5901 18.4655)')), -- San Juan, Puerto Rico
-('S495', 'Supermarket S5', ST_GeomFromText('POINT(139.7301 35.6895)')), -- Tokyo, Nhật Bản
+('S495', 'Supermarket S5', ST_GeomFromText('POINT(13.7301 35.6895)')), -- Tokyo, Nhật Bản
 
 ('S496', 'Supermarket T1', ST_GeomFromText('POINT(101.7072 3.1578)')), -- Kuala Lumpur, Malaysia
 ('S497', 'Supermarket T2', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Tokyo, Nhật Bản
 ('S498', 'Supermarket T3', ST_GeomFromText('POINT(174.7762 -41.2865)')), -- Wellington, New Zealand
 ('S499', 'Supermarket T4', ST_GeomFromText('POINT(114.1577 22.2855)')), -- Hong Kong
 ('S500', 'Supermarket T5', ST_GeomFromText('POINT(151.2093 -33.8688)')); -- Sydney, Úc
+
