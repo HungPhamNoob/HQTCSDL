@@ -1,0 +1,186 @@
+use supermarket;
+
+DROP TABLE Store_Locations;
+
+CREATE TABLE Store_Locations (
+    store_id CHAR(10) NOT NULL PRIMARY KEY,
+    store_name VARCHAR(100) NOT NULL,
+    location POINT NOT NULL 
+)
+
+
+
+-- 10 Store gần (bán kính 1km)
+INSERT INTO Store_Locations (store_id, store_name, location) VALUES 
+('S001', 'Supermarket A', ST_GeomFromText('POINT(105.854 21.030)')),
+('S002', 'Supermarket B', ST_GeomFromText('POINT(105.855 21.031)')),
+('S003', 'Supermarket C', ST_GeomFromText('POINT(105.856 21.029)')),
+('S004', 'Supermarket D', ST_GeomFromText('POINT(105.857 21.032)')),
+('S005', 'Supermarket E', ST_GeomFromText('POINT(105.853 21.033)')),
+('S006', 'Supermarket F', ST_GeomFromText('POINT(105.852 21.030)')),
+('S007', 'Supermarket G', ST_GeomFromText('POINT(105.858 21.034)')),
+('S008', 'Supermarket H', ST_GeomFromText('POINT(105.859 21.028)')),
+('S009', 'Supermarket I', ST_GeomFromText('POINT(105.851 21.031)')),
+('S010', 'Supermarket J', ST_GeomFromText('POINT(105.860 21.027)'));
+('S011', 'Supermarket K', ST_GeomFromText('POINT(105.870 21.040)')),
+('S012', 'Supermarket L', ST_GeomFromText('POINT(105.875 21.045)')),
+('S013', 'Supermarket M', ST_GeomFromText('POINT(105.880 21.050)')),
+('S014', 'Supermarket N', ST_GeomFromText('POINT(105.885 21.055)')),
+('S015', 'Supermarket O', ST_GeomFromText('POINT(105.890 21.060)')),
+('S016', 'Supermarket P', ST_GeomFromText('POINT(105.895 21.065)')),
+('S017', 'Supermarket Q', ST_GeomFromText('POINT(105.900 21.070)')),
+('S018', 'Supermarket R', ST_GeomFromText('POINT(105.905 21.075)')),
+('S019', 'Supermarket S', ST_GeomFromText('POINT(105.910 21.080)')),
+('S020', 'Supermarket T', ST_GeomFromText('POINT(105.915 21.085)')),
+('S021', 'Supermarket U', ST_GeomFromText('POINT(105.920 21.090)')),
+('S022', 'Supermarket V', ST_GeomFromText('POINT(105.925 21.095)')),
+('S023', 'Supermarket W', ST_GeomFromText('POINT(105.930 21.100)')),
+('S024', 'Supermarket X', ST_GeomFromText('POINT(105.935 21.105)')),
+('S025', 'Supermarket Y', ST_GeomFromText('POINT(105.940 21.110)')),
+('S026', 'Supermarket Z', ST_GeomFromText('POINT(105.945 21.115)')),
+('S027', 'Supermarket AA', ST_GeomFromText('POINT(105.950 21.120)')),
+('S028', 'Supermarket BB', ST_GeomFromText('POINT(105.955 21.125)')),
+('S029', 'Supermarket CC', ST_GeomFromText('POINT(105.960 21.130)')),
+('S030', 'Supermarket DD', ST_GeomFromText('POINT(105.965 21.135)'));
+('S031', 'Supermarket EE', ST_GeomFromText('POINT(106.000 21.150)')),
+('S032', 'Supermarket FF', ST_GeomFromText('POINT(106.050 21.180)')),
+('S033', 'Supermarket GG', ST_GeomFromText('POINT(106.100 21.200)')),
+('S034', 'Supermarket HH', ST_GeomFromText('POINT(106.150 21.220)')),
+('S035', 'Supermarket II', ST_GeomFromText('POINT(106.200 21.250)')),
+('S036', 'Supermarket JJ', ST_GeomFromText('POINT(106.250 21.270)')),
+('S037', 'Supermarket KK', ST_GeomFromText('POINT(106.300 21.300)')),
+('S038', 'Supermarket LL', ST_GeomFromText('POINT(106.350 21.320)')),
+('S039', 'Supermarket MM', ST_GeomFromText('POINT(106.400 21.350)')),
+('S040', 'Supermarket NN', ST_GeomFromText('POINT(106.450 21.370)')),
+('S041', 'Supermarket OO', ST_GeomFromText('POINT(106.500 21.400)')),
+('S042', 'Supermarket PP', ST_GeomFromText('POINT(106.550 21.420)')),
+('S043', 'Supermarket QQ', ST_GeomFromText('POINT(106.600 21.450)')),
+('S044', 'Supermarket RR', ST_GeomFromText('POINT(106.650 21.470)')),
+('S045', 'Supermarket SS', ST_GeomFromText('POINT(106.700 21.500)')),
+('S046', 'Supermarket TT', ST_GeomFromText('POINT(106.750 21.520)')),
+('S047', 'Supermarket UU', ST_GeomFromText('POINT(106.800 21.550)')),
+('S048', 'Supermarket VV', ST_GeomFromText('POINT(106.850 21.570)')),
+('S049', 'Supermarket WW', ST_GeomFromText('POINT(106.900 21.600)')),
+('S050', 'Supermarket XX', ST_GeomFromText('POINT(106.950 21.620)'));
+('S051', 'Supermarket A', ST_GeomFromText('POINT(105.854 21.030)')),
+('S052', 'Supermarket B', ST_GeomFromText('POINT(105.855 21.031)')),
+('S053', 'Supermarket C', ST_GeomFromText('POINT(105.856 21.029)')),
+('S054', 'Supermarket D', ST_GeomFromText('POINT(105.857 21.032)')),
+('S055', 'Supermarket E', ST_GeomFromText('POINT(105.853 21.033)')),
+('S056', 'Supermarket F', ST_GeomFromText('POINT(105.852 21.030)')),
+('S057', 'Supermarket G', ST_GeomFromText('POINT(105.858 21.034)')),
+('S058', 'Supermarket H', ST_GeomFromText('POINT(105.859 21.028)')),
+('S059', 'Supermarket I', ST_GeomFromText('POINT(105.851 21.031)')),
+('S060', 'Supermarket J', ST_GeomFromText('POINT(105.860 21.027)')),
+('S061', 'Supermarket K', ST_GeomFromText('POINT(105.870 21.040)')),
+('S062', 'Supermarket L', ST_GeomFromText('POINT(105.875 21.045)')),
+('S063', 'Supermarket M', ST_GeomFromText('POINT(105.880 21.050)')),
+('S064', 'Supermarket N', ST_GeomFromText('POINT(105.885 21.055)')),
+('S065', 'Supermarket O', ST_GeomFromText('POINT(105.890 21.060)')),
+('S066', 'Supermarket P', ST_GeomFromText('POINT(105.895 21.065)')),
+('S067', 'Supermarket Q', ST_GeomFromText('POINT(105.900 21.070)')),
+('S068', 'Supermarket R', ST_GeomFromText('POINT(105.905 21.075)')),
+('S069', 'Supermarket S', ST_GeomFromText('POINT(105.910 21.080)')),
+('S070', 'Supermarket T', ST_GeomFromText('POINT(105.915 21.085)')),
+('S071', 'Supermarket U', ST_GeomFromText('POINT(105.920 21.090)')),
+('S072', 'Supermarket V', ST_GeomFromText('POINT(105.925 21.095)')),
+('S073', 'Supermarket W', ST_GeomFromText('POINT(105.930 21.100)')),
+('S074', 'Supermarket X', ST_GeomFromText('POINT(105.935 21.105)')),
+('S075', 'Supermarket Y', ST_GeomFromText('POINT(105.940 21.110)')),
+('S076', 'Supermarket Z', ST_GeomFromText('POINT(105.945 21.115)')),
+('S077', 'Supermarket AA', ST_GeomFromText('POINT(105.950 21.120)')),
+('S078', 'Supermarket BB', ST_GeomFromText('POINT(105.955 21.125)')),
+('S079', 'Supermarket CC', ST_GeomFromText('POINT(105.960 21.130)')),
+('S080', 'Supermarket DD', ST_GeomFromText('POINT(105.965 21.135)')),
+('S081', 'Supermarket EE', ST_GeomFromText('POINT(106.000 21.150)')),
+('S082', 'Supermarket FF', ST_GeomFromText('POINT(106.050 21.180)')),
+('S083', 'Supermarket GG', ST_GeomFromText('POINT(106.100 21.200)')),
+('S084', 'Supermarket HH', ST_GeomFromText('POINT(106.150 21.220)')),
+('S085', 'Supermarket II', ST_GeomFromText('POINT(106.200 21.250)')),
+('S086', 'Supermarket JJ', ST_GeomFromText('POINT(106.250 21.270)')),
+('S087', 'Supermarket KK', ST_GeomFromText('POINT(106.300 21.300)')),
+('S088', 'Supermarket LL', ST_GeomFromText('POINT(106.350 21.320)')),
+('S089', 'Supermarket MM', ST_GeomFromText('POINT(106.400 21.350)')),
+('S090', 'Supermarket NN', ST_GeomFromText('POINT(106.450 21.370)')),
+('S091', 'Supermarket OO', ST_GeomFromText('POINT(106.500 21.400)')),
+('S092', 'Supermarket PP', ST_GeomFromText('POINT(106.550 21.420)')),
+('S093', 'Supermarket QQ', ST_GeomFromText('POINT(106.600 21.450)')),
+('S094', 'Supermarket RR', ST_GeomFromText('POINT(106.650 21.470)')),
+('S095', 'Supermarket SS', ST_GeomFromText('POINT(106.700 21.500)')),
+('S096', 'Supermarket TT', ST_GeomFromText('POINT(106.750 21.520)')),
+('S097', 'Supermarket UU', ST_GeomFromText('POINT(106.800 21.550)')),
+('S098', 'Supermarket VV', ST_GeomFromText('POINT(106.850 21.570)')),
+('S099', 'Supermarket WW', ST_GeomFromText('POINT(106.900 21.600)')),
+('S100', 'Supermarket XX', ST_GeomFromText('POINT(106.950 21.620)'));
+
+-- Châu Âu
+('S101', 'Supermarket AY', ST_GeomFromText('POINT(13.4050 52.5200)')), -- Berlin, Đức
+('S102', 'Supermarket AZ', ST_GeomFromText('POINT(12.4964 41.9028)')), -- Rome, Ý
+('S103', 'Supermarket BA', ST_GeomFromText('POINT(-3.7038 40.4168)')), -- Madrid, Tây Ban Nha
+('S104', 'Supermarket BB', ST_GeomFromText('POINT(4.9041 52.3676)')), -- Amsterdam, Hà Lan
+('S105', 'Supermarket BC', ST_GeomFromText('POINT(18.0686 59.3293)')), -- Stockholm, Thụy Điển
+
+-- Bắc Mỹ
+('S106', 'Supermarket BD', ST_GeomFromText('POINT(-118.2437 34.0522)')), -- Los Angeles, Mỹ
+('S107', 'Supermarket BE', ST_GeomFromText('POINT(-87.6298 41.8781)')), -- Chicago, Mỹ
+('S108', 'Supermarket BF', ST_GeomFromText('POINT(-79.3832 43.6532)')), -- Toronto, Canada
+('S109', 'Supermarket BG', ST_GeomFromText('POINT(-123.1216 49.2827)')), -- Vancouver, Canada
+('S110', 'Supermarket BH', ST_GeomFromText('POINT(-99.1332 19.4326)')), -- Mexico City, Mexico
+
+-- Nam Mỹ
+('S111', 'Supermarket BI', ST_GeomFromText('POINT(-46.6333 -23.5505)')), -- São Paulo, Brazil
+('S112', 'Supermarket BJ', ST_GeomFromText('POINT(-58.3816 -34.6037)')), -- Buenos Aires, Argentina
+('S113', 'Supermarket BK', ST_GeomFromText('POINT(-74.0721 4.7110)')), -- Bogotá, Colombia
+('S114', 'Supermarket BL', ST_GeomFromText('POINT(-77.0282 -12.0464)')), -- Lima, Peru
+('S115', 'Supermarket BM', ST_GeomFromText('POINT(-68.1193 -16.5000)')), -- La Paz, Bolivia
+
+-- Châu Phi
+('S116', 'Supermarket BN', ST_GeomFromText('POINT(31.2357 30.0444)')), -- Cairo, Ai Cập
+('S117', 'Supermarket BO', ST_GeomFromText('POINT(18.4241 -33.9249)')), -- Cape Town, Nam Phi
+('S118', 'Supermarket BP', ST_GeomFromText('POINT(3.3792 6.5244)')), -- Lagos, Nigeria
+('S119', 'Supermarket BQ', ST_GeomFromText('POINT(39.2083 -6.7924)')), -- Dar es Salaam, Tanzania
+('S120', 'Supermarket BR', ST_GeomFromText('POINT(36.8219 -1.2921)')), -- Nairobi, Kenya
+
+-- Trung Đông
+('S121', 'Supermarket BS', ST_GeomFromText('POINT(44.3661 33.3152)')), -- Baghdad, Iraq
+('S122', 'Supermarket BT', ST_GeomFromText('POINT(35.2137 31.7683)')), -- Jerusalem, Israel
+('S123', 'Supermarket BU', ST_GeomFromText('POINT(50.5647 26.2285)')), -- Manama, Bahrain
+('S124', 'Supermarket BV', ST_GeomFromText('POINT(58.3829 23.5859)')), -- Muscat, Oman
+('S125', 'Supermarket BW', ST_GeomFromText('POINT(51.5200 25.2854)')), -- Doha, Qatar
+
+-- Châu Á (các địa điểm bổ sung)
+('S126', 'Supermarket BX', ST_GeomFromText('POINT(126.9780 37.5665)')), -- Seoul, Hàn Quốc
+('S127', 'Supermarket BY', ST_GeomFromText('POINT(144.9631 -37.8136)')), -- Melbourne, Úc
+('S128', 'Supermarket BZ', ST_GeomFromText('POINT(139.6917 35.6895)')), -- Osaka, Nhật Bản
+('S129', 'Supermarket CA', ST_GeomFromText('POINT(72.8777 19.0760)')), -- Pune, Ấn Độ
+('S130', 'Supermarket CB', ST_GeomFromText('POINT(103.8198 1.3521)')), -- Johor Bahru, Malaysia
+
+-- Nga & khu vực lân cận
+('S131', 'Supermarket CC', ST_GeomFromText('POINT(37.6173 55.7558)')), -- Moscow, Nga
+('S132', 'Supermarket CD', ST_GeomFromText('POINT(30.3351 59.9343)')), -- Saint Petersburg, Nga
+('S133', 'Supermarket CE', ST_GeomFromText('POINT(27.5615 53.9006)')), -- Minsk, Belarus
+('S134', 'Supermarket CF', ST_GeomFromText('POINT(44.8024 41.7151)')), -- Tbilisi, Georgia
+('S135', 'Supermarket CG', ST_GeomFromText('POINT(69.2401 41.2995)')), -- Tashkent, Uzbekistan
+
+-- Các địa điểm khác trên thế giới
+('S136', 'Supermarket CH', ST_GeomFromText('POINT(-157.8583 21.3069)')), -- Honolulu, Hawaii, Mỹ
+('S137', 'Supermarket CI', ST_GeomFromText('POINT(-149.9003 61.2181)')), -- Anchorage, Alaska, Mỹ
+('S138', 'Supermarket CJ', ST_GeomFromText('POINT(-73.5712 45.5017)')), -- Montreal, Canada
+('S139', 'Supermarket CK', ST_GeomFromText('POINT(174.7633 -36.8485)')), -- Auckland, New Zealand
+('S140', 'Supermarket CL', ST_GeomFromText('POINT(55.5364 -20.8821)')), -- Saint-Denis, Réunion
+('S141', 'Supermarket CM', ST_GeomFromText('POINT(166.4572 -22.2558)')), -- Nouméa, New Caledonia
+('S142', 'Supermarket CN', ST_GeomFromText('POINT(-159.7711 -21.2129)')), -- Avarua, Cook Islands
+('S143', 'Supermarket CO', ST_GeomFromText('POINT(113.5547 -22.2855)')), -- Exmouth, Australia
+('S144', 'Supermarket CP', ST_GeomFromText('POINT(144.2517 -15.4609)')), -- Cooktown, Australia
+('S145', 'Supermarket CQ', ST_GeomFromText('POINT(-68.1193 -16.5000)')), -- Uyuni, Bolivia
+('S146', 'Supermarket CR', ST_GeomFromText('POINT(-5.8282 35.7550)')), -- Tangier, Morocco
+('S147', 'Supermarket CS', ST_GeomFromText('POINT(28.0473 -26.2041)')), -- Johannesburg, South Africa
+('S148', 'Supermarket CT', ST_GeomFromText('POINT(-79.0421 -8.1091)')), -- Trujillo, Peru
+('S149', 'Supermarket CU', ST_GeomFromText('POINT(-67.2510 -55.0512)')), -- Ushuaia, Argentina
+('S150', 'Supermarket CV', ST_GeomFromText('POINT(-58.3833 -34.6033)')); -- Montevideo, Uruguay
+
+
+
+
+
+
