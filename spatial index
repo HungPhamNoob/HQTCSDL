@@ -1,12 +1,12 @@
 use supermarket;
 
-DROP TABLE Store_Locations;
+-- DROP TABLE Store_Locations;
 
 CREATE TABLE Store_Locations (
     store_id CHAR(10) NOT NULL PRIMARY KEY,
     store_name VARCHAR(100) NOT NULL,
     location POINT NOT NULL 
-)
+);
 
 
 
@@ -21,7 +21,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S007', 'Supermarket G', ST_GeomFromText('POINT(105.858 21.034)')),
 ('S008', 'Supermarket H', ST_GeomFromText('POINT(105.859 21.028)')),
 ('S009', 'Supermarket I', ST_GeomFromText('POINT(105.851 21.031)')),
-('S010', 'Supermarket J', ST_GeomFromText('POINT(105.860 21.027)'));
+('S010', 'Supermarket J', ST_GeomFromText('POINT(105.860 21.027)')),
 ('S011', 'Supermarket K', ST_GeomFromText('POINT(105.870 21.040)')),
 ('S012', 'Supermarket L', ST_GeomFromText('POINT(105.875 21.045)')),
 ('S013', 'Supermarket M', ST_GeomFromText('POINT(105.880 21.050)')),
@@ -41,7 +41,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S027', 'Supermarket AA', ST_GeomFromText('POINT(105.950 21.120)')),
 ('S028', 'Supermarket BB', ST_GeomFromText('POINT(105.955 21.125)')),
 ('S029', 'Supermarket CC', ST_GeomFromText('POINT(105.960 21.130)')),
-('S030', 'Supermarket DD', ST_GeomFromText('POINT(105.965 21.135)'));
+('S030', 'Supermarket DD', ST_GeomFromText('POINT(105.965 21.135)')),
 ('S031', 'Supermarket EE', ST_GeomFromText('POINT(106.000 21.150)')),
 ('S032', 'Supermarket FF', ST_GeomFromText('POINT(106.050 21.180)')),
 ('S033', 'Supermarket GG', ST_GeomFromText('POINT(106.100 21.200)')),
@@ -61,7 +61,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S047', 'Supermarket UU', ST_GeomFromText('POINT(106.800 21.550)')),
 ('S048', 'Supermarket VV', ST_GeomFromText('POINT(106.850 21.570)')),
 ('S049', 'Supermarket WW', ST_GeomFromText('POINT(106.900 21.600)')),
-('S050', 'Supermarket XX', ST_GeomFromText('POINT(106.950 21.620)'));
+('S050', 'Supermarket XX', ST_GeomFromText('POINT(106.950 21.620)')),
 ('S051', 'Supermarket A', ST_GeomFromText('POINT(105.854 21.030)')),
 ('S052', 'Supermarket B', ST_GeomFromText('POINT(105.855 21.031)')),
 ('S053', 'Supermarket C', ST_GeomFromText('POINT(105.856 21.029)')),
@@ -111,7 +111,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S097', 'Supermarket UU', ST_GeomFromText('POINT(106.800 21.550)')),
 ('S098', 'Supermarket VV', ST_GeomFromText('POINT(106.850 21.570)')),
 ('S099', 'Supermarket WW', ST_GeomFromText('POINT(106.900 21.600)')),
-('S100', 'Supermarket XX', ST_GeomFromText('POINT(106.950 21.620)'));
+('S100', 'Supermarket XX', ST_GeomFromText('POINT(106.950 21.620)')),
 
 -- Châu Âu
 ('S101', 'Supermarket AY', ST_GeomFromText('POINT(13.4050 52.5200)')), -- Berlin, Đức
@@ -177,7 +177,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S147', 'Supermarket CS', ST_GeomFromText('POINT(28.0473 -26.2041)')), -- Johannesburg, South Africa
 ('S148', 'Supermarket CT', ST_GeomFromText('POINT(-79.0421 -8.1091)')), -- Trujillo, Peru
 ('S149', 'Supermarket CU', ST_GeomFromText('POINT(-67.2510 -55.0512)')), -- Ushuaia, Argentina
-('S150', 'Supermarket CV', ST_GeomFromText('POINT(-58.3833 -34.6033)')); -- Montevideo, Uruguay
+('S150', 'Supermarket CV', ST_GeomFromText('POINT(-58.3833 -34.6033)')), -- Montevideo, Uruguay
 -- Khu vực Đông Nam Á
 ('S151', 'Supermarket SEA1', ST_GeomFromText('POINT(103.851959 1.290270)')), -- Singapore
 ('S152', 'Supermarket SEA2', ST_GeomFromText('POINT(100.501765 13.756331)')), -- Bangkok, Thái Lan
@@ -244,7 +244,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S197', 'Supermarket RD7', ST_GeomFromText('POINT(-73.5673 45.5017)')), -- Montreal, Canada
 ('S198', 'Supermarket RD8', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Yokohama, Nhật Bản
 ('S199', 'Supermarket RD9', ST_GeomFromText('POINT(126.9780 37.5665)')), -- Seoul, Hàn Quốc
-('S200', 'Supermarket RD10', ST_GeomFromText('POINT(100.5168 13.7367)')); -- Bangkok, Thái Lan
+('S200', 'Supermarket RD10', ST_GeomFromText('POINT(100.5168 13.7367)')), -- Bangkok, Thái Lan
 
 -- Các siêu thị ở Bắc Mỹ
 ('S201', 'Supermarket A1', ST_GeomFromText('POINT(-118.2437 34.0522)')), -- Los Angeles, USA
@@ -312,7 +312,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S247', 'Supermarket I7', ST_GeomFromText('POINT(-46.6253 -23.5338)')), -- Rio de Janeiro, Brazil
 ('S248', 'Supermarket I8', ST_GeomFromText('POINT(28.9784 41.0082)')), -- Istanbul, Thổ Nhĩ Kỳ
 ('S249', 'Supermarket I9', ST_GeomFromText('POINT(103.8519 1.2903)')), -- Sentosa, Singapore
-('S250', 'Supermarket I10', ST_GeomFromText('POINT(-43.1729 -22.9068)')); -- Rio de Janeiro, Brazil
+('S250', 'Supermarket I10', ST_GeomFromText('POINT(-43.1729 -22.9068)')), -- Rio de Janeiro, Brazil
 
 -- Đông Nam Á
 ('S251', 'Supermarket A1', ST_GeomFromText('POINT(103.8198 1.3521)')), -- Singapore
@@ -380,7 +380,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S297', 'Supermarket J2', ST_GeomFromText('POINT(35.6892 139.6917)')), -- Yokohama, Nhật Bản
 ('S298', 'Supermarket J3', ST_GeomFromText('POINT(103.8519 1.2801)')), -- Sentosa, Singapore
 ('S299', 'Supermarket J4', ST_GeomFromText('POINT(-68.1193 44.3876)')), -- Bar Harbor, Maine, USA
-('S300', 'Supermarket J5', ST_GeomFromText('POINT(-123.3656 48.4284)')); -- Victoria, Canada
+('S300', 'Supermarket J5', ST_GeomFromText('POINT(-123.3656 48.4284)')), -- Victoria, Canada
 
 
 ('S301', 'Supermarket A1', ST_GeomFromText('POINT(-0.118092 51.509865)')), -- London, UK
@@ -441,7 +441,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S347', 'Supermarket J2', ST_GeomFromText('POINT(-43.1729 -22.9068)')), -- Rio de Janeiro, Brazil
 ('S348', 'Supermarket J3', ST_GeomFromText('POINT(11.5819 48.1351)')), -- Munich, Germany
 ('S349', 'Supermarket J4', ST_GeomFromText('POINT(135.7681 35.0116)')), -- Kyoto, Japan
-('S350', 'Supermarket J5', ST_GeomFromText('POINT(-0.0879 51.5116)')); -- London, UK
+('S350', 'Supermarket J5', ST_GeomFromText('POINT(-0.0879 51.5116)')), -- London, UK
 
 ('S351', 'Supermarket J1', ST_GeomFromText('POINT(139.6503 35.6762)')), -- Yokohama, Nhật Bản
 ('S352', 'Supermarket J2', ST_GeomFromText('POINT(2.1734 41.3851)')), -- Barcelona, Tây Ban Nha
@@ -508,7 +508,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S397', 'Supermarket R7', ST_GeomFromText('POINT(12.5683 55.6761)')), -- Copenhagen, Đan Mạch
 ('S398', 'Supermarket R8', ST_GeomFromText('POINT(174.7756 -41.2865)')), -- Wellington, New Zealand
 ('S399', 'Supermarket R9', ST_GeomFromText('POINT(-43.1729 -22.9068)')), -- Rio de Janeiro, Brazil
-('S400', 'Supermarket R10', ST_GeomFromText('POINT(-135.0000 -90.0000)')); -- Nam Cực (Giả định có 1 siêu thị cho nhà nghiên cứu)
+('S400', 'Supermarket R10', ST_GeomFromText('POINT(-135.0000 -90.0000)')), -- Nam Cực (Giả định có 1 siêu thị cho nhà nghiên cứu)
 
 
 ('S401', 'Supermarket K1', ST_GeomFromText('POINT(12.4964 41.9028)')), -- Rome, Italy
@@ -569,7 +569,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S447', 'Supermarket T2', ST_GeomFromText('POINT(144.9631 -37.8136)')), -- Melbourne, Australia
 ('S448', 'Supermarket T3', ST_GeomFromText('POINT(106.7038 10.7769)')), -- Ho Chi Minh City, Vietnam
 ('S449', 'Supermarket T4', ST_GeomFromText('POINT(105.8545 21.0285)')), -- Hanoi, Vietnam
-('S450', 'Supermarket T5', ST_GeomFromText('POINT(108.2272 16.0471)')); -- Da Nang, Vietnam
+('S450', 'Supermarket T5', ST_GeomFromText('POINT(108.2272 16.0471)')), -- Da Nang, Vietnam
 
 ('S451', 'Supermarket K1', ST_GeomFromText('POINT(37.9838 23.7275)')), -- Athens, Hy Lạp
 ('S452', 'Supermarket K2', ST_GeomFromText('POINT(30.5234 50.4501)')), -- Kyiv, Ukraine
@@ -630,4 +630,3 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S498', 'Supermarket T3', ST_GeomFromText('POINT(174.7762 -41.2865)')), -- Wellington, New Zealand
 ('S499', 'Supermarket T4', ST_GeomFromText('POINT(114.1577 22.2855)')), -- Hong Kong
 ('S500', 'Supermarket T5', ST_GeomFromText('POINT(151.2093 -33.8688)')); -- Sydney, Úc
-
