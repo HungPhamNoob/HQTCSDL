@@ -7,19 +7,28 @@ CREATE TABLE staff_salary_history (
     CHECK (start_date < end_date)        -- Ràng buộc logic thời gian
 );
 
-ALTER TABLE staff_salary_history
-ADD COLUMN time_range tsrange; -- Thêm cột mới dạng khoảng thời gian
+-- Xóa cột time_range nếu đã tồn tại
+ALTER TABLE staff_salary_history DROP COLUMN IF EXISTS time_range;
 
+-- Xóa Index cũ nếu đã tồn tại
+DROP INDEX IF EXISTS idx_staff_salary_btree;
+DROP INDEX IF EXISTS idx_staff_salary_gist;
+
+-- Thêm cột mới dạng khoảng thời gian
+ALTER TABLE staff_salary_history ADD COLUMN time_range tsrange;
+
+-- Gán giá trị cho cột mới
 UPDATE staff_salary_history
-SET time_range = tsrange(start_date, end_date, '[]'); -- Gán giá trị cho cột mới
+SET time_range = tsrange(start_date, end_date, '[]');
 
--- Tạo GIST Index (R-tree) cho truy vấn theo khoảng thời gian
+-- Tạo GIST Index (R-tree) chỉ trên time_range (KHÔNG có staff_id)
 CREATE INDEX idx_staff_salary_gist
 ON staff_salary_history USING GIST (time_range);
 
--- Hoặc B+-Tree giả lập Interval B+-Tree
+-- Tạo B+-Tree giả lập Interval B+-Tree
 CREATE INDEX idx_staff_salary_btree
 ON staff_salary_history (staff_id, start_date, end_date);
+
 
 
 
