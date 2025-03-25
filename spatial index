@@ -111,7 +111,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S097', 'Supermarket UU', ST_GeomFromText('LINESTRING(106.800 21.550, 106.801 21.551)')),
 ('S098', 'Supermarket VV', ST_GeomFromText('LINESTRING(106.850 21.570, 106.851 21.571)')),
 ('S099', 'Supermarket WW', ST_GeomFromText('LINESTRING(106.900 21.600, 106.901 21.601)')),
-('S100', 'Supermarket XX', ST_GeomFromText('LINESTRING(106.950 21.620, 106.951 21.621)'));
+('S100', 'Supermarket XX', ST_GeomFromText('LINESTRING(106.950 21.620, 106.951 21.621)')),
 
 -- Châu Âu
 ('S101', 'Supermarket AY', ST_GeomFromText('LINESTRING(13.4050 52.5200, 13.4050 52.5201)')), -- Berlin, Đức
@@ -177,7 +177,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S147', 'Supermarket CS', ST_GeomFromText('LINESTRING(28.0473 -26.2041, 28.0473 -26.2040)')), -- Johannesburg, South Africa
 ('S148', 'Supermarket CT', ST_GeomFromText('LINESTRING(-79.0421 -8.1091, -79.0421 -8.1090)')), -- Trujillo, Peru
 ('S149', 'Supermarket CU', ST_GeomFromText('LINESTRING(-67.2510 -55.0512, -67.2510 -55.0511)')), -- Ushuaia, Argentina
-('S150', 'Supermarket CV', ST_GeomFromText('LINESTRING(-58.3833 -34.6033, -58.3833 -34.6032)')) -- Montevideo, Uruguay
+('S150', 'Supermarket CV', ST_GeomFromText('LINESTRING(-58.3833 -34.6033, -58.3833 -34.6032)')), -- Montevideo, Uruguay
 -- Khu vực Đông Nam Á
 ('S151', 'Supermarket SEA1', ST_GeomFromText('LINESTRING(103.851959 1.290270, 103.852959 1.291270)')), -- Singapore
 ('S152', 'Supermarket SEA2', ST_GeomFromText('LINESTRING(100.501765 13.756331, 100.502765 13.757331)')), -- Bangkok, Thái Lan
@@ -244,7 +244,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S197', 'Supermarket RD7', ST_GeomFromText('LINESTRING(-73.5673 45.5017, -73.5663 45.5027)')), -- Montreal, Canada
 ('S198', 'Supermarket RD8', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Yokohama, Nhật Bản
 ('S199', 'Supermarket RD9', ST_GeomFromText('LINESTRING(126.9780 37.5665, 126.9790 37.5675)')), -- Seoul, Hàn Quốc
-('S200', 'Supermarket RD10', ST_GeomFromText('LINESTRING(100.5168 13.7367, 100.5178 13.7377)')) -- Bangkok, Thái Lan
+('S200', 'Supermarket RD10', ST_GeomFromText('LINESTRING(100.5168 13.7367, 100.5178 13.7377)')), -- Bangkok, Thái Lan
 
 -- Các siêu thị ở Bắc Mỹ
 ('S201', 'Supermarket A1', ST_GeomFromText('LINESTRING(-118.2437 34.0522, -118.2427 34.0532)')), -- Los Angeles, USA
@@ -312,7 +312,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S247', 'Supermarket I7', ST_GeomFromText('LINESTRING(-46.6253 -23.5338, -46.6243 -23.5328)')), -- Rio de Janeiro, Brazil
 ('S248', 'Supermarket I8', ST_GeomFromText('LINESTRING(28.9784 41.0082, 28.9794 41.0092)')), -- Istanbul, Thổ Nhĩ Kỳ
 ('S249', 'Supermarket I9', ST_GeomFromText('LINESTRING(103.8519 1.2903, 103.8529 1.2913)')), -- Sentosa, Singapore
-('S250', 'Supermarket I10', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')) -- Rio de Janeiro, Brazil
+('S250', 'Supermarket I10', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')), -- Rio de Janeiro, Brazil
 
 -- Đông Nam Á
 ('S251', 'Supermarket A1', ST_GeomFromText('LINESTRING(103.8198 1.3521, 103.8208 1.3531)')), -- Singapore
@@ -380,7 +380,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S297', 'Supermarket J2', ST_GeomFromText('LINESTRING(139.6917 35.6892, 139.6927 35.6902)')), -- Yokohama, Nhật Bản
 ('S298', 'Supermarket J3', ST_GeomFromText('LINESTRING(103.8519 1.2801, 103.8529 1.2811)')), -- Sentosa, Singapore
 ('S299', 'Supermarket J4', ST_GeomFromText('LINESTRING(-68.1193 44.3876, -68.1183 44.3886)')), -- Bar Harbor, Maine, USA
-('S300', 'Supermarket J5', ST_GeomFromText('LINESTRING(-123.3656 48.4284, -123.3646 48.4294)')) -- Victoria, Canada
+('S300', 'Supermarket J5', ST_GeomFromText('LINESTRING(-123.3656 48.4284, -123.3646 48.4294)')), -- Victoria, Canada
 
 
 ('S301', 'Supermarket A1', ST_GeomFromText('LINESTRING(-0.118092 51.509865, -0.117092 51.510865)')), -- London, UK
@@ -441,7 +441,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S347', 'Supermarket J2', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')), -- Rio de Janeiro, Brazil
 ('S348', 'Supermarket J3', ST_GeomFromText('LINESTRING(11.5819 48.1351, 11.5829 48.1361)')), -- Munich, Germany
 ('S349', 'Supermarket J4', ST_GeomFromText('LINESTRING(135.7681 35.0116, 135.7691 35.0126)')), -- Kyoto, Japan
-('S350', 'Supermarket J5', ST_GeomFromText('LINESTRING(-0.0879 51.5116, -0.0869 51.5126)')) -- London, UK
+('S350', 'Supermarket J5', ST_GeomFromText('LINESTRING(-0.0879 51.5116, -0.0869 51.5126)')), -- London, UK
 
 ('S351', 'Supermarket J1', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Yokohama, Nhật Bản
 ('S352', 'Supermarket J2', ST_GeomFromText('LINESTRING(2.1734 41.3851, 2.1744 41.3861)')), -- Barcelona, Tây Ban Nha
@@ -508,7 +508,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S397', 'Supermarket R7', ST_GeomFromText('LINESTRING(12.5683 55.6761, 12.5693 55.6771)')), -- Copenhagen, Đan Mạch
 ('S398', 'Supermarket R8', ST_GeomFromText('LINESTRING(174.7756 -41.2865, 174.7766 -41.2855)')), -- Wellington, New Zealand
 ('S399', 'Supermarket R9', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')), -- Rio de Janeiro, Brazil
-('S400', 'Supermarket R10', ST_GeomFromText('LINESTRING(-135.0000 -90.0000, -134.9990 -89.9990)')) -- Nam Cực (Giả định có 1 siêu thị cho nhà nghiên cứu)
+('S400', 'Supermarket R10', ST_GeomFromText('LINESTRING(-135.0000 -90.0000, -134.9990 -89.9990)')), -- Nam Cực (Giả định có 1 siêu thị cho nhà nghiên cứu)
 
 
 ('S401', 'Supermarket K1', ST_GeomFromText('LINESTRING(12.4964 41.9028, 12.4974 41.9038)')), -- Rome, Italy
@@ -569,7 +569,7 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S447', 'Supermarket T2', ST_GeomFromText('LINESTRING(144.9631 -37.8136, 144.9641 -37.8126)')), -- Melbourne, Australia
 ('S448', 'Supermarket T3', ST_GeomFromText('LINESTRING(106.7038 10.7769, 106.7048 10.7779)')), -- Ho Chi Minh City, Vietnam
 ('S449', 'Supermarket T4', ST_GeomFromText('LINESTRING(105.8545 21.0285, 105.8555 21.0295)')), -- Hanoi, Vietnam
-('S450', 'Supermarket T5', ST_GeomFromText('LINESTRING(108.2272 16.0471, 108.2282 16.0481)')) -- Da Nang, Vietnam
+('S450', 'Supermarket T5', ST_GeomFromText('LINESTRING(108.2272 16.0471, 108.2282 16.0481)')), -- Da Nang, Vietnam
 
 ('S451', 'Supermarket K1', ST_GeomFromText('LINESTRING(37.9838 23.7275, 37.9848 23.7285)')), -- Athens, Hy Lạp
 ('S452', 'Supermarket K2', ST_GeomFromText('LINESTRING(30.5234 50.4501, 30.5244 50.4511)')), -- Kyiv, Ukraine
@@ -630,4 +630,3 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S498', 'Supermarket T3', ST_GeomFromText('LINESTRING(174.7762 -41.2865, 174.7772 -41.2855)')), -- Wellington, New Zealand
 ('S499', 'Supermarket T4', ST_GeomFromText('LINESTRING(114.1577 22.2855, 114.1587 22.2865)')), -- Hong Kong
 ('S500', 'Supermarket T5', ST_GeomFromText('LINESTRING(151.2093 -33.8688, 151.2103 -33.8678)')); -- Sydney, Úc
-
