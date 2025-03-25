@@ -5,7 +5,7 @@ DROP TABLE Store_Locations;
 CREATE TABLE Store_Locations (
     store_id CHAR(10) NOT NULL PRIMARY KEY,
     store_name VARCHAR(100) NOT NULL,
-    location POINT NOT NULL 
+    location GEOMETRY NOT NULL 
 );
 
 
