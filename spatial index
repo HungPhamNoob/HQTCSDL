@@ -5,628 +5,644 @@ DROP TABLE Store_Locations;
 CREATE TABLE Store_Locations (
     store_id CHAR(10) NOT NULL PRIMARY KEY,
     store_name VARCHAR(100) NOT NULL,
-    location GEOMETRY NOT NULL 
+    location GEOMETRY NOT NULL SRID 4326
+    -- SRID 4326 hệ tọa độ chuẩn cho GPS, Google Maps và các ứng dụng bản đồ
 );
 
 
 
 -- 10 Store gần (bán kính 1km)
 INSERT INTO Store_Locations (store_id, store_name, location) VALUES 
-('S001', 'Supermarket A', ST_GeomFromText('LINESTRING(105.854 21.030, 105.855 21.031)')),
-('S002', 'Supermarket B', ST_GeomFromText('LINESTRING(105.855 21.031, 105.856 21.032)')),
-('S003', 'Supermarket C', ST_GeomFromText('LINESTRING(105.856 21.029, 105.857 21.030)')),
-('S004', 'Supermarket D', ST_GeomFromText('LINESTRING(105.857 21.032, 105.858 21.033)')),
-('S005', 'Supermarket E', ST_GeomFromText('LINESTRING(105.853 21.033, 105.854 21.034)')),
-('S006', 'Supermarket F', ST_GeomFromText('LINESTRING(105.852 21.030, 105.853 21.031)')),
-('S007', 'Supermarket G', ST_GeomFromText('LINESTRING(105.858 21.034, 105.859 21.035)')),
-('S008', 'Supermarket H', ST_GeomFromText('LINESTRING(105.859 21.028, 105.860 21.029)')),
-('S009', 'Supermarket I', ST_GeomFromText('LINESTRING(105.851 21.031, 105.852 21.032)')),
-('S010', 'Supermarket J', ST_GeomFromText('LINESTRING(105.860 21.027, 105.861 21.028)')),
-('S011', 'Supermarket K', ST_GeomFromText('LINESTRING(105.870 21.040, 105.871 21.041)')),
-('S012', 'Supermarket L', ST_GeomFromText('LINESTRING(105.875 21.045, 105.876 21.046)')),
-('S013', 'Supermarket M', ST_GeomFromText('LINESTRING(105.880 21.050, 105.881 21.051)')),
-('S014', 'Supermarket N', ST_GeomFromText('LINESTRING(105.885 21.055, 105.886 21.056)')),
-('S015', 'Supermarket O', ST_GeomFromText('LINESTRING(105.890 21.060, 105.891 21.061)')),
-('S016', 'Supermarket P', ST_GeomFromText('LINESTRING(105.895 21.065, 105.896 21.066)')),
-('S017', 'Supermarket Q', ST_GeomFromText('LINESTRING(105.900 21.070, 105.901 21.071)')),
-('S018', 'Supermarket R', ST_GeomFromText('LINESTRING(105.905 21.075, 105.906 21.076)')),
-('S019', 'Supermarket S', ST_GeomFromText('LINESTRING(105.910 21.080, 105.911 21.081)')),
-('S020', 'Supermarket T', ST_GeomFromText('LINESTRING(105.915 21.085, 105.916 21.086)')),
-('S021', 'Supermarket U', ST_GeomFromText('LINESTRING(105.920 21.090, 105.921 21.091)')),
-('S022', 'Supermarket V', ST_GeomFromText('LINESTRING(105.925 21.095, 105.926 21.096)')),
-('S023', 'Supermarket W', ST_GeomFromText('LINESTRING(105.930 21.100, 105.931 21.101)')),
-('S024', 'Supermarket X', ST_GeomFromText('LINESTRING(105.935 21.105, 105.936 21.106)')),
-('S025', 'Supermarket Y', ST_GeomFromText('LINESTRING(105.940 21.110, 105.941 21.111)')),
-('S026', 'Supermarket Z', ST_GeomFromText('LINESTRING(105.945 21.115, 105.946 21.116)')),
-('S027', 'Supermarket AA', ST_GeomFromText('LINESTRING(105.950 21.120, 105.951 21.121)')),
-('S028', 'Supermarket BB', ST_GeomFromText('LINESTRING(105.955 21.125, 105.956 21.126)')),
-('S029', 'Supermarket CC', ST_GeomFromText('LINESTRING(105.960 21.130, 105.961 21.131)')),
-('S030', 'Supermarket DD', ST_GeomFromText('LINESTRING(105.965 21.135, 105.966 21.136)')),
-('S031', 'Supermarket EE', ST_GeomFromText('LINESTRING(106.000 21.150, 106.001 21.151)')),
-('S032', 'Supermarket FF', ST_GeomFromText('LINESTRING(106.050 21.180, 106.051 21.181)')),
-('S033', 'Supermarket GG', ST_GeomFromText('LINESTRING(106.100 21.200, 106.101 21.201)')),
-('S034', 'Supermarket HH', ST_GeomFromText('LINESTRING(106.150 21.220, 106.151 21.221)')),
-('S035', 'Supermarket II', ST_GeomFromText('LINESTRING(106.200 21.250, 106.201 21.251)')),
-('S036', 'Supermarket JJ', ST_GeomFromText('LINESTRING(106.250 21.270, 106.251 21.271)')),
-('S037', 'Supermarket KK', ST_GeomFromText('LINESTRING(106.300 21.300, 106.301 21.301)')),
-('S038', 'Supermarket LL', ST_GeomFromText('LINESTRING(106.350 21.320, 106.351 21.321)')),
-('S039', 'Supermarket MM', ST_GeomFromText('LINESTRING(106.400 21.350, 106.401 21.351)')),
-('S040', 'Supermarket NN', ST_GeomFromText('LINESTRING(106.450 21.370, 106.451 21.371)')),
-('S041', 'Supermarket OO', ST_GeomFromText('LINESTRING(106.500 21.400, 106.501 21.401)')),
-('S042', 'Supermarket PP', ST_GeomFromText('LINESTRING(106.550 21.420, 106.551 21.421)')),
-('S043', 'Supermarket QQ', ST_GeomFromText('LINESTRING(106.600 21.450, 106.601 21.451)')),
-('S044', 'Supermarket RR', ST_GeomFromText('LINESTRING(106.650 21.470, 106.651 21.471)')),
-('S045', 'Supermarket SS', ST_GeomFromText('LINESTRING(106.700 21.500, 106.701 21.501)')),
-('S046', 'Supermarket TT', ST_GeomFromText('LINESTRING(106.750 21.520, 106.751 21.521)')),
-('S047', 'Supermarket UU', ST_GeomFromText('LINESTRING(106.800 21.550, 106.801 21.551)')),
-('S048', 'Supermarket VV', ST_GeomFromText('LINESTRING(106.850 21.570, 106.851 21.571)')),
-('S049', 'Supermarket WW', ST_GeomFromText('LINESTRING(106.900 21.600, 106.901 21.601)')),
-('S050', 'Supermarket XX', ST_GeomFromText('LINESTRING(106.950 21.620, 106.951 21.621)')),
-('S051', 'Supermarket A', ST_GeomFromText('LINESTRING(105.854 21.030, 105.855 21.031)')),
-('S052', 'Supermarket B', ST_GeomFromText('LINESTRING(105.855 21.031, 105.856 21.032)')),
-('S053', 'Supermarket C', ST_GeomFromText('LINESTRING(105.856 21.029, 105.857 21.030)')),
-('S054', 'Supermarket D', ST_GeomFromText('LINESTRING(105.857 21.032, 105.858 21.033)')),
-('S055', 'Supermarket E', ST_GeomFromText('LINESTRING(105.853 21.033, 105.854 21.034)')),
-('S056', 'Supermarket F', ST_GeomFromText('LINESTRING(105.852 21.030, 105.853 21.031)')),
-('S057', 'Supermarket G', ST_GeomFromText('LINESTRING(105.858 21.034, 105.859 21.035)')),
-('S058', 'Supermarket H', ST_GeomFromText('LINESTRING(105.859 21.028, 105.860 21.029)')),
-('S059', 'Supermarket I', ST_GeomFromText('LINESTRING(105.851 21.031, 105.852 21.032)')),
-('S060', 'Supermarket J', ST_GeomFromText('LINESTRING(105.860 21.027, 105.861 21.028)')),
-('S061', 'Supermarket K', ST_GeomFromText('LINESTRING(105.870 21.040, 105.871 21.041)')),
-('S062', 'Supermarket L', ST_GeomFromText('LINESTRING(105.875 21.045, 105.876 21.046)')),
-('S063', 'Supermarket M', ST_GeomFromText('LINESTRING(105.880 21.050, 105.881 21.051)')),
-('S064', 'Supermarket N', ST_GeomFromText('LINESTRING(105.885 21.055, 105.886 21.056)')),
-('S065', 'Supermarket O', ST_GeomFromText('LINESTRING(105.890 21.060, 105.891 21.061)')),
-('S066', 'Supermarket P', ST_GeomFromText('LINESTRING(105.895 21.065, 105.896 21.066)')),
-('S067', 'Supermarket Q', ST_GeomFromText('LINESTRING(105.900 21.070, 105.901 21.071)')),
-('S068', 'Supermarket R', ST_GeomFromText('LINESTRING(105.905 21.075, 105.906 21.076)')),
-('S069', 'Supermarket S', ST_GeomFromText('LINESTRING(105.910 21.080, 105.911 21.081)')),
-('S070', 'Supermarket T', ST_GeomFromText('LINESTRING(105.915 21.085, 105.916 21.086)')),
-('S071', 'Supermarket U', ST_GeomFromText('LINESTRING(105.920 21.090, 105.921 21.091)')),
-('S072', 'Supermarket V', ST_GeomFromText('LINESTRING(105.925 21.095, 105.926 21.096)')),
-('S073', 'Supermarket W', ST_GeomFromText('LINESTRING(105.930 21.100, 105.931 21.101)')),
-('S074', 'Supermarket X', ST_GeomFromText('LINESTRING(105.935 21.105, 105.936 21.106)')),
-('S075', 'Supermarket Y', ST_GeomFromText('LINESTRING(105.940 21.110, 105.941 21.111)')),
-('S076', 'Supermarket Z', ST_GeomFromText('LINESTRING(105.945 21.115, 105.946 21.116)')),
-('S077', 'Supermarket AA', ST_GeomFromText('LINESTRING(105.950 21.120, 105.951 21.121)')),
-('S078', 'Supermarket BB', ST_GeomFromText('LINESTRING(105.955 21.125, 105.956 21.126)')),
-('S079', 'Supermarket CC', ST_GeomFromText('LINESTRING(105.960 21.130, 105.961 21.131)')),
-('S080', 'Supermarket DD', ST_GeomFromText('LINESTRING(105.965 21.135, 105.966 21.136)')),
-('S081', 'Supermarket EE', ST_GeomFromText('LINESTRING(106.000 21.150, 106.001 21.151)')),
-('S082', 'Supermarket FF', ST_GeomFromText('LINESTRING(106.050 21.180, 106.051 21.181)')),
-('S083', 'Supermarket GG', ST_GeomFromText('LINESTRING(106.100 21.200, 106.101 21.201)')),
-('S084', 'Supermarket HH', ST_GeomFromText('LINESTRING(106.150 21.220, 106.151 21.221)')),
-('S085', 'Supermarket II', ST_GeomFromText('LINESTRING(106.200 21.250, 106.201 21.251)')),
-('S086', 'Supermarket JJ', ST_GeomFromText('LINESTRING(106.250 21.270, 106.251 21.271)')),
-('S087', 'Supermarket KK', ST_GeomFromText('LINESTRING(106.300 21.300, 106.301 21.301)')),
-('S088', 'Supermarket LL', ST_GeomFromText('LINESTRING(106.350 21.320, 106.351 21.321)')),
-('S089', 'Supermarket MM', ST_GeomFromText('LINESTRING(106.400 21.350, 106.401 21.351)')),
-('S090', 'Supermarket NN', ST_GeomFromText('LINESTRING(106.450 21.370, 106.451 21.371)')),
-('S091', 'Supermarket OO', ST_GeomFromText('LINESTRING(106.500 21.400, 106.501 21.401)')),
-('S092', 'Supermarket PP', ST_GeomFromText('LINESTRING(106.550 21.420, 106.551 21.421)')),
-('S093', 'Supermarket QQ', ST_GeomFromText('LINESTRING(106.600 21.450, 106.601 21.451)')),
-('S094', 'Supermarket RR', ST_GeomFromText('LINESTRING(106.650 21.470, 106.651 21.471)')),
-('S095', 'Supermarket SS', ST_GeomFromText('LINESTRING(106.700 21.500, 106.701 21.501)')),
-('S096', 'Supermarket TT', ST_GeomFromText('LINESTRING(106.750 21.520, 106.751 21.521)')),
-('S097', 'Supermarket UU', ST_GeomFromText('LINESTRING(106.800 21.550, 106.801 21.551)')),
-('S098', 'Supermarket VV', ST_GeomFromText('LINESTRING(106.850 21.570, 106.851 21.571)')),
-('S099', 'Supermarket WW', ST_GeomFromText('LINESTRING(106.900 21.600, 106.901 21.601)')),
-('S100', 'Supermarket XX', ST_GeomFromText('LINESTRING(106.950 21.620, 106.951 21.621)')),
+('S001', 'Supermarket A', ST_GeomFromText('LINESTRING(21.030 105.854, 21.031 105.855)', 4326)),
+('S002', 'Supermarket B', ST_GeomFromText('LINESTRING(21.031 105.855, 21.032 105.856)', 4326)),
+('S003', 'Supermarket C', ST_GeomFromText('LINESTRING(21.029 105.856, 21.030 105.857)', 4326)),
+('S004', 'Supermarket D', ST_GeomFromText('LINESTRING(21.032 105.857, 21.033 105.858)', 4326)),
+('S005', 'Supermarket E', ST_GeomFromText('LINESTRING(21.033 105.853, 21.034 105.854)', 4326)),
+('S006', 'Supermarket F', ST_GeomFromText('LINESTRING(21.030 105.852, 21.031 105.853)', 4326)),
+('S007', 'Supermarket G', ST_GeomFromText('LINESTRING(21.034 105.858, 21.035 105.859)', 4326)),
+('S008', 'Supermarket H', ST_GeomFromText('LINESTRING(21.028 105.859, 21.029 105.860)', 4326)),
+('S009', 'Supermarket I', ST_GeomFromText('LINESTRING(21.031 105.851, 21.032 105.852)', 4326)),
+('S010', 'Supermarket J', ST_GeomFromText('LINESTRING(21.027 105.860, 21.028 105.861)', 4326)),
+('S011', 'Supermarket K', ST_GeomFromText('LINESTRING(21.040 105.870, 21.041 105.871)', 4326)),
+('S012', 'Supermarket L', ST_GeomFromText('LINESTRING(21.045 105.875, 21.046 105.876)', 4326)),
+('S013', 'Supermarket M', ST_GeomFromText('LINESTRING(21.050 105.880, 21.051 105.881)', 4326)),
+('S014', 'Supermarket N', ST_GeomFromText('LINESTRING(21.055 105.885, 21.056 105.886)', 4326)),
+('S015', 'Supermarket O', ST_GeomFromText('LINESTRING(21.060 105.890, 21.061 105.891)', 4326)),
+('S016', 'Supermarket P', ST_GeomFromText('LINESTRING(21.065 105.895, 21.066 105.896)', 4326)),
+('S017', 'Supermarket Q', ST_GeomFromText('LINESTRING(21.070 105.900, 21.071 105.901)', 4326)),
+('S018', 'Supermarket R', ST_GeomFromText('LINESTRING(21.075 105.905, 21.076 105.906)', 4326)),
+('S019', 'Supermarket S', ST_GeomFromText('LINESTRING(21.080 105.910, 21.081 105.911)', 4326)),
+('S020', 'Supermarket T', ST_GeomFromText('LINESTRING(21.085 105.915, 21.086 105.916)', 4326)),
+('S021', 'Supermarket U', ST_GeomFromText('LINESTRING(21.090 105.920, 21.091 105.921)', 4326)),
+('S022', 'Supermarket V', ST_GeomFromText('LINESTRING(21.095 105.925, 21.096 105.926)', 4326)),
+('S023', 'Supermarket W', ST_GeomFromText('LINESTRING(21.100 105.930, 21.101 105.931)', 4326)),
+('S024', 'Supermarket X', ST_GeomFromText('LINESTRING(21.105 105.935, 21.106 105.936)', 4326)),
+('S025', 'Supermarket Y', ST_GeomFromText('LINESTRING(21.110 105.940, 21.111 105.941)', 4326)),
+('S026', 'Supermarket Z', ST_GeomFromText('LINESTRING(21.115 105.945, 21.116 105.946)', 4326)),
+('S027', 'Supermarket AA', ST_GeomFromText('LINESTRING(21.120 105.950, 21.121 105.951)', 4326)),
+('S028', 'Supermarket BB', ST_GeomFromText('LINESTRING(21.125 105.955, 21.126 105.956)', 4326)),
+('S029', 'Supermarket CC', ST_GeomFromText('LINESTRING(21.130 105.960, 21.131 105.961)', 4326)),
+('S030', 'Supermarket DD', ST_GeomFromText('LINESTRING(21.135 105.965, 21.136 105.966)', 4326)),
+('S031', 'Supermarket EE', ST_GeomFromText('LINESTRING(21.150 106.000, 21.151 106.001)', 4326)),
+('S032', 'Supermarket FF', ST_GeomFromText('LINESTRING(21.180 106.050, 21.181 106.051)', 4326)),
+('S033', 'Supermarket GG', ST_GeomFromText('LINESTRING(21.200 106.100, 21.201 106.101)', 4326)),
+('S034', 'Supermarket HH', ST_GeomFromText('LINESTRING(21.220 106.150, 21.221 106.151)', 4326)),
+('S035', 'Supermarket II', ST_GeomFromText('LINESTRING(21.250 106.200, 21.251 106.201)', 4326)),
+('S036', 'Supermarket JJ', ST_GeomFromText('LINESTRING(21.270 106.250, 21.271 106.251)', 4326)),
+('S037', 'Supermarket KK', ST_GeomFromText('LINESTRING(21.300 106.300, 21.301 106.301)', 4326)),
+('S038', 'Supermarket LL', ST_GeomFromText('LINESTRING(21.320 106.350, 21.321 106.351)', 4326)),
+('S039', 'Supermarket MM', ST_GeomFromText('LINESTRING(21.350 106.400, 21.351 106.401)', 4326)),
+('S040', 'Supermarket NN', ST_GeomFromText('LINESTRING(21.370 106.450, 21.371 106.451)', 4326)),
+('S041', 'Supermarket OO', ST_GeomFromText('LINESTRING(21.400 106.500, 21.401 106.501)', 4326)),
+('S042', 'Supermarket PP', ST_GeomFromText('LINESTRING(21.420 106.550, 21.421 106.551)', 4326)),
+('S043', 'Supermarket QQ', ST_GeomFromText('LINESTRING(21.450 106.600, 21.451 106.601)', 4326)),
+('S044', 'Supermarket RR', ST_GeomFromText('LINESTRING(21.470 106.650, 21.471 106.651)', 4326)),
+('S045', 'Supermarket SS', ST_GeomFromText('LINESTRING(21.500 106.700, 21.501 106.701)', 4326)),
+('S046', 'Supermarket TT', ST_GeomFromText('LINESTRING(21.520 106.750, 21.521 106.751)', 4326)),
+('S047', 'Supermarket UU', ST_GeomFromText('LINESTRING(21.550 106.800, 21.551 106.801)', 4326)),
+('S048', 'Supermarket VV', ST_GeomFromText('LINESTRING(21.570 106.850, 21.571 106.851)', 4326)),
+('S049', 'Supermarket WW', ST_GeomFromText('LINESTRING(21.600 106.900, 21.601 106.901)', 4326)),
+('S050', 'Supermarket XX', ST_GeomFromText('LINESTRING(21.620 106.950, 21.621 106.951)', 4326)),
+('S051', 'Supermarket A', ST_GeomFromText('LINESTRING(21.030 105.854, 21.031 105.855)', 4326)),
+('S052', 'Supermarket B', ST_GeomFromText('LINESTRING(21.031 105.855, 21.032 105.856)', 4326)),
+('S053', 'Supermarket C', ST_GeomFromText('LINESTRING(21.029 105.856, 21.030 105.857)', 4326)),
+('S054', 'Supermarket D', ST_GeomFromText('LINESTRING(21.032 105.857, 21.033 105.858)', 4326)),
+('S055', 'Supermarket E', ST_GeomFromText('LINESTRING(21.033 105.853, 21.034 105.854)', 4326)),
+('S056', 'Supermarket F', ST_GeomFromText('LINESTRING(21.030 105.852, 21.031 105.853)', 4326)),
+('S057', 'Supermarket G', ST_GeomFromText('LINESTRING(21.034 105.858, 21.035 105.859)', 4326)),
+('S058', 'Supermarket H', ST_GeomFromText('LINESTRING(21.028 105.859, 21.029 105.860)', 4326)),
+('S059', 'Supermarket I', ST_GeomFromText('LINESTRING(21.031 105.851, 21.032 105.852)', 4326)),
+('S060', 'Supermarket J', ST_GeomFromText('LINESTRING(21.027 105.860, 21.028 105.861)', 4326)),
+('S061', 'Supermarket K', ST_GeomFromText('LINESTRING(21.040 105.870, 21.041 105.871)', 4326)),
+('S062', 'Supermarket L', ST_GeomFromText('LINESTRING(21.045 105.875, 21.046 105.876)', 4326)),
+('S063', 'Supermarket M', ST_GeomFromText('LINESTRING(21.050 105.880, 21.051 105.881)', 4326)),
+('S064', 'Supermarket N', ST_GeomFromText('LINESTRING(21.055 105.885, 21.056 105.886)', 4326)),
+('S065', 'Supermarket O', ST_GeomFromText('LINESTRING(21.060 105.890, 21.061 105.891)', 4326)),
+('S066', 'Supermarket P', ST_GeomFromText('LINESTRING(21.065 105.895, 21.066 105.896)', 4326)),
+('S067', 'Supermarket Q', ST_GeomFromText('LINESTRING(21.070 105.900, 21.071 105.901)', 4326)),
+('S068', 'Supermarket R', ST_GeomFromText('LINESTRING(21.075 105.905, 21.076 105.906)', 4326)),
+('S069', 'Supermarket S', ST_GeomFromText('LINESTRING(21.080 105.910, 21.081 105.911)', 4326)),
+('S070', 'Supermarket T', ST_GeomFromText('LINESTRING(21.085 105.915, 21.086 105.916)', 4326)),
+('S071', 'Supermarket U', ST_GeomFromText('LINESTRING(21.090 105.920, 21.091 105.921)', 4326)),
+('S072', 'Supermarket V', ST_GeomFromText('LINESTRING(21.095 105.925, 21.096 105.926)', 4326)),
+('S073', 'Supermarket W', ST_GeomFromText('LINESTRING(21.100 105.930, 21.101 105.931)', 4326)),
+('S074', 'Supermarket X', ST_GeomFromText('LINESTRING(21.105 105.935, 21.106 105.936)', 4326)),
+('S075', 'Supermarket Y', ST_GeomFromText('LINESTRING(21.110 105.940, 21.111 105.941)', 4326)),
+('S076', 'Supermarket Z', ST_GeomFromText('LINESTRING(21.115 105.945, 21.116 105.946)', 4326)),
+('S077', 'Supermarket AA', ST_GeomFromText('LINESTRING(21.120 105.950, 21.121 105.951)', 4326)),
+('S078', 'Supermarket BB', ST_GeomFromText('LINESTRING(21.125 105.955, 21.126 105.956)', 4326)),
+('S079', 'Supermarket CC', ST_GeomFromText('LINESTRING(21.130 105.960, 21.131 105.961)', 4326)),
+('S080', 'Supermarket DD', ST_GeomFromText('LINESTRING(21.135 105.965, 21.136 105.966)', 4326)),
+('S081', 'Supermarket EE', ST_GeomFromText('LINESTRING(21.150 106.000, 21.151 106.001)', 4326)),
+('S082', 'Supermarket FF', ST_GeomFromText('LINESTRING(21.180 106.050, 21.181 106.051)', 4326)),
+('S083', 'Supermarket GG', ST_GeomFromText('LINESTRING(21.200 106.100, 21.201 106.101)', 4326)),
+('S084', 'Supermarket HH', ST_GeomFromText('LINESTRING(21.220 106.150, 21.221 106.151)', 4326)),
+('S085', 'Supermarket II', ST_GeomFromText('LINESTRING(21.250 106.200, 21.251 106.201)', 4326)),
+('S086', 'Supermarket JJ', ST_GeomFromText('LINESTRING(21.270 106.250, 21.271 106.251)', 4326)),
+('S087', 'Supermarket KK', ST_GeomFromText('LINESTRING(21.300 106.300, 21.301 106.301)', 4326)),
+('S088', 'Supermarket LL', ST_GeomFromText('LINESTRING(21.320 106.350, 21.321 106.351)', 4326)),
+('S089', 'Supermarket MM', ST_GeomFromText('LINESTRING(21.350 106.400, 21.351 106.401)', 4326)),
+('S090', 'Supermarket NN', ST_GeomFromText('LINESTRING(21.370 106.450, 21.371 106.451)', 4326)),
+('S091', 'Supermarket OO', ST_GeomFromText('LINESTRING(21.400 106.500, 21.401 106.501)', 4326)),
+('S092', 'Supermarket PP', ST_GeomFromText('LINESTRING(21.420 106.550, 21.421 106.551)', 4326)),
+('S093', 'Supermarket QQ', ST_GeomFromText('LINESTRING(21.450 106.600, 21.451 106.601)', 4326)),
+('S094', 'Supermarket RR', ST_GeomFromText('LINESTRING(21.470 106.650, 21.471 106.651)', 4326)),
+('S095', 'Supermarket SS', ST_GeomFromText('LINESTRING(21.500 106.700, 21.501 106.701)', 4326)),
+('S096', 'Supermarket TT', ST_GeomFromText('LINESTRING(21.520 106.750, 21.521 106.751)', 4326)),
+('S097', 'Supermarket UU', ST_GeomFromText('LINESTRING(21.550 106.800, 21.551 106.801)', 4326)),
+('S098', 'Supermarket VV', ST_GeomFromText('LINESTRING(21.570 106.850, 21.571 106.851)', 4326)),
+('S099', 'Supermarket WW', ST_GeomFromText('LINESTRING(21.600 106.900, 21.601 106.901)', 4326)),
+('S100', 'Supermarket XX', ST_GeomFromText('LINESTRING(21.620 106.950, 21.621 106.951)', 4326)),
+
+
 
 -- Châu Âu
-('S101', 'Supermarket AY', ST_GeomFromText('LINESTRING(13.4050 52.5200, 13.4050 52.5201)')), -- Berlin, Đức
-('S102', 'Supermarket AZ', ST_GeomFromText('LINESTRING(12.4964 41.9028, 12.4964 41.9029)')), -- Rome, Ý
-('S103', 'Supermarket BA', ST_GeomFromText('LINESTRING(-3.7038 40.4168, -3.7038 40.4169)')), -- Madrid, Tây Ban Nha
-('S104', 'Supermarket BB', ST_GeomFromText('LINESTRING(4.9041 52.3676, 4.9041 52.3677)')), -- Amsterdam, Hà Lan
-('S105', 'Supermarket BC', ST_GeomFromText('LINESTRING(18.0686 59.3293, 18.0686 59.3294)')), -- Stockholm, Thụy Điển
-
+('S101', 'Supermarket AY', ST_GeomFromText('LINESTRING(13.4050 52.5200, 13.4050 52.5201)', 4326)), -- Berlin, Đức
+('S102', 'Supermarket AZ', ST_GeomFromText('LINESTRING(12.4964 41.9028, 12.4964 41.9029)', 4326)), -- Rome, Ý
+('S103', 'Supermarket BA', ST_GeomFromText('LINESTRING(-3.7038 40.4168, -3.7038 40.4169)', 4326)), -- Madrid, Tây Ban Nha
+('S104', 'Supermarket BB', ST_GeomFromText('LINESTRING(4.9041 52.3676, 4.9041 52.3677)', 4326)), -- Amsterdam, Hà Lan
+('S105', 'Supermarket BC', ST_GeomFromText('LINESTRING(18.0686 59.3293, 18.0686 59.3294)', 4326)), -- Stockholm, Thụy Điển
 -- Bắc Mỹ
-('S106', 'Supermarket BD', ST_GeomFromText('LINESTRING(-118.2437 34.0522, -118.2437 34.0523)')), -- Los Angeles, Mỹ
-('S107', 'Supermarket BE', ST_GeomFromText('LINESTRING(-87.6298 41.8781, -87.6298 41.8782)')), -- Chicago, Mỹ
-('S108', 'Supermarket BF', ST_GeomFromText('LINESTRING(-79.3832 43.6532, -79.3832 43.6533)')), -- Toronto, Canada
-('S109', 'Supermarket BG', ST_GeomFromText('LINESTRING(-123.1216 49.2827, -123.1216 49.2828)')), -- Vancouver, Canada
-('S110', 'Supermarket BH', ST_GeomFromText('LINESTRING(-99.1332 19.4326, -99.1332 19.4327)')), -- Mexico City, Mexico
+('S106', 'Supermarket BD', ST_GeomFromText('LINESTRING(34.0522 -118.2437, 34.0523 -118.2437)', 4326)), -- Los Angeles, Mỹ
+('S107', 'Supermarket BE', ST_GeomFromText('LINESTRING(41.8781 -87.6298, 41.8782 -87.6298)', 4326)), -- Chicago, Mỹ
+('S108', 'Supermarket BF', ST_GeomFromText('LINESTRING(43.6532 -79.3832, 43.6533 -79.3832)', 4326)), -- Toronto, Canada
+('S109', 'Supermarket BG', ST_GeomFromText('LINESTRING(49.2827 -123.1216, 49.2828 -123.1216)', 4326)), -- Vancouver, Canada
+('S110', 'Supermarket BH', ST_GeomFromText('LINESTRING(19.4326 -99.1332, 19.4327 -99.1332)', 4326)), -- Mexico City, Mexico
 
 -- Nam Mỹ
-('S111', 'Supermarket BI', ST_GeomFromText('LINESTRING(-46.6333 -23.5505, -46.6333 -23.5504)')), -- São Paulo, Brazil
-('S112', 'Supermarket BJ', ST_GeomFromText('LINESTRING(-58.3816 -34.6037, -58.3816 -34.6036)')), -- Buenos Aires, Argentina
-('S113', 'Supermarket BK', ST_GeomFromText('LINESTRING(-74.0721 4.7110, -74.0721 4.7111)')), -- Bogotá, Colombia
-('S114', 'Supermarket BL', ST_GeomFromText('LINESTRING(-77.0282 -12.0464, -77.0282 -12.0463)')), -- Lima, Peru
-('S115', 'Supermarket BM', ST_GeomFromText('LINESTRING(-68.1193 -16.5000, -68.1193 -16.4999)')), -- La Paz, Bolivia
+('S111', 'Supermarket BI', ST_GeomFromText('LINESTRING(-23.5505 -46.6333, -23.5504 -46.6333)', 4326)), -- São Paulo, Brazil
+('S112', 'Supermarket BJ', ST_GeomFromText('LINESTRING(-34.6037 -58.3816, -34.6036 -58.3816)', 4326)), -- Buenos Aires, Argentina
+('S113', 'Supermarket BK', ST_GeomFromText('LINESTRING(4.7110 -74.0721, 4.7111 -74.0721)', 4326)), -- Bogotá, Colombia
+('S114', 'Supermarket BL', ST_GeomFromText('LINESTRING(-12.0464 -77.0282, -12.0463 -77.0282)', 4326)), -- Lima, Peru
+('S115', 'Supermarket BM', ST_GeomFromText('LINESTRING(-16.5000 -68.1193, -16.4999 -68.1193)', 4326)), -- La Paz, Bolivia
 
 -- Châu Phi
-('S116', 'Supermarket BN', ST_GeomFromText('LINESTRING(31.2357 30.0444, 31.2357 30.0445)')), -- Cairo, Ai Cập
-('S117', 'Supermarket BO', ST_GeomFromText('LINESTRING(18.4241 -33.9249, 18.4241 -33.9248)')), -- Cape Town, Nam Phi
-('S118', 'Supermarket BP', ST_GeomFromText('LINESTRING(3.3792 6.5244, 3.3792 6.5245)')), -- Lagos, Nigeria
-('S119', 'Supermarket BQ', ST_GeomFromText('LINESTRING(39.2083 -6.7924, 39.2083 -6.7923)')), -- Dar es Salaam, Tanzania
-('S120', 'Supermarket BR', ST_GeomFromText('LINESTRING(36.8219 -1.2921, 36.8219 -1.2920)')), -- Nairobi, Kenya
+('S116', 'Supermarket BN', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0445 31.2357)', 4326)), -- Cairo, Ai Cập
+('S117', 'Supermarket BO', ST_GeomFromText('LINESTRING(-33.9249 18.4241, -33.9248 18.4241)', 4326)), -- Cape Town, Nam Phi
+('S118', 'Supermarket BP', ST_GeomFromText('LINESTRING(6.5244 3.3792, 6.5245 3.3792)', 4326)), -- Lagos, Nigeria
+('S119', 'Supermarket BQ', ST_GeomFromText('LINESTRING(-6.7924 39.2083, -6.7923 39.2083)', 4326)), -- Dar es Salaam, Tanzania
+('S120', 'Supermarket BR', ST_GeomFromText('LINESTRING(-1.2921 36.8219, -1.2920 36.8219)', 4326)), -- Nairobi, Kenya
 
 -- Trung Đông
-('S121', 'Supermarket BS', ST_GeomFromText('LINESTRING(44.3661 33.3152, 44.3661 33.3153)')), -- Baghdad, Iraq
-('S122', 'Supermarket BT', ST_GeomFromText('LINESTRING(35.2137 31.7683, 35.2137 31.7684)')), -- Jerusalem, Israel
-('S123', 'Supermarket BU', ST_GeomFromText('LINESTRING(50.5647 26.2285, 50.5647 26.2286)')), -- Manama, Bahrain
-('S124', 'Supermarket BV', ST_GeomFromText('LINESTRING(58.3829 23.5859, 58.3829 23.5860)')), -- Muscat, Oman
-('S125', 'Supermarket BW', ST_GeomFromText('LINESTRING(51.5200 25.2854, 51.5200 25.2855)')), -- Doha, Qatar
+('S121', 'Supermarket BS', ST_GeomFromText('LINESTRING(33.3152 44.3661, 33.3153 44.3661)', 4326)), -- Baghdad, Iraq
+('S122', 'Supermarket BT', ST_GeomFromText('LINESTRING(31.7683 35.2137, 31.7684 35.2137)', 4326)), -- Jerusalem, Israel
+('S123', 'Supermarket BU', ST_GeomFromText('LINESTRING(26.2285 50.5647, 26.2286 50.5647)', 4326)), -- Manama, Bahrain
+('S124', 'Supermarket BV', ST_GeomFromText('LINESTRING(23.5859 58.3829, 23.5860 58.3829)', 4326)), -- Muscat, Oman
+('S125', 'Supermarket BW', ST_GeomFromText('LINESTRING(25.2854 51.5200, 25.2855 51.5200)', 4326)), -- Doha, Qatar
 
 -- Châu Á (các địa điểm bổ sung)
-('S126', 'Supermarket BX', ST_GeomFromText('LINESTRING(126.9780 37.5665, 126.9780 37.5666)')), -- Seoul, Hàn Quốc
-('S127', 'Supermarket BY', ST_GeomFromText('LINESTRING(144.9631 -37.8136, 144.9631 -37.8135)')), -- Melbourne, Úc
-('S128', 'Supermarket BZ', ST_GeomFromText('LINESTRING(13.6917 35.6895, 13.6917 35.6896)')), -- Osaka, Nhật Bản
-('S129', 'Supermarket CA', ST_GeomFromText('LINESTRING(72.8777 19.0760, 72.8777 19.0761)')), -- Pune, Ấn Độ
-('S130', 'Supermarket CB', ST_GeomFromText('LINESTRING(103.8198 1.3521, 103.8198 1.3522)')), -- Johor Bahru, Malaysia
+('S126', 'Supermarket BX', ST_GeomFromText('LINESTRING(37.5665 126.9780, 37.5666 126.9780)', 4326)), -- Seoul, Hàn Quốc
+('S127', 'Supermarket BY', ST_GeomFromText('LINESTRING(-37.8136 144.9631, -37.8135 144.9631)', 4326)), -- Melbourne, Úc
+('S128', 'Supermarket BZ', ST_GeomFromText('LINESTRING(35.6895 13.6917, 35.6896 13.6917)', 4326)), -- Osaka, Nhật Bản
+('S129', 'Supermarket CA', ST_GeomFromText('LINESTRING(19.0760 72.8777, 19.0761 72.8777)', 4326)), -- Pune, Ấn Độ
+('S130', 'Supermarket CB', ST_GeomFromText('LINESTRING(1.3521 103.8198, 1.3522 103.8198)', 4326)), -- Johor Bahru, Malaysia
 
 -- Nga & khu vực lân cận
-('S131', 'Supermarket CC', ST_GeomFromText('LINESTRING(37.6173 55.7558, 37.6173 55.7559)')), -- Moscow, Nga
-('S132', 'Supermarket CD', ST_GeomFromText('LINESTRING(30.3351 59.9343, 30.3351 59.9344)')), -- Saint Petersburg, Nga
-('S133', 'Supermarket CE', ST_GeomFromText('LINESTRING(27.5615 53.9006, 27.5615 53.9007)')), -- Minsk, Belarus
-('S134', 'Supermarket CF', ST_GeomFromText('LINESTRING(44.8024 41.7151, 44.8024 41.7152)')), -- Tbilisi, Georgia
-('S135', 'Supermarket CG', ST_GeomFromText('LINESTRING(69.2401 41.2995, 69.2401 41.2996)')), -- Tashkent, Uzbekistan
+('S131', 'Supermarket CC', ST_GeomFromText('LINESTRING(55.7558 37.6173, 55.7559 37.6173)', 4326)), -- Moscow, Nga
+('S132', 'Supermarket CD', ST_GeomFromText('LINESTRING(59.9343 30.3351, 59.9344 30.3351)', 4326)), -- Saint Petersburg, Nga
+('S133', 'Supermarket CE', ST_GeomFromText('LINESTRING(53.9006 27.5615, 53.9007 27.5615)', 4326)), -- Minsk, Belarus
+('S134', 'Supermarket CF', ST_GeomFromText('LINESTRING(41.7151 44.8024, 41.7152 44.8024)', 4326)), -- Tbilisi, Georgia
+('S135', 'Supermarket CG', ST_GeomFromText('LINESTRING(41.2995 69.2401, 41.2996 69.2401)', 4326)), -- Tashkent, Uzbekistan
 
 -- Các địa điểm khác trên thế giới
-('S136', 'Supermarket CH', ST_GeomFromText('LINESTRING(-157.8583 21.3069, -157.8583 21.3070)')), -- Honolulu, Hawaii, Mỹ
-('S137', 'Supermarket CI', ST_GeomFromText('LINESTRING(-149.9003 61.2181, -149.9003 61.2182)')), -- Anchorage, Alaska, Mỹ
-('S138', 'Supermarket CJ', ST_GeomFromText('LINESTRING(-73.5712 45.5017, -73.5712 45.5018)')), -- Montreal, Canada
-('S139', 'Supermarket CK', ST_GeomFromText('LINESTRING(174.7633 -36.8485, 174.7633 -36.8484)')), -- Auckland, New Zealand
-('S140', 'Supermarket CL', ST_GeomFromText('LINESTRING(55.5364 -20.8821, 55.5364 -20.8820)')), -- Saint-Denis, Réunion
-('S141', 'Supermarket CM', ST_GeomFromText('LINESTRING(166.4572 -22.2558, 166.4572 -22.2557)')), -- Nouméa, New Caledonia
-('S142', 'Supermarket CN', ST_GeomFromText('LINESTRING(-159.7711 -21.2129, -159.7711 -21.2128)')), -- Avarua, Cook Islands
-('S143', 'Supermarket CO', ST_GeomFromText('LINESTRING(113.5547 -22.2855, 113.5547 -22.2854)')), -- Exmouth, Australia
-('S144', 'Supermarket CP', ST_GeomFromText('LINESTRING(144.2517 -15.4609, 144.2517 -15.4608)')), -- Cooktown, Australia
-('S145', 'Supermarket CQ', ST_GeomFromText('LINESTRING(-68.1193 -16.5000, -68.1193 -16.4999)')), -- Uyuni, Bolivia
-('S146', 'Supermarket CR', ST_GeomFromText('LINESTRING(-5.8282 35.7550, -5.8282 35.7551)')), -- Tangier, Morocco
-('S147', 'Supermarket CS', ST_GeomFromText('LINESTRING(28.0473 -26.2041, 28.0473 -26.2040)')), -- Johannesburg, South Africa
-('S148', 'Supermarket CT', ST_GeomFromText('LINESTRING(-79.0421 -8.1091, -79.0421 -8.1090)')), -- Trujillo, Peru
-('S149', 'Supermarket CU', ST_GeomFromText('LINESTRING(-67.2510 -55.0512, -67.2510 -55.0511)')), -- Ushuaia, Argentina
-('S150', 'Supermarket CV', ST_GeomFromText('LINESTRING(-58.3833 -34.6033, -58.3833 -34.6032)')), -- Montevideo, Uruguay
+('S136', 'Supermarket CH', ST_GeomFromText('LINESTRING(21.3069 -157.8583, 21.3070 -157.8583)', 4326)), -- Honolulu, Hawaii, Mỹ
+('S137', 'Supermarket CI', ST_GeomFromText('LINESTRING(61.2181 -149.9003, 61.2182 -149.9003)', 4326)), -- Anchorage, Alaska, Mỹ
+('S138', 'Supermarket CJ', ST_GeomFromText('LINESTRING(45.5017 -73.5712, 45.5018 -73.5712)', 4326)), -- Montreal, Canada
+('S139', 'Supermarket CK', ST_GeomFromText('LINESTRING(-36.8485 174.7633, -36.8484 174.7633)', 4326)), -- Auckland, New Zealand
+('S140', 'Supermarket CL', ST_GeomFromText('LINESTRING(-20.8821 55.5364, -20.8820 55.5364)', 4326)), -- Saint-Denis, Réunion
+('S141', 'Supermarket CM', ST_GeomFromText('LINESTRING(-22.2558 166.4572, -22.2557 166.4572)', 4326)), -- Nouméa, New Caledonia
+('S142', 'Supermarket CN', ST_GeomFromText('LINESTRING(-21.2129 -159.7711, -21.2128 -159.7711)', 4326)), -- Avarua, Cook Islands
+('S143', 'Supermarket CO', ST_GeomFromText('LINESTRING(-22.2855 113.5547, -22.2854 113.5547)', 4326)), -- Exmouth, Australia
+('S144', 'Supermarket CP', ST_GeomFromText('LINESTRING(-15.4609 144.2517, -15.4608 144.2517)', 4326)), -- Cooktown, Australia
+('S145', 'Supermarket CQ', ST_GeomFromText('LINESTRING(-16.5000 -68.1193, -16.4999 -68.1193)', 4326)), -- Uyuni, Bolivia
+('S146', 'Supermarket CR', ST_GeomFromText('LINESTRING(35.7550 -5.8282, 35.7551 -5.8282)', 4326)), -- Tangier, Morocco
+('S147', 'Supermarket CS', ST_GeomFromText('LINESTRING(-26.2041 28.0473, -26.2040 28.0473)', 4326)), -- Johannesburg, South Africa
+('S148', 'Supermarket CT', ST_GeomFromText('LINESTRING(-8.1091 -79.0421, -8.1090 -79.0421)', 4326)), -- Trujillo, Peru
+('S149', 'Supermarket CU', ST_GeomFromText('LINESTRING(-55.0512 -67.2510, -55.0511 -67.2510)', 4326)), -- Ushuaia, Argentina
+('S150', 'Supermarket CV', ST_GeomFromText('LINESTRING(-34.6033 -58.3833, -34.6032 -58.3833)', 4326)), -- Montevideo, Uruguay
+
 -- Khu vực Đông Nam Á
-('S151', 'Supermarket SEA1', ST_GeomFromText('LINESTRING(103.851959 1.290270, 103.852959 1.291270)')), -- Singapore
-('S152', 'Supermarket SEA2', ST_GeomFromText('LINESTRING(100.501765 13.756331, 100.502765 13.757331)')), -- Bangkok, Thái Lan
-('S153', 'Supermarket SEA3', ST_GeomFromText('LINESTRING(106.865039 -6.175110, 106.866039 -6.176110)')), -- Jakarta, Indonesia
-('S154', 'Supermarket SEA4', ST_GeomFromText('LINESTRING(121.774017 12.879721, 121.775017 12.880721)')), -- Philippines
-('S155', 'Supermarket SEA5', ST_GeomFromText('LINESTRING(105.318756 10.776889, 105.319756 10.777889)')), -- Cần Thơ, Việt Nam
+('S151', 'Supermarket SEA1', ST_GeomFromText('LINESTRING(1.290270 103.851959, 1.291270 103.852959)', 4326)), -- Singapore
+('S152', 'Supermarket SEA2', ST_GeomFromText('LINESTRING(13.756331 100.501765, 13.757331 100.502765)', 4326)), -- Bangkok, Thái Lan
+('S153', 'Supermarket SEA3', ST_GeomFromText('LINESTRING(-6.175110 106.865039, -6.176110 106.866039)', 4326)), -- Jakarta, Indonesia
+('S154', 'Supermarket SEA4', ST_GeomFromText('LINESTRING(12.879721 121.774017, 12.880721 121.775017)', 4326)), -- Philippines
+('S155', 'Supermarket SEA5', ST_GeomFromText('LINESTRING(10.776889 105.318756, 10.777889 105.319756)', 4326)), -- Cần Thơ, Việt Nam
 
 -- Khu vực Trung Quốc
-('S156', 'Supermarket CN1', ST_GeomFromText('LINESTRING(116.407396 39.904200, 116.408396 39.905200)')), -- Bắc Kinh
-('S157', 'Supermarket CN2', ST_GeomFromText('LINESTRING(121.473701 31.230416, 121.474701 31.231416)')), -- Thượng Hải
-('S158', 'Supermarket CN3', ST_GeomFromText('LINESTRING(113.264435 23.129110, 113.265435 23.130110)')), -- Quảng Châu
-('S159', 'Supermarket CN4', ST_GeomFromText('LINESTRING(114.169361 22.319304, 114.170361 22.320304)')), -- Hồng Kông
-('S160', 'Supermarket CN5', ST_GeomFromText('LINESTRING(120.155070 30.274150, 120.156070 30.275150)')), -- Hàng Châu
+('S156', 'Supermarket CN1', ST_GeomFromText('LINESTRING(39.904200 116.407396, 39.905200 116.408396)', 4326)), -- Bắc Kinh
+('S157', 'Supermarket CN2', ST_GeomFromText('LINESTRING(31.230416 121.473701, 31.231416 121.474701)', 4326)), -- Thượng Hải
+('S158', 'Supermarket CN3', ST_GeomFromText('LINESTRING(23.129110 113.264435, 23.130110 113.265435)', 4326)), -- Quảng Châu
+('S159', 'Supermarket CN4', ST_GeomFromText('LINESTRING(22.319304 114.169361, 22.320304 114.170361)', 4326)), -- Hồng Kông
+('S160', 'Supermarket CN5', ST_GeomFromText('LINESTRING(30.274150 120.155070, 30.275150 120.156070)', 4326)), -- Hàng Châu
 
 -- Khu vực Châu Âu
-('S161', 'Supermarket EU1', ST_GeomFromText('LINESTRING(2.352222 48.856614, 2.353222 48.857614)')), -- Paris, Pháp
-('S162', 'Supermarket EU2', ST_GeomFromText('LINESTRING(-0.127758 51.507351, -0.126758 51.508351)')), -- London, Anh
-('S163', 'Supermarket EU3', ST_GeomFromText('LINESTRING(13.4050 52.5200, 13.4060 52.5210)')), -- Berlin, Đức
-('S164', 'Supermarket EU4', ST_GeomFromText('LINESTRING(12.496366 41.902782, 12.497366 41.903782)')), -- Rome, Ý
-('S165', 'Supermarket EU5', ST_GeomFromText('LINESTRING(37.6173 55.7558, 37.6183 55.7568)')), -- Moscow, Nga
+('S161', 'Supermarket EU1', ST_GeomFromText('LINESTRING(48.856614 2.352222, 48.857614 2.353222)', 4326)), -- Paris, Pháp
+('S162', 'Supermarket EU2', ST_GeomFromText('LINESTRING(51.507351 -0.127758, 51.508351 -0.126758)', 4326)), -- London, Anh
+('S163', 'Supermarket EU3', ST_GeomFromText('LINESTRING(52.5200 13.4050, 52.5210 13.4060)', 4326)), -- Berlin, Đức
+('S164', 'Supermarket EU4', ST_GeomFromText('LINESTRING(41.902782 12.496366, 41.903782 12.497366)', 4326)), -- Rome, Ý
+('S165', 'Supermarket EU5', ST_GeomFromText('LINESTRING(55.7558 37.6173, 55.7568 37.6183)', 4326)), -- Moscow, Nga
 
 -- Khu vực Bắc Mỹ
-('S166', 'Supermarket NA1', ST_GeomFromText('LINESTRING(-74.0060 40.7128, -74.0050 40.7138)')), -- New York, Mỹ
-('S167', 'Supermarket NA2', ST_GeomFromText('LINESTRING(-118.2437 34.0522, -118.2427 34.0532)')), -- Los Angeles, Mỹ
-('S168', 'Supermarket NA3', ST_GeomFromText('LINESTRING(-87.6298 41.8781, -87.6288 41.8791)')), -- Chicago, Mỹ
-('S169', 'Supermarket NA4', ST_GeomFromText('LINESTRING(-123.1216 49.2827, -123.1206 49.2837)')), -- Vancouver, Canada
-('S170', 'Supermarket NA5', ST_GeomFromText('LINESTRING(-79.3832 43.6532, -79.3822 43.6542)')), -- Toronto, Canada
+('S166', 'Supermarket NA1', ST_GeomFromText('LINESTRING(40.7128 -74.0060, 40.7138 -74.0050)', 4326)), -- New York, Mỹ
+('S167', 'Supermarket NA2', ST_GeomFromText('LINESTRING(34.0522 -118.2437, 34.0532 -118.2427)', 4326)), -- Los Angeles, Mỹ
+('S168', 'Supermarket NA3', ST_GeomFromText('LINESTRING(41.8781 -87.6298, 41.8791 -87.6288)', 4326)), -- Chicago, Mỹ
+('S169', 'Supermarket NA4', ST_GeomFromText('LINESTRING(49.2827 -123.1216, 49.2837 -123.1206)', 4326)), -- Vancouver, Canada
+('S170', 'Supermarket NA5', ST_GeomFromText('LINESTRING(43.6532 -79.3832, 43.6542 -79.3822)', 4326)), -- Toronto, Canada
 
 -- Khu vực Nam Mỹ
-('S171', 'Supermarket SA1', ST_GeomFromText('LINESTRING(-46.6333 -23.5505, -46.6323 -23.5495)')), -- São Paulo, Brazil
-('S172', 'Supermarket SA2', ST_GeomFromText('LINESTRING(-58.3816 -34.6037, -58.3806 -34.6027)')), -- Buenos Aires, Argentina
-('S173', 'Supermarket SA3', ST_GeomFromText('LINESTRING(-70.6483 -33.4489, -70.6473 -33.4479)')), -- Santiago, Chile
-('S174', 'Supermarket SA4', ST_GeomFromText('LINESTRING(-79.5199 9.1012, -79.5189 9.1022)')), -- Panama City, Panama
-('S175', 'Supermarket SA5', ST_GeomFromText('LINESTRING(-99.1332 19.4326, -99.1322 19.4336)')), -- Mexico City, Mexico
+('S171', 'Supermarket SA1', ST_GeomFromText('LINESTRING(-23.5505 -46.6333, -23.5495 -46.6323)', 4326)), -- São Paulo, Brazil
+('S172', 'Supermarket SA2', ST_GeomFromText('LINESTRING(-34.6037 -58.3816, -34.6027 -58.3806)', 4326)), -- Buenos Aires, Argentina
+('S173', 'Supermarket SA3', ST_GeomFromText('LINESTRING(-33.4489 -70.6483, -33.4479 -70.6473)', 4326)), -- Santiago, Chile
+('S174', 'Supermarket SA4', ST_GeomFromText('LINESTRING(9.1012 -79.5199, 9.1022 -79.5189)', 4326)), -- Panama City, Panama
+('S175', 'Supermarket SA5', ST_GeomFromText('LINESTRING(19.4326 -99.1332, 19.4336 -99.1322)', 4326)), -- Mexico City, Mexico
 
 -- Khu vực Châu Phi
-('S176', 'Supermarket AF1', ST_GeomFromText('LINESTRING(31.2357 30.0444, 31.2367 30.0454)')), -- Cairo, Ai Cập
-('S177', 'Supermarket AF2', ST_GeomFromText('LINESTRING(18.4241 -33.9249, 18.4251 -33.9239)')), -- Cape Town, Nam Phi
-('S178', 'Supermarket AF3', ST_GeomFromText('LINESTRING(3.3792 6.5244, 3.3802 6.5254)')), -- Lagos, Nigeria
-('S179', 'Supermarket AF4', ST_GeomFromText('LINESTRING(36.8219 -1.2921, 36.8229 -1.2911)')), -- Nairobi, Kenya
-('S180', 'Supermarket AF5', ST_GeomFromText('LINESTRING(9.0579 8.6753, 9.0589 8.6763)')), -- Abuja, Nigeria
+('S176', 'Supermarket AF1', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)', 4326)), -- Cairo, Ai Cập
+('S177', 'Supermarket AF2', ST_GeomFromText('LINESTRING(-33.9249 18.4241, -33.9239 18.4251)', 4326)), -- Cape Town, Nam Phi
+('S178', 'Supermarket AF3', ST_GeomFromText('LINESTRING(6.5244 3.3792, 6.5254 3.3802)', 4326)), -- Lagos, Nigeria
+('S179', 'Supermarket AF4', ST_GeomFromText('LINESTRING(-1.2921 36.8219, -1.2911 36.8229)', 4326)), -- Nairobi, Kenya
+('S180', 'Supermarket AF5', ST_GeomFromText('LINESTRING(8.6753 9.0579, 8.6763 9.0589)', 4326)), -- Abuja, Nigeria
 
 -- Khu vực Châu Đại Dương
-('S181', 'Supermarket OC1', ST_GeomFromText('LINESTRING(151.2093 -33.8688, 151.2103 -33.8678)')), -- Sydney, Úc
-('S182', 'Supermarket OC2', ST_GeomFromText('LINESTRING(144.9631 -37.8136, 144.9641 -37.8126)')), -- Melbourne, Úc
-('S183', 'Supermarket OC3', ST_GeomFromText('LINESTRING(174.7633 -36.8485, 174.7643 -36.8475)')), -- Auckland, New Zealand
-('S184', 'Supermarket OC4', ST_GeomFromText('LINESTRING(166.4572 -22.2558, 166.4582 -22.2548)')), -- Nouméa, New Caledonia
-('S185', 'Supermarket OC5', ST_GeomFromText('LINESTRING(159.9552 -31.5180, 159.9562 -31.5170)')), -- Lord Howe Island, Úc
+('S181', 'Supermarket OC1', ST_GeomFromText('LINESTRING(-33.8688 151.2093, -33.8678 151.2103)', 4326)), -- Sydney, Úc
+('S182', 'Supermarket OC2', ST_GeomFromText('LINESTRING(-37.8136 144.9631, -37.8126 144.9641)', 4326)), -- Melbourne, Úc
+('S183', 'Supermarket OC3', ST_GeomFromText('LINESTRING(-36.8485 174.7633, -36.8475 174.7643)', 4326)), -- Auckland, New Zealand
+('S184', 'Supermarket OC4', ST_GeomFromText('LINESTRING(-22.2558 166.4572, -22.2548 166.4582)', 4326)), -- Nouméa, New Caledonia
+('S185', 'Supermarket OC5', ST_GeomFromText('LINESTRING(-31.5180 159.9552, -31.5170 159.9562)', 4326)), -- Lord Howe Island, Úc
 
 -- Các địa điểm đặc biệt (Bắc Cực, Nam Cực, Sa Mạc, Đảo Xa)
-('S186', 'Supermarket XP1', ST_GeomFromText('LINESTRING(-135.0000 -82.8628, -134.9990 -82.8618)')), -- Trạm Amundsen-Scott, Nam Cực
-('S187', 'Supermarket XP2', ST_GeomFromText('LINESTRING(21.0000 78.0000, 21.0010 78.0010)')), -- Svalbard, Na Uy (gần Bắc Cực)
-('S188', 'Supermarket XP3', ST_GeomFromText('LINESTRING(-13.0000 27.0000, -12.9990 27.0010)')), -- Sa mạc Sahara, Châu Phi
-('S189', 'Supermarket XP4', ST_GeomFromText('LINESTRING(-155.5828 19.8968, -155.5818 19.8978)')), -- Hawaii, Mỹ (đảo xa)
-('S190', 'Supermarket XP5', ST_GeomFromText('LINESTRING(-60.9833 -50.7333, -60.9823 -50.7323)')), -- Falkland Islands
+('S186', 'Supermarket XP1', ST_GeomFromText('LINESTRING(-82.8628 -135.0000, -82.8618 -134.9990)', 4326)), -- Trạm Amundsen-Scott, Nam Cực
+('S187', 'Supermarket XP2', ST_GeomFromText('LINESTRING(78.0000 21.0000, 78.0010 21.0010)', 4326)), -- Svalbard, Na Uy (gần Bắc Cực)
+('S188', 'Supermarket XP3', ST_GeomFromText('LINESTRING(27.0000 -13.0000, 27.0010 -12.9990)', 4326)), -- Sa mạc Sahara, Châu Phi
+('S189', 'Supermarket XP4', ST_GeomFromText('LINESTRING(19.8968 -155.5828, 19.8978 -155.5818)', 4326)), -- Hawaii, Mỹ (đảo xa)
+('S190', 'Supermarket XP5', ST_GeomFromText('LINESTRING(-50.7333 -60.9833, -50.7323 -60.9823)', 4326)), -- Falkland Islands
 
 -- Các địa điểm ngẫu nhiên
-('S191', 'Supermarket RD1', ST_GeomFromText('LINESTRING(55.2708 25.2048, 55.2718 25.2058)')), -- Dubai, UAE
-('S192', 'Supermarket RD2', ST_GeomFromText('LINESTRING(-157.8583 21.3069, -157.8573 21.3079)')), -- Honolulu, Hawaii
-('S193', 'Supermarket RD3', ST_GeomFromText('LINESTRING(90.4125 23.8103, 90.4135 23.8113)')), -- Dhaka, Bangladesh
-('S194', 'Supermarket RD4', ST_GeomFromText('LINESTRING(13.6917 35.6895, 13.6927 35.6905)')), -- Tokyo, Nhật Bản
-('S195', 'Supermarket RD5', ST_GeomFromText('LINESTRING(77.1025 28.7041, 77.1035 28.7051)')), -- New Delhi, Ấn Độ
-('S196', 'Supermarket RD6', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')), -- Rio de Janeiro, Brazil
-('S197', 'Supermarket RD7', ST_GeomFromText('LINESTRING(-73.5673 45.5017, -73.5663 45.5027)')), -- Montreal, Canada
-('S198', 'Supermarket RD8', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Yokohama, Nhật Bản
-('S199', 'Supermarket RD9', ST_GeomFromText('LINESTRING(126.9780 37.5665, 126.9790 37.5675)')), -- Seoul, Hàn Quốc
-('S200', 'Supermarket RD10', ST_GeomFromText('LINESTRING(100.5168 13.7367, 100.5178 13.7377)')), -- Bangkok, Thái Lan
+('S191', 'Supermarket RD1', ST_GeomFromText('LINESTRING(25.2048 55.2708, 25.2058 55.2718)', 4326)), -- Dubai, UAE
+('S192', 'Supermarket RD2', ST_GeomFromText('LINESTRING(21.3069 -157.8583, 21.3079 -157.8573)', 4326)), -- Honolulu, Hawaii
+('S193', 'Supermarket RD3', ST_GeomFromText('LINESTRING(23.8103 90.4125, 23.8113 90.4135)', 4326)), -- Dhaka, Bangladesh
+('S194', 'Supermarket RD4', ST_GeomFromText('LINESTRING(35.6895 13.6917, 35.6905 13.6927)', 4326)), -- Tokyo, Nhật Bản
+('S195', 'Supermarket RD5', ST_GeomFromText('LINESTRING(28.7041 77.1025, 28.7051 77.1035)', 4326)), -- New Delhi, Ấn Độ
+('S196', 'Supermarket RD6', ST_GeomFromText('LINESTRING(-22.9068 -43.1729, -22.9058 -43.1719)', 4326)), -- Rio de Janeiro, Brazil
+('S197', 'Supermarket RD7', ST_GeomFromText('LINESTRING(45.5017 -73.5673, 45.5027 -73.5663)', 4326)), -- Montreal, Canada
+('S198', 'Supermarket RD8', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Yokohama, Nhật Bản
+('S199', 'Supermarket RD9', ST_GeomFromText('LINESTRING(37.5665 126.9780, 37.5675 126.9790)', 4326)), -- Seoul, Hàn Quốc
+('S200', 'Supermarket RD10', ST_GeomFromText('LINESTRING(13.7367 100.5168, 13.7377 100.5178)', 4326)), -- Bangkok, Thái Lan
+
+
 
 -- Các siêu thị ở Bắc Mỹ
-('S201', 'Supermarket A1', ST_GeomFromText('LINESTRING(-118.2437 34.0522, -118.2427 34.0532)')), -- Los Angeles, USA
-('S202', 'Supermarket A2', ST_GeomFromText('LINESTRING(-123.1216 49.2827, -123.1206 49.2837)')), -- Vancouver, Canada
-('S203', 'Supermarket A3', ST_GeomFromText('LINESTRING(-95.3698 29.7604, -95.3688 29.7614)')), -- Houston, USA
-('S204', 'Supermarket A4', ST_GeomFromText('LINESTRING(-79.3832 43.6532, -79.3822 43.6542)')), -- Toronto, Canada
-('S205', 'Supermarket A5', ST_GeomFromText('LINESTRING(-90.0715 29.9511, -90.0705 29.9521)')), -- New Orleans, USA
+('S201', 'Supermarket A1', ST_GeomFromText('LINESTRING(34.0522 -119.2437, 34.0532 -118.2427)', 4326)), -- Los Angeles, USA
+('S202', 'Supermarket A2', ST_GeomFromText('LINESTRING(49.2827 -123.1216, 49.2837 -123.1206)', 4326)), -- Vancouver, Canada
+('S203', 'Supermarket A3', ST_GeomFromText('LINESTRING(29.7604 -95.3698, 29.7614 -95.3688)', 4326)), -- Houston, USA
+('S204', 'Supermarket A4', ST_GeomFromText('LINESTRING(43.6532 -79.3832, 43.6542 -79.3822)', 4326)), -- Toronto, Canada
+('S205', 'Supermarket A5', ST_GeomFromText('LINESTRING(29.9511 -90.0715, 29.9521 -90.0705)', 4326)), -- New Orleans, USA
 
 -- Các siêu thị ở Nam Mỹ
-('S206', 'Supermarket B1', ST_GeomFromText('LINESTRING(-58.3816 -34.6037, -58.3806 -34.6027)')), -- Buenos Aires, Argentina
-('S207', 'Supermarket B2', ST_GeomFromText('LINESTRING(-46.6333 -23.5505, -46.6323 -23.5495)')), -- São Paulo, Brazil
-('S208', 'Supermarket B3', ST_GeomFromText('LINESTRING(-74.0721 4.7110, -74.0711 4.7120)')), -- Bogotá, Colombia
-('S209', 'Supermarket B4', ST_GeomFromText('LINESTRING(-70.6483 -33.4489, -70.6473 -33.4479)')), -- Santiago, Chile
-('S210', 'Supermarket B5', ST_GeomFromText('LINESTRING(-77.0428 -12.0464, -77.0418 -12.0454)')), -- Lima, Peru
+('S206', 'Supermarket B1', ST_GeomFromText('LINESTRING(-34.6037 -58.3816, -34.6027 -58.3806)', 4326)), -- Buenos Aires, Argentina
+('S207', 'Supermarket B2', ST_GeomFromText('LINESTRING(-23.5505 -46.6333, -23.5495 -46.6323)', 4326)), -- São Paulo, Brazil
+('S208', 'Supermarket B3', ST_GeomFromText('LINESTRING(4.7110 -74.0721, 4.7120 -74.0711)', 4326)), -- Bogotá, Colombia
+('S209', 'Supermarket B4', ST_GeomFromText('LINESTRING(-33.4489 -70.6483, -33.4479 -70.6473)', 4326)), -- Santiago, Chile
+('S210', 'Supermarket B5', ST_GeomFromText('LINESTRING(-12.0464 -77.0428, -12.0454 -77.0418)', 4326)), -- Lima, Peru
 
 -- Các siêu thị ở Châu Âu
-('S211', 'Supermarket C1', ST_GeomFromText('LINESTRING(14.5058 46.0569, 14.5068 46.0579)')), -- Ljubljana, Slovenia
-('S212', 'Supermarket C2', ST_GeomFromText('LINESTRING(16.3738 48.2082, 16.3748 48.2092)')), -- Vienna, Austria
-('S213', 'Supermarket C3', ST_GeomFromText('LINESTRING(18.0686 59.3293, 18.0696 59.3303)')), -- Stockholm, Sweden
-('S214', 'Supermarket C4', ST_GeomFromText('LINESTRING(4.9041 52.3676, 4.9051 52.3686)')), -- Amsterdam, Netherlands
-('S215', 'Supermarket C5', ST_GeomFromText('LINESTRING(-3.1883 55.9533, -3.1873 55.9543)')), -- Edinburgh, Scotland
+('S211', 'Supermarket C1', ST_GeomFromText('LINESTRING(46.0569 14.5058, 46.0579 14.5068)', 4326)), -- Ljubljana, Slovenia
+('S212', 'Supermarket C2', ST_GeomFromText('LINESTRING(48.2082 16.3738, 48.2092 16.3748)', 4326)), -- Vienna, Austria
+('S213', 'Supermarket C3', ST_GeomFromText('LINESTRING(59.3293 18.0686, 59.3303 18.0696)', 4326)), -- Stockholm, Sweden
+('S214', 'Supermarket C4', ST_GeomFromText('LINESTRING(52.3676 4.9041, 52.3686 4.9051)', 4326)), -- Amsterdam, Netherlands
+('S215', 'Supermarket C5', ST_GeomFromText('LINESTRING(55.9533 -3.1883, 55.9543 -3.1873)', 4326)), -- Edinburgh, Scotland
 
 -- Các siêu thị ở Châu Phi
-('S216', 'Supermarket D1', ST_GeomFromText('LINESTRING(31.2357 30.0444, 31.2367 30.0454)')), -- Cairo, Ai Cập
-('S217', 'Supermarket D2', ST_GeomFromText('LINESTRING(28.0473 -26.2041, 28.0483 -26.2031)')), -- Johannesburg, Nam Phi
-('S218', 'Supermarket D3', ST_GeomFromText('LINESTRING(3.3792 6.5244, 3.3802 6.5254)')), -- Lagos, Nigeria
-('S219', 'Supermarket D4', ST_GeomFromText('LINESTRING(39.2083 -6.7924, 39.2093 -6.7914)')), -- Dar es Salaam, Tanzania
-('S220', 'Supermarket D5', ST_GeomFromText('LINESTRING(36.8219 -1.2921, 36.8229 -1.2911)')), -- Nairobi, Kenya
+('S216', 'Supermarket D1', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)', 4326)), -- Cairo, Ai Cập
+('S217', 'Supermarket D2', ST_GeomFromText('LINESTRING(-26.2041 28.0473, -26.2031 28.0483)', 4326)), -- Johannesburg, Nam Phi
+('S218', 'Supermarket D3', ST_GeomFromText('LINESTRING(6.5244 3.3792, 6.5254 3.3802)', 4326)), -- Lagos, Nigeria
+('S219', 'Supermarket D4', ST_GeomFromText('LINESTRING(-6.7924 39.2083, -6.7914 39.2093)', 4326)), -- Dar es Salaam, Tanzania
+('S220', 'Supermarket D5', ST_GeomFromText('LINESTRING(-1.2921 36.8219, -1.2911 36.8229)', 4326)), -- Nairobi, Kenya
 
 -- Các siêu thị ở Châu Á
-('S221', 'Supermarket E1', ST_GeomFromText('LINESTRING(100.5018 13.7563, 100.5028 13.7573)')), -- Bangkok, Thái Lan
-('S222', 'Supermarket E2', ST_GeomFromText('LINESTRING(77.2090 28.6139, 77.2100 28.6149)')), -- New Delhi, Ấn Độ
-('S223', 'Supermarket E3', ST_GeomFromText('LINESTRING(126.9780 37.5665, 126.9790 37.5675)')), -- Seoul, Hàn Quốc
-('S224', 'Supermarket E4', ST_GeomFromText('LINESTRING(103.8198 1.3521, 103.8208 1.3531)')), -- Singapore
-('S225', 'Supermarket E5', ST_GeomFromText('LINESTRING(144.9631 -37.8136, 144.9641 -37.8126)')), -- Melbourne, Úc
+('S221', 'Supermarket E1', ST_GeomFromText('LINESTRING(13.7563 100.5018, 13.7573 100.5028)', 4326)), -- Bangkok, Thái Lan
+('S222', 'Supermarket E2', ST_GeomFromText('LINESTRING(28.6139 77.2090, 28.6149 77.2100)', 4326)), -- New Delhi, Ấn Độ
+('S223', 'Supermarket E3', ST_GeomFromText('LINESTRING(37.5665 126.9780, 37.5675 126.9790)', 4326)), -- Seoul, Hàn Quốc
+('S224', 'Supermarket E4', ST_GeomFromText('LINESTRING(1.3521 103.8198, 1.3531 103.8208)', 4326)), -- Singapore
+('S225', 'Supermarket E5', ST_GeomFromText('LINESTRING(-37.8136 144.9631, -37.8126 144.9641)', 4326)), -- Melbourne, Úc
 
 -- Các siêu thị ở Trung Đông
-('S226', 'Supermarket F1', ST_GeomFromText('LINESTRING(35.2350 31.7683, 35.2360 31.7693)')), -- Jerusalem, Israel
-('S227', 'Supermarket F2', ST_GeomFromText('LINESTRING(51.3890 35.6892, 51.3900 35.6902)')), -- Tehran, Iran
-('S228', 'Supermarket F3', ST_GeomFromText('LINESTRING(39.1979 21.4858, 39.1989 21.4868)')), -- Jeddah, Ả Rập Xê Út
-('S229', 'Supermarket F4', ST_GeomFromText('LINESTRING(55.2962 25.2760, 55.2972 25.2770)')), -- Dubai, UAE
-('S230', 'Supermarket F5', ST_GeomFromText('LINESTRING(46.6753 24.7136, 46.6763 24.7146)')), -- Riyadh, Ả Rập Xê Út
+('S226', 'Supermarket F1', ST_GeomFromText('LINESTRING(31.7683 35.2350, 31.7693 35.2360)', 4326)), -- Jerusalem, Israel
+('S227', 'Supermarket F2', ST_GeomFromText('LINESTRING(35.6892 51.3890, 35.6902 51.3900)', 4326)), -- Tehran, Iran
+('S228', 'Supermarket F3', ST_GeomFromText('LINESTRING(21.4858 39.1979, 21.4868 39.1989)', 4326)), -- Jeddah, Ả Rập Xê Út
+('S229', 'Supermarket F4', ST_GeomFromText('LINESTRING(25.2760 55.2962, 25.2770 55.2972)', 4326)), -- Dubai, UAE
+('S230', 'Supermarket F5', ST_GeomFromText('LINESTRING(24.7136 46.6753, 24.7146 46.6763)', 4326)), -- Riyadh, Ả Rập Xê Út
 
 -- Các siêu thị ở vùng Bắc Cực & Nam Cực
-('S231', 'Supermarket G1', ST_GeomFromText('LINESTRING(-135.0000 -90.0000, -134.9990 -89.9990)')), -- Nam Cực
-('S232', 'Supermarket G2', ST_GeomFromText('LINESTRING(-51.9253 64.1835, -51.9243 64.1845)')), -- Nuuk, Greenland
-('S233', 'Supermarket G3', ST_GeomFromText('LINESTRING(37.6184 55.7512, 37.6194 55.7522)')), -- Moscow, Nga
-('S234', 'Supermarket G4', ST_GeomFromText('LINESTRING(-134.4197 58.3019, -134.4187 58.3029)')), -- Juneau, Alaska, USA
-('S235', 'Supermarket G5', ST_GeomFromText('LINESTRING(174.7756 -41.2865, 174.7766 -41.2855)')), -- Wellington, New Zealand
+('S231', 'Supermarket G1', ST_GeomFromText('LINESTRING(-90.0000 -135.0000, -89.9990 -134.9990)', 4326)), -- Nam Cực
+('S232', 'Supermarket G2', ST_GeomFromText('LINESTRING(64.1835 -51.9253, 64.1845 -51.9243)', 4326)), -- Nuuk, Greenland
+('S233', 'Supermarket G3', ST_GeomFromText('LINESTRING(55.7512 37.6184, 55.7522 37.6194)', 4326)), -- Moscow, Nga
+('S234', 'Supermarket G4', ST_GeomFromText('LINESTRING(58.3019 -134.4197, 58.3029 -134.4187)', 4326)), -- Juneau, Alaska, USA
+('S235', 'Supermarket G5', ST_GeomFromText('LINESTRING(-41.2865 174.7756, -41.2855 174.7766)', 4326)), -- Wellington, New Zealand
 
 -- Một số siêu thị ở các đảo nổi tiếng
-('S236', 'Supermarket H1', ST_GeomFromText('LINESTRING(-157.8583 21.3069, -157.8573 21.3079)')), -- Honolulu, Hawaii, USA
-('S237', 'Supermarket H2', ST_GeomFromText('LINESTRING(55.5364 -20.3484, 55.5374 -20.3474)')), -- Port Louis, Mauritius
-('S238', 'Supermarket H3', ST_GeomFromText('LINESTRING(144.9568 -37.8136, 144.9578 -37.8126)')), -- Hamilton, Bermuda
-('S239', 'Supermarket H4', ST_GeomFromText('LINESTRING(-159.7711 -21.2129, -159.7701 -21.2119)')), -- Avarua, Cook Islands
-('S240', 'Supermarket H5', ST_GeomFromText('LINESTRING(-61.2225 13.9094, -61.2215 13.9104)')), -- Castries, Saint Lucia
+('S236', 'Supermarket H1', ST_GeomFromText('LINESTRING(21.3069 -157.8583, 21.3079 -157.8573)', 4326)), -- Honolulu, Hawaii, USA
+('S237', 'Supermarket H2', ST_GeomFromText('LINESTRING(-20.3484 55.5364, -20.3474 55.5374)', 4326)), -- Port Louis, Mauritius
+('S238', 'Supermarket H3', ST_GeomFromText('LINESTRING(-37.8136 144.9568, -37.8126 144.9578)', 4326)), -- Hamilton, Bermuda
+('S239', 'Supermarket H4', ST_GeomFromText('LINESTRING(-21.2129 -159.7711, -21.2119 -159.7701)', 4326)), -- Avarua, Cook Islands
+('S240', 'Supermarket H5', ST_GeomFromText('LINESTRING(13.9094 -61.2225, 13.9104 -61.2215)', 4326)), -- Castries, Saint Lucia
 
 -- Một số siêu thị đặt tại các địa điểm kỳ lạ
-('S241', 'Supermarket I1', ST_GeomFromText('LINESTRING(-106.4454 35.0844, -106.4444 35.0854)')), -- Albuquerque, USA
-('S242', 'Supermarket I2', ST_GeomFromText('LINESTRING(30.3351 59.9343, 30.3361 59.9353)')), -- Saint Petersburg, Nga
-('S243', 'Supermarket I3', ST_GeomFromText('LINESTRING(34.8516 31.0461, 34.8526 31.0471)')), -- Tel Aviv, Israel
-('S244', 'Supermarket I4', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Yokohama, Nhật Bản
-('S245', 'Supermarket I5', ST_GeomFromText('LINESTRING(30.5234 50.4501, 30.5244 50.4511)')), -- Kyiv, Ukraine
-('S246', 'Supermarket I6', ST_GeomFromText('LINESTRING(12.5683 55.6761, 12.5693 55.6771)')), -- Copenhagen, Đan Mạch
-('S247', 'Supermarket I7', ST_GeomFromText('LINESTRING(-46.6253 -23.5338, -46.6243 -23.5328)')), -- Rio de Janeiro, Brazil
-('S248', 'Supermarket I8', ST_GeomFromText('LINESTRING(28.9784 41.0082, 28.9794 41.0092)')), -- Istanbul, Thổ Nhĩ Kỳ
-('S249', 'Supermarket I9', ST_GeomFromText('LINESTRING(103.8519 1.2903, 103.8529 1.2913)')), -- Sentosa, Singapore
-('S250', 'Supermarket I10', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')), -- Rio de Janeiro, Brazil
+('S241', 'Supermarket I1', ST_GeomFromText('LINESTRING(35.0844 -106.4454, 35.0854 -106.4444)', 4326)), -- Albuquerque, USA
+('S242', 'Supermarket I2', ST_GeomFromText('LINESTRING(59.9343 30.3351, 59.9353 30.3361)', 4326)), -- Saint Petersburg, Nga
+('S243', 'Supermarket I3', ST_GeomFromText('LINESTRING(31.0461 34.8516, 31.0471 34.8526)', 4326)), -- Tel Aviv, Israel
+('S244', 'Supermarket I4', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Yokohama, Nhật Bản
+('S245', 'Supermarket I5', ST_GeomFromText('LINESTRING(50.4501 30.5234, 50.4511 30.5244)', 4326)), -- Kyiv, Ukraine
+('S246', 'Supermarket I6', ST_GeomFromText('LINESTRING(55.6761 12.5683, 55.6771 12.5693)', 4326)), -- Copenhagen, Đan Mạch
+('S247', 'Supermarket I7', ST_GeomFromText('LINESTRING(-23.5338 -46.6253, -23.5328 -46.6243)', 4326)), -- Rio de Janeiro, Brazil
+('S248', 'Supermarket I8', ST_GeomFromText('LINESTRING(41.0082 28.9784, 41.0092 28.9794)', 4326)), -- Istanbul, Thổ Nhĩ Kỳ
+('S249', 'Supermarket I9', ST_GeomFromText('LINESTRING(1.2903 103.8519, 1.2913 103.8529)', 4326)), -- Sentosa, Singapore
+('S250', 'Supermarket I10', ST_GeomFromText('LINESTRING(-22.9068 -43.1729, -22.9058 -43.1719)', 4326)), -- Rio de Janeiro, Brazil
 
 -- Đông Nam Á
-('S251', 'Supermarket A1', ST_GeomFromText('LINESTRING(103.8198 1.3521, 103.8208 1.3531)')), -- Singapore
-('S252', 'Supermarket A2', ST_GeomFromText('LINESTRING(100.5018 13.7563, 100.5028 13.7573)')), -- Bangkok, Thái Lan
-('S253', 'Supermarket A3', ST_GeomFromText('LINESTRING(106.8650 -6.1751, 106.8660 -6.1741)')), -- Jakarta, Indonesia
-('S254', 'Supermarket A4', ST_GeomFromText('LINESTRING(101.6869 3.1390, 101.6879 3.1400)')), -- Kuala Lumpur, Malaysia
-('S255', 'Supermarket A5', ST_GeomFromText('LINESTRING(104.8922 11.5564, 104.8932 11.5574)')), -- Phnom Penh, Campuchia
+('S251', 'Supermarket A1', ST_GeomFromText('LINESTRING(1.3521 103.8198, 1.3531 103.8208)', 4326)), -- Singapore
+('S252', 'Supermarket A2', ST_GeomFromText('LINESTRING(13.7563 100.5018, 13.7573 100.5028)', 4326)), -- Bangkok, Thái Lan
+('S253', 'Supermarket A3', ST_GeomFromText('LINESTRING(-6.1751 106.8650, -6.1741 106.8660)', 4326)), -- Jakarta, Indonesia
+('S254', 'Supermarket A4', ST_GeomFromText('LINESTRING(3.1390 101.6869, 3.1400 101.6879)', 4326)), -- Kuala Lumpur, Malaysia
+('S255', 'Supermarket A5', ST_GeomFromText('LINESTRING(11.5564 104.8922, 11.5574 104.8932)', 4326)), -- Phnom Penh, Campuchia
 
 -- Trung Quốc
-('S256', 'Supermarket B1', ST_GeomFromText('LINESTRING(116.4074 39.9042, 116.4084 39.9052)')), -- Bắc Kinh
-('S257', 'Supermarket B2', ST_GeomFromText('LINESTRING(121.4737 31.2304, 121.4747 31.2314)')), -- Thượng Hải
-('S258', 'Supermarket B3', ST_GeomFromText('LINESTRING(114.1694 22.3193, 114.1704 22.3203)')), -- Hồng Kông
-('S259', 'Supermarket B4', ST_GeomFromText('LINESTRING(113.2644 23.1291, 113.2654 23.1301)')), -- Quảng Châu
-('S260', 'Supermarket B5', ST_GeomFromText('LINESTRING(120.5853 31.2989, 120.5863 31.2999)')), -- Tô Châu
+('S256', 'Supermarket B1', ST_GeomFromText('LINESTRING(39.9042 116.4074, 39.9052 116.4084)', 4326)), -- Bắc Kinh
+('S257', 'Supermarket B2', ST_GeomFromText('LINESTRING(31.2304 121.4737, 31.2314 121.4747)', 4326)), -- Thượng Hải
+('S258', 'Supermarket B3', ST_GeomFromText('LINESTRING(22.3193 114.1694, 22.3203 114.1704)', 4326)), -- Hồng Kông
+('S259', 'Supermarket B4', ST_GeomFromText('LINESTRING(23.1291 113.2644, 23.1301 113.2654)', 4326)), -- Quảng Châu
+('S260', 'Supermarket B5', ST_GeomFromText('LINESTRING(31.2989 120.5853, 31.2999 120.5863)', 4326)), -- Tô Châu
 
 -- Châu Âu
-('S261', 'Supermarket C1', ST_GeomFromText('LINESTRING(4.9041 52.3676, 4.9051 52.3686)')), -- Amsterdam, Hà Lan
-('S262', 'Supermarket C2', ST_GeomFromText('LINESTRING(18.0686 59.3293, 18.0696 59.3303)')), -- Stockholm, Thụy Điển
-('S263', 'Supermarket C3', ST_GeomFromText('LINESTRING(10.7522 59.9139, 10.7532 59.9149)')), -- Oslo, Na Uy
-('S264', 'Supermarket C4', ST_GeomFromText('LINESTRING(9.1900 45.4642, 9.1910 45.4652)')), -- Milan, Ý
-('S265', 'Supermarket C5', ST_GeomFromText('LINESTRING(2.1686 41.3874, 2.1696 41.3884)')), -- Barcelona, Tây Ban Nha
+('S261', 'Supermarket C1', ST_GeomFromText('LINESTRING(52.3676 4.9041, 52.3686 4.9051)', 4326)), -- Amsterdam, Hà Lan
+('S262', 'Supermarket C2', ST_GeomFromText('LINESTRING(59.3293 18.0686, 59.3303 18.0696)', 4326)), -- Stockholm, Thụy Điển
+('S263', 'Supermarket C3', ST_GeomFromText('LINESTRING(59.9139 10.7522, 59.9149 10.7532)', 4326)), -- Oslo, Na Uy
+('S264', 'Supermarket C4', ST_GeomFromText('LINESTRING(45.4642 9.1900, 45.4652 9.1910)', 4326)), -- Milan, Ý
+('S265', 'Supermarket C5', ST_GeomFromText('LINESTRING(41.3874 2.1686, 41.3884 2.1696)', 4326)), -- Barcelona, Tây Ban Nha
 
 -- Châu Mỹ
-('S266', 'Supermarket D1', ST_GeomFromText('LINESTRING(-99.1332 19.4326, -99.1322 19.4336)')), -- Mexico City, Mexico
-('S267', 'Supermarket D2', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')), -- Rio de Janeiro, Brazil
-('S268', 'Supermarket D3', ST_GeomFromText('LINESTRING(-58.3816 -34.6037, -58.3806 -34.6027)')), -- Buenos Aires, Argentina
-('S269', 'Supermarket D4', ST_GeomFromText('LINESTRING(-79.3832 43.6532, -79.3822 43.6542)')), -- Toronto, Canada
-('S270', 'Supermarket D5', ST_GeomFromText('LINESTRING(-123.1216 49.2827, -123.1206 49.2837)')), -- Vancouver, Canada
+('S266', 'Supermarket D1', ST_GeomFromText('LINESTRING(19.4326 -99.1332, 19.4336 -99.1322)', 4326)), -- Mexico City, Mexico
+('S267', 'Supermarket D2', ST_GeomFromText('LINESTRING(-22.9068 -43.1729, -22.9058 -43.1719)', 4326)), -- Rio de Janeiro, Brazil
+('S268', 'Supermarket D3', ST_GeomFromText('LINESTRING(-34.6037 -58.3816, -34.6027 -58.3806)', 4326)), -- Buenos Aires, Argentina
+('S269', 'Supermarket D4', ST_GeomFromText('LINESTRING(43.6532 -79.3832, 43.6542 -79.3822)', 4326)), -- Toronto, Canada
+('S270', 'Supermarket D5', ST_GeomFromText('LINESTRING(49.2827 -123.1216, 49.2837 -123.1206)', 4326)), -- Vancouver, Canada
 
 -- Châu Phi
-('S271', 'Supermarket E1', ST_GeomFromText('LINESTRING(31.2357 30.0444, 31.2367 30.0454)')), -- Cairo, Ai Cập
-('S272', 'Supermarket E2', ST_GeomFromText('LINESTRING(18.4233 -33.9189, 18.4243 -33.9179)')), -- Cape Town, Nam Phi
-('S273', 'Supermarket E3', ST_GeomFromText('LINESTRING(3.3792 6.5244, 3.3802 6.5254)')), -- Lagos, Nigeria
-('S274', 'Supermarket E4', ST_GeomFromText('LINESTRING(36.8219 -1.2921, 36.8229 -1.2911)')), -- Nairobi, Kenya
-('S275', 'Supermarket E5', ST_GeomFromText('LINESTRING(32.5825 0.3476, 32.5835 0.3486)')), -- Kampala, Uganda
+('S271', 'Supermarket E1', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)', 4326)), -- Cairo, Ai Cập
+('S272', 'Supermarket E2', ST_GeomFromText('LINESTRING(-33.9189 18.4233, -33.9179 18.4243)', 4326)), -- Cape Town, Nam Phi
+('S273', 'Supermarket E3', ST_GeomFromText('LINESTRING(6.5244 3.3792, 6.5254 3.3802)', 4326)), -- Lagos, Nigeria
+('S274', 'Supermarket E4', ST_GeomFromText('LINESTRING(-1.2921 36.8219, -1.2911 36.8229)', 4326)), -- Nairobi, Kenya
+('S275', 'Supermarket E5', ST_GeomFromText('LINESTRING(0.3476 32.5825, 0.3486 32.5835)', 4326)), -- Kampala, Uganda
 
 -- Trung Đông
-('S276', 'Supermarket F1', ST_GeomFromText('LINESTRING(55.2708 25.2048, 55.2718 25.2058)')), -- Dubai, UAE
-('S277', 'Supermarket F2', ST_GeomFromText('LINESTRING(39.1979 21.4858, 39.1989 21.4868)')), -- Jeddah, Ả Rập Xê Út
-('S278', 'Supermarket F3', ST_GeomFromText('LINESTRING(51.3890 35.6892, 51.3900 35.6902)')), -- Tehran, Iran
-('S279', 'Supermarket F4', ST_GeomFromText('LINESTRING(44.3661 33.3152, 44.3671 33.3162)')), -- Baghdad, Iraq
-('S280', 'Supermarket F5', ST_GeomFromText('LINESTRING(35.2332 31.7683, 35.2342 31.7693)')), -- Jerusalem, Israel
+('S276', 'Supermarket F1', ST_GeomFromText('LINESTRING(25.2048 55.2708, 25.2058 55.2718)', 4326)), -- Dubai, UAE
+('S277', 'Supermarket F2', ST_GeomFromText('LINESTRING(21.4858 39.1979, 21.4868 39.1989)', 4326)), -- Jeddah, Ả Rập Xê Út
+('S278', 'Supermarket F3', ST_GeomFromText('LINESTRING(35.6892 51.3890, 35.6902 51.3900)', 4326)), -- Tehran, Iran
+('S279', 'Supermarket F4', ST_GeomFromText('LINESTRING(33.3152 44.3661, 33.3162 44.3671)', 4326)), -- Baghdad, Iraq
+('S280', 'Supermarket F5', ST_GeomFromText('LINESTRING(31.7683 35.2332, 31.7693 35.2342)', 4326)), -- Jerusalem, Israel
 
 -- Châu Đại Dương
-('S281', 'Supermarket G1', ST_GeomFromText('LINESTRING(174.7633 -36.8485, 174.7643 -36.8475)')), -- Auckland, New Zealand
-('S282', 'Supermarket G2', ST_GeomFromText('LINESTRING(153.0251 -27.4698, 153.0261 -27.4688)')), -- Brisbane, Australia
-('S283', 'Supermarket G3', ST_GeomFromText('LINESTRING(144.9631 -37.8136, 144.9641 -37.8126)')), -- Melbourne, Australia
-('S284', 'Supermarket G4', ST_GeomFromText('LINESTRING(115.8575 -31.9505, 115.8585 -31.9495)')), -- Perth, Australia
-('S285', 'Supermarket G5', ST_GeomFromText('LINESTRING(166.4572 -22.2758, 166.4582 -22.2748)')), -- Nouméa, New Caledonia
+('S281', 'Supermarket G1', ST_GeomFromText('LINESTRING(-36.8485 174.7633, -36.8475 174.7643)', 4326)), -- Auckland, New Zealand
+('S282', 'Supermarket G2', ST_GeomFromText('LINESTRING(-27.4698 153.0251, -27.4688 153.0261)', 4326)), -- Brisbane, Australia
+('S283', 'Supermarket G3', ST_GeomFromText('LINESTRING(-37.8136 144.9631, -37.8126 144.9641)', 4326)), -- Melbourne, Australia
+('S284', 'Supermarket G4', ST_GeomFromText('LINESTRING(-31.9505 115.8575, -31.9495 115.8585)', 4326)), -- Perth, Australia
+('S285', 'Supermarket G5', ST_GeomFromText('LINESTRING(-22.2758 166.4572, -22.2748 166.4582)', 4326)), -- Nouméa, New Caledonia
 
 -- Các thành phố ít phổ biến hơn
-('S286', 'Supermarket H1', ST_GeomFromText('LINESTRING(-56.1645 -34.9011, -56.1635 -34.9001)')), -- Montevideo, Uruguay
-('S287', 'Supermarket H2', ST_GeomFromText('LINESTRING(-70.6693 -33.4489, -70.6683 -33.4479)')), -- Santiago, Chile
-('S288', 'Supermarket H3', ST_GeomFromText('LINESTRING(10.7522 59.9139, 10.7532 59.9149)')), -- Reykjavik, Iceland
-('S289', 'Supermarket H4', ST_GeomFromText('LINESTRING(7.4474 46.9481, 7.4484 46.9491)')), -- Bern, Thụy Sĩ
-('S290', 'Supermarket H5', ST_GeomFromText('LINESTRING(26.1025 44.4268, 26.1035 44.4278)')), -- Bucharest, Romania
+('S286', 'Supermarket H1', ST_GeomFromText('LINESTRING(-34.9011 -56.1645, -34.9001 -56.1635)', 4326)), -- Montevideo, Uruguay
+('S287', 'Supermarket H2', ST_GeomFromText('LINESTRING(-33.4489 -70.6693, -33.4479 -70.6683)', 4326)), -- Santiago, Chile
+('S288', 'Supermarket H3', ST_GeomFromText('LINESTRING(59.9139 10.7522, 59.9149 10.7532)', 4326)), -- Reykjavik, Iceland
+('S289', 'Supermarket H4', ST_GeomFromText('LINESTRING(46.9481 7.4474, 46.9491 7.4484)', 4326)), -- Bern, Thụy Sĩ
+('S290', 'Supermarket H5', ST_GeomFromText('LINESTRING(44.4268 26.1025, 44.4278 26.1035)', 4326)), -- Bucharest, Romania
 
 -- Các khu vực địa lý đặc biệt
-('S291', 'Supermarket I1', ST_GeomFromText('LINESTRING(47.9212 29.3759, 47.9222 29.3769)')), -- Kuwait City, Kuwait
-('S292', 'Supermarket I2', ST_GeomFromText('LINESTRING(-149.9003 61.2181, -149.8993 61.2191)')), -- Anchorage, Alaska, USA
-('S293', 'Supermarket I3', ST_GeomFromText('LINESTRING(37.6173 55.7558, 37.6183 55.7568)')), -- Moscow, Nga
-('S294', 'Supermarket I4', ST_GeomFromText('LINESTRING(125.7635 -8.5569, 125.7645 -8.5559)')), -- Dili, Đông Timor
-('S295', 'Supermarket I5', ST_GeomFromText('LINESTRING(-106.4869 31.7619, -106.4859 31.7629)')), -- El Paso, Texas, USA
-('S296', 'Supermarket J1', ST_GeomFromText('LINESTRING(-159.4644 22.0964, -159.4634 22.0974)')), -- Kauai, Hawaii, USA
-('S297', 'Supermarket J2', ST_GeomFromText('LINESTRING(139.6917 35.6892, 139.6927 35.6902)')), -- Yokohama, Nhật Bản
-('S298', 'Supermarket J3', ST_GeomFromText('LINESTRING(103.8519 1.2801, 103.8529 1.2811)')), -- Sentosa, Singapore
-('S299', 'Supermarket J4', ST_GeomFromText('LINESTRING(-68.1193 44.3876, -68.1183 44.3886)')), -- Bar Harbor, Maine, USA
-('S300', 'Supermarket J5', ST_GeomFromText('LINESTRING(-123.3656 48.4284, -123.3646 48.4294)')), -- Victoria, Canada
+('S291', 'Supermarket I1', ST_GeomFromText('LINESTRING(29.3759 47.9212, 29.3769 47.9222)', 4326)), -- Kuwait City, Kuwait
+('S292', 'Supermarket I2', ST_GeomFromText('LINESTRING(61.2181 -149.9003, 61.2191 -149.8993)', 4326)), -- Anchorage, Alaska, USA
+('S293', 'Supermarket I3', ST_GeomFromText('LINESTRING(55.7558 37.6173, 55.7568 37.6183)', 4326)), -- Moscow, Nga
+('S294', 'Supermarket I4', ST_GeomFromText('LINESTRING(-8.5569 125.7635, -8.5559 125.7645)', 4326)), -- Dili, Đông Timor
+('S295', 'Supermarket I5', ST_GeomFromText('LINESTRING(31.7619 -106.4869, 31.7629 -106.4859)', 4326)), -- El Paso, Texas, USA
+('S296', 'Supermarket J1', ST_GeomFromText('LINESTRING(22.0964 -159.4644, 22.0974 -159.4634)', 4326)), -- Kauai, Hawaii, USA
+('S297', 'Supermarket J2', ST_GeomFromText('LINESTRING(35.6892 139.6917, 35.6902 139.6927)', 4326)), -- Yokohama, Nhật Bản
+('S298', 'Supermarket J3', ST_GeomFromText('LINESTRING(1.2801 103.8519, 1.2811 103.8529)', 4326)), -- Sentosa, Singapore
+('S299', 'Supermarket J4', ST_GeomFromText('LINESTRING(44.3876 -68.1193, 44.3886 -68.1183)', 4326)), -- Bar Harbor, Maine, USA
+('S300', 'Supermarket J5', ST_GeomFromText('LINESTRING(48.4284 -123.3656, 48.4294 -123.3646)', 4326)), -- Victoria, Canada
 
 
-('S301', 'Supermarket A1', ST_GeomFromText('LINESTRING(-0.118092 51.509865, -0.117092 51.510865)')), -- London, UK
-('S302', 'Supermarket A2', ST_GeomFromText('LINESTRING(2.1734 41.3851, 2.1744 41.3861)')), -- Barcelona, Spain
-('S303', 'Supermarket A3', ST_GeomFromText('LINESTRING(37.6173 55.7558, 37.6183 55.7568)')), -- Moscow, Russia
-('S304', 'Supermarket A4', ST_GeomFromText('LINESTRING(-58.3816 -34.6037, -58.3806 -34.6027)')), -- Buenos Aires, Argentina
-('S305', 'Supermarket A5', ST_GeomFromText('LINESTRING(151.2093 -33.8688, 151.2103 -33.8678)')), -- Sydney, Australia
-
-('S306', 'Supermarket B1', ST_GeomFromText('LINESTRING(103.8198 1.3521, 103.8208 1.3531)')), -- Singapore
-('S307', 'Supermarket B2', ST_GeomFromText('LINESTRING(106.8650 -6.1751, 106.8660 -6.1741)')), -- Jakarta, Indonesia
-('S308', 'Supermarket B3', ST_GeomFromText('LINESTRING(100.5018 13.7563, 100.5028 13.7573)')), -- Bangkok, Thailand
-('S309', 'Supermarket B4', ST_GeomFromText('LINESTRING(144.9631 -37.8136, 144.9641 -37.8126)')), -- Melbourne, Australia
-('S310', 'Supermarket B5', ST_GeomFromText('LINESTRING(-46.6333 -23.5505, -46.6323 -23.5495)')), -- São Paulo, Brazil
-
-('S311', 'Supermarket C1', ST_GeomFromText('LINESTRING(174.7633 -36.8485, 174.7643 -36.8475)')), -- Auckland, New Zealand
-('S312', 'Supermarket C2', ST_GeomFromText('LINESTRING(13.6917 35.6895, 13.6927 35.6905)')), -- Tokyo, Japan
-('S313', 'Supermarket C3', ST_GeomFromText('LINESTRING(116.4074 39.9042, 116.4084 39.9052)')), -- Beijing, China
-('S314', 'Supermarket C4', ST_GeomFromText('LINESTRING(-79.3832 43.6532, -79.3822 43.6542)')), -- Toronto, Canada
-('S315', 'Supermarket C5', ST_GeomFromText('LINESTRING(-0.1276 51.5074, -0.1266 51.5084)')), -- London, UK
-
-('S316', 'Supermarket D1', ST_GeomFromText('LINESTRING(-77.0369 38.9072, -77.0359 38.9082)')), -- Washington, USA
-('S317', 'Supermarket D2', ST_GeomFromText('LINESTRING(-118.2437 34.0522, -118.2427 34.0532)')), -- Los Angeles, USA
-('S318', 'Supermarket D3', ST_GeomFromText('LINESTRING(-87.6298 41.8781, -87.6288 41.8791)')), -- Chicago, USA
-('S319', 'Supermarket D4', ST_GeomFromText('LINESTRING(-122.4194 37.7749, -122.4184 37.7759)')), -- San Francisco, USA
-('S320', 'Supermarket D5', ST_GeomFromText('LINESTRING(-71.0589 42.3601, -71.0579 42.3611)')), -- Boston, USA
-
-('S321', 'Supermarket E1', ST_GeomFromText('LINESTRING(28.9784 41.0082, 28.9794 41.0092)')), -- Istanbul, Turkey
-('S322', 'Supermarket E2', ST_GeomFromText('LINESTRING(34.8516 31.0461, 34.8526 31.0471)')), -- Tel Aviv, Israel
-('S323', 'Supermarket E3', ST_GeomFromText('LINESTRING(55.2708 25.2048, 55.2718 25.2058)')), -- Dubai, UAE
-('S324', 'Supermarket E4', ST_GeomFromText('LINESTRING(18.4241 -33.9249, 18.4251 -33.9239)')), -- Cape Town, South Africa
-('S325', 'Supermarket E5', ST_GeomFromText('LINESTRING(31.2357 30.0444, 31.2367 30.0454)')), -- Cairo, Egypt
-
-('S326', 'Supermarket F1', ST_GeomFromText('LINESTRING(12.4964 41.9028, 12.4974 41.9038)')), -- Rome, Italy
-('S327', 'Supermarket F2', ST_GeomFromText('LINESTRING(13.4050 52.5200, 13.4060 52.5210)')), -- Berlin, Germany
-('S328', 'Supermarket F3', ST_GeomFromText('LINESTRING(4.9041 52.3676, 4.9051 52.3686)')), -- Amsterdam, Netherlands
-('S329', 'Supermarket F4', ST_GeomFromText('LINESTRING(18.0686 59.3293, 18.0696 59.3303)')), -- Stockholm, Sweden
-('S330', 'Supermarket F5', ST_GeomFromText('LINESTRING(24.7536 59.4370, 24.7546 59.4380)')), -- Tallinn, Estonia
-
-('S331', 'Supermarket G1', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Yokohama, Japan
-('S332', 'Supermarket G2', ST_GeomFromText('LINESTRING(126.9780 37.5665, 126.9790 37.5675)')), -- Seoul, South Korea
-('S333', 'Supermarket G3', ST_GeomFromText('LINESTRING(120.9605 23.6978, 120.9615 23.6988)')), -- Taipei, Taiwan
-('S334', 'Supermarket G4', ST_GeomFromText('LINESTRING(115.8575 -31.9505, 115.8585 -31.9495)')), -- Perth, Australia
-('S335', 'Supermarket G5', ST_GeomFromText('LINESTRING(151.7833 -32.9167, 151.7843 -32.9157)')), -- Newcastle, Australia
-
-('S336', 'Supermarket H1', ST_GeomFromText('LINESTRING(70.9000 26.9124, 70.9010 26.9134)')), -- Jaipur, India
-('S337', 'Supermarket H2', ST_GeomFromText('LINESTRING(88.3639 22.5726, 88.3649 22.5736)')), -- Kolkata, India
-('S338', 'Supermarket H3', ST_GeomFromText('LINESTRING(77.2090 28.6139, 77.2100 28.6149)')), -- New Delhi, India
-('S339', 'Supermarket H4', ST_GeomFromText('LINESTRING(72.8777 19.0760, 72.8787 19.0770)')), -- Mumbai, India
-('S340', 'Supermarket H5', ST_GeomFromText('LINESTRING(78.4867 17.3850, 78.4877 17.3860)')), -- Hyderabad, India
-
-('S341', 'Supermarket I1', ST_GeomFromText('LINESTRING(23.7275 37.9838, 23.7285 37.9848)')), -- Athens, Greece
-('S342', 'Supermarket I2', ST_GeomFromText('LINESTRING(30.5234 50.4501, 30.5244 50.4511)')), -- Kyiv, Ukraine
-('S343', 'Supermarket I3', ST_GeomFromText('LINESTRING(-9.1399 38.7169, -9.1389 38.7179)')), -- Lisbon, Portugal
-('S344', 'Supermarket I4', ST_GeomFromText('LINESTRING(-3.7038 40.4168, -3.7028 40.4178)')), -- Madrid, Spain
-('S345', 'Supermarket I5', ST_GeomFromText('LINESTRING(29.9187 31.2001, 29.9197 31.2011)')), -- Alexandria, Egypt
-
-('S346', 'Supermarket J1', ST_GeomFromText('LINESTRING(-157.8583 21.3069, -157.8573 21.3079)')), -- Honolulu, Hawaii
-('S347', 'Supermarket J2', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')), -- Rio de Janeiro, Brazil
-('S348', 'Supermarket J3', ST_GeomFromText('LINESTRING(11.5819 48.1351, 11.5829 48.1361)')), -- Munich, Germany
-('S349', 'Supermarket J4', ST_GeomFromText('LINESTRING(135.7681 35.0116, 135.7691 35.0126)')), -- Kyoto, Japan
-('S350', 'Supermarket J5', ST_GeomFromText('LINESTRING(-0.0879 51.5116, -0.0869 51.5126)')), -- London, UK
-
-('S351', 'Supermarket J1', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Yokohama, Nhật Bản
-('S352', 'Supermarket J2', ST_GeomFromText('LINESTRING(2.1734 41.3851, 2.1744 41.3861)')), -- Barcelona, Tây Ban Nha
-('S353', 'Supermarket J3', ST_GeomFromText('LINESTRING(37.6173 55.7558, 37.6183 55.7568)')), -- Moscow, Nga
-('S354', 'Supermarket J4', ST_GeomFromText('LINESTRING(77.5946 12.9716, 77.5956 12.9726)')), -- Bangalore, Ấn Độ
-('S355', 'Supermarket J5', ST_GeomFromText('LINESTRING(-99.1332 19.4326, -99.1322 19.4336)')), -- Mexico City, Mexico
-
--- Các siêu thị ở Bắc Mỹ
-('S356', 'Supermarket K1', ST_GeomFromText('LINESTRING(-104.9903 39.7392, -104.9893 39.7402)')), -- Denver, USA
-('S357', 'Supermarket K2', ST_GeomFromText('LINESTRING(-75.6972 45.4215, -75.6962 45.4225)')), -- Ottawa, Canada
-('S358', 'Supermarket K3', ST_GeomFromText('LINESTRING(-71.0589 42.3601, -71.0579 42.3611)')), -- Boston, USA
-('S359', 'Supermarket K4', ST_GeomFromText('LINESTRING(-80.1918 25.7617, -80.1908 25.7627)')), -- Miami, USA
-('S360', 'Supermarket K5', ST_GeomFromText('LINESTRING(-123.3656 48.4284, -123.3646 48.4294)')), -- Victoria, Canada
-
--- Các siêu thị ở Nam Mỹ
-('S361', 'Supermarket L1', ST_GeomFromText('LINESTRING(-68.1193 -16.5000, -68.1183 -16.4990)')), -- La Paz, Bolivia
-('S362', 'Supermarket L2', ST_GeomFromText('LINESTRING(-60.6453 -32.9468, -60.6443 -32.9458)')), -- Rosario, Argentina
-('S363', 'Supermarket L3', ST_GeomFromText('LINESTRING(-79.9224 -2.1894, -79.9214 -2.1884)')), -- Guayaquil, Ecuador
-('S364', 'Supermarket L4', ST_GeomFromText('LINESTRING(-43.9378 -19.9227, -43.9368 -19.9217)')), -- Belo Horizonte, Brazil
-('S365', 'Supermarket L5', ST_GeomFromText('LINESTRING(-75.6636 6.2442, -75.6626 6.2452)')), -- Medellín, Colombia
-
--- Các siêu thị ở Châu Phi
-('S366', 'Supermarket M1', ST_GeomFromText('LINESTRING(31.2357 30.0444, 31.2367 30.0454)')), -- Cairo, Ai Cập
-('S367', 'Supermarket M2', ST_GeomFromText('LINESTRING(25.7479 -28.2293, 25.7489 -28.2283)')), -- Pretoria, Nam Phi
-('S368', 'Supermarket M3', ST_GeomFromText('LINESTRING(47.9186 -18.8792, 47.9196 -18.8782)')), -- Antananarivo, Madagascar
-('S369', 'Supermarket M4', ST_GeomFromText('LINESTRING(35.7382 -15.7875, 35.7392 -15.7865)')), -- Lilongwe, Malawi
-('S370', 'Supermarket M5', ST_GeomFromText('LINESTRING(39.2674 -6.7924, 39.2684 -6.7914)')), -- Zanzibar City, Tanzania
-
--- Các siêu thị ở Châu Âu
-('S371', 'Supermarket N1', ST_GeomFromText('LINESTRING(24.9458 60.1921, 24.9468 60.1931)')), -- Helsinki, Phần Lan
-('S372', 'Supermarket N2', ST_GeomFromText('LINESTRING(23.7275 37.9838, 23.7285 37.9848)')), -- Athens, Hy Lạp
-('S373', 'Supermarket N3', ST_GeomFromText('LINESTRING(10.7522 59.9139, 10.7532 59.9149)')), -- Oslo, Na Uy
-('S374', 'Supermarket N4', ST_GeomFromText('LINESTRING(19.0402 47.4979, 19.0412 47.4989)')), -- Budapest, Hungary
-('S375', 'Supermarket N5', ST_GeomFromText('LINESTRING(-6.2603 53.3498, -6.2593 53.3508)')), -- Dublin, Ireland
-
--- Các siêu thị ở Trung Đông
-('S376', 'Supermarket O1', ST_GeomFromText('LINESTRING(39.1979 21.4858, 39.1989 21.4868)')), -- Jeddah, Ả Rập Xê Út
-('S377', 'Supermarket O2', ST_GeomFromText('LINESTRING(44.3661 33.3152, 44.3671 33.3162)')), -- Baghdad, Iraq
-('S378', 'Supermarket O3', ST_GeomFromText('LINESTRING(54.3667 24.4667, 54.3677 24.4677)')), -- Abu Dhabi, UAE
-('S379', 'Supermarket O4', ST_GeomFromText('LINESTRING(35.9304 31.9632, 35.9314 31.9642)')), -- Amman, Jordan
-('S380', 'Supermarket O5', ST_GeomFromText('LINESTRING(50.5577 26.2235, 50.5587 26.2245)')), -- Manama, Bahrain
-
--- Các siêu thị ở Châu Á
-('S381', 'Supermarket P1', ST_GeomFromText('LINESTRING(103.8519 1.2903, 103.8529 1.2913)')), -- Sentosa, Singapore
-('S382', 'Supermarket P2', ST_GeomFromText('LINESTRING(106.8650 -6.1751, 106.8660 -6.1741)')), -- Jakarta, Indonesia
-('S383', 'Supermarket P3', ST_GeomFromText('LINESTRING(120.9842 14.5995, 120.9852 14.6005)')), -- Manila, Philippines
-('S384', 'Supermarket P4', ST_GeomFromText('LINESTRING(116.4074 39.9042, 116.4084 39.9052)')), -- Bắc Kinh, Trung Quốc
-('S385', 'Supermarket P5', ST_GeomFromText('LINESTRING(121.4737 31.2304, 121.4747 31.2314)')), -- Thượng Hải, Trung Quốc
-
--- Các siêu thị ở Úc & các đảo Thái Bình Dương
-('S386', 'Supermarket Q1', ST_GeomFromText('LINESTRING(149.1300 -35.2809, 149.1310 -35.2799)')), -- Canberra, Úc
-('S387', 'Supermarket Q2', ST_GeomFromText('LINESTRING(151.2165 -33.8651, 151.2175 -33.8641)')), -- Sydney, Úc
-('S388', 'Supermarket Q3', ST_GeomFromText('LINESTRING(166.4572 -22.2735, 166.4582 -22.2725)')), -- Nouméa, New Caledonia
-('S389', 'Supermarket Q4', ST_GeomFromText('LINESTRING(159.9670 -9.4272, 159.9680 -9.4262)')), -- Honiara, Solomon Islands
-('S390', 'Supermarket Q5', ST_GeomFromText('LINESTRING(138.6007 -34.9285, 138.6017 -34.9275)')), -- Adelaide, Úc
-
--- Các siêu thị đặt tại các địa điểm đặc biệt
-('S391', 'Supermarket R1', ST_GeomFromText('LINESTRING(-106.4454 35.0844, -106.4444 35.0854)')), -- Albuquerque, USA (Breaking Bad)
-('S392', 'Supermarket R2', ST_GeomFromText('LINESTRING(30.5234 50.4501, 30.5244 50.4511)')), -- Kyiv, Ukraine
-('S393', 'Supermarket R3', ST_GeomFromText('LINESTRING(28.9784 41.0082, 28.9794 41.0092)')), -- Istanbul, Thổ Nhĩ Kỳ
-('S394', 'Supermarket R4', ST_GeomFromText('LINESTRING(-46.6253 -23.5338, -46.6243 -23.5328)')), -- São Paulo, Brazil
-('S395', 'Supermarket R5', ST_GeomFromText('LINESTRING(-159.7711 -21.2129, -159.7701 -21.2119)')), -- Avarua, Cook Islands
-('S396', 'Supermarket R6', ST_GeomFromText('LINESTRING(-61.2225 13.9094, -61.2215 13.9104)')), -- Castries, Saint Lucia
-('S397', 'Supermarket R7', ST_GeomFromText('LINESTRING(12.5683 55.6761, 12.5693 55.6771)')), -- Copenhagen, Đan Mạch
-('S398', 'Supermarket R8', ST_GeomFromText('LINESTRING(174.7756 -41.2865, 174.7766 -41.2855)')), -- Wellington, New Zealand
-('S399', 'Supermarket R9', ST_GeomFromText('LINESTRING(-43.1729 -22.9068, -43.1719 -22.9058)')), -- Rio de Janeiro, Brazil
-('S400', 'Supermarket R10', ST_GeomFromText('LINESTRING(-135.0000 -90.0000, -134.9990 -89.9990)')), -- Nam Cực (Giả định có 1 siêu thị cho nhà nghiên cứu)
+('S301', 'Supermarket A1', ST_GeomFromText('LINESTRING(-0.118092 51.509865, -0.117092 51.510865)', 4326)), -- London, UK
 
 
-('S401', 'Supermarket K1', ST_GeomFromText('LINESTRING(12.4964 41.9028, 12.4974 41.9038)')), -- Rome, Italy
-('S402', 'Supermarket K2', ST_GeomFromText('LINESTRING(19.0402 47.4979, 19.0412 47.4989)')), -- Budapest, Hungary
-('S403', 'Supermarket K3', ST_GeomFromText('LINESTRING(30.5234 50.4501, 30.5244 50.4511)')), -- Kyiv, Ukraine
-('S404', 'Supermarket K4', ST_GeomFromText('LINESTRING(23.7275 37.9838, 23.7285 37.9848)')), -- Athens, Greece
-('S405', 'Supermarket K5', ST_GeomFromText('LINESTRING(24.7536 59.4370, 24.7546 59.4380)')), -- Tallinn, Estonia
+('S302', 'Supermarket A2', ST_GeomFromText('LINESTRING(2.1734 41.3851, 2.1744 41.3861)', 4326)), -- Barcelona, Spain
+('S303', 'Supermarket A3', ST_GeomFromText('LINESTRING(37.6173 55.7558, 37.6183 55.7568)', 4326)), -- Moscow, Russia
+('S304', 'Supermarket A4', ST_GeomFromText('LINESTRING(-58.3816 -34.6037, -58.3806 -34.6027)', 4326)), -- Buenos Aires, Argentina
 
-('S406', 'Supermarket L1', ST_GeomFromText('LINESTRING(55.2030 25.2760, 55.2040 25.2770)')), -- Abu Dhabi, UAE
-('S407', 'Supermarket L2', ST_GeomFromText('LINESTRING(58.4032 23.6143, 58.4042 23.6153)')), -- Muscat, Oman
-('S408', 'Supermarket L3', ST_GeomFromText('LINESTRING(44.3615 33.3128, 44.3625 33.3138)')), -- Baghdad, Iraq
-('S409', 'Supermarket L4', ST_GeomFromText('LINESTRING(54.3667 24.4667, 54.3677 24.4677)')), -- Al Ain, UAE
-('S410', 'Supermarket L5', ST_GeomFromText('LINESTRING(43.7696 15.3530, 43.7706 15.3540)')), -- Sanaa, Yemen
 
-('S411', 'Supermarket M1', ST_GeomFromText('LINESTRING(-70.1627 -18.4783, -70.1617 -18.4773)')), -- Arica, Chile
-('S412', 'Supermarket M2', ST_GeomFromText('LINESTRING(-74.2973 4.5709, -74.2963 4.5719)')), -- Bogotá, Colombia
-('S413', 'Supermarket M3', ST_GeomFromText('LINESTRING(-66.9036 10.4806, -66.9026 10.4816)')), -- Caracas, Venezuela
-('S414', 'Supermarket M4', ST_GeomFromText('LINESTRING(-80.7821 -0.9499, -80.7811 -0.9489)')), -- Manta, Ecuador
-('S415', 'Supermarket M5', ST_GeomFromText('LINESTRING(-77.0428 -12.0464, -77.0418 -12.0454)')), -- Lima, Peru
+-- Khu vực Châu Á - Thái Bình Dương
+('S305', 'Supermarket A5', ST_GeomFromText('LINESTRING(-33.8688 151.2093, -33.8678 151.2103)', 4326)),  -- Sydney
 
-('S416', 'Supermarket N1', ST_GeomFromText('LINESTRING(151.7751 -32.9264, 151.7761 -32.9254)')), -- Newcastle, Australia
-('S417', 'Supermarket N2', ST_GeomFromText('LINESTRING(147.3294 -42.8821, 147.3304 -42.8811)')), -- Hobart, Australia
-('S418', 'Supermarket N3', ST_GeomFromText('LINESTRING(158.7516 -8.8968, 158.7526 -8.8958)')), -- Honiara, Solomon Islands
-('S419', 'Supermarket N4', ST_GeomFromText('LINESTRING(166.4250 -22.2758, 166.4260 -22.2748)')), -- Noumea, New Caledonia
-('S420', 'Supermarket N5', ST_GeomFromText('LINESTRING(-134.4197 58.3019, -134.4187 58.3029)')), -- Juneau, Alaska, USA
+('S306', 'Supermarket B1', ST_GeomFromText('LINESTRING(1.3521 103.8198, 1.3531 103.8208)', 4326)), -- Singapore
+('S307', 'Supermarket B2', ST_GeomFromText('LINESTRING(-6.1751 106.8650, -6.1741 106.8660)', 4326)), -- Jakarta
 
-('S421', 'Supermarket O1', ST_GeomFromText('LINESTRING(9.0579 48.7833, 9.0589 48.7843)')), -- Stuttgart, Germany
-('S422', 'Supermarket O2', ST_GeomFromText('LINESTRING(14.5058 46.0569, 14.5068 46.0579)')), -- Ljubljana, Slovenia
-('S423', 'Supermarket O3', ST_GeomFromText('LINESTRING(26.1025 44.4268, 26.1035 44.4278)')), -- Bucharest, Romania
-('S424', 'Supermarket O4', ST_GeomFromText('LINESTRING(10.7522 59.9139, 10.7532 59.9149)')), -- Oslo, Norway
-('S425', 'Supermarket O5', ST_GeomFromText('LINESTRING(4.8357 45.7640, 4.8367 45.7650)')), -- Lyon, France
+('S308', 'Supermarket B3', ST_GeomFromText('LINESTRING(13.7563 100.5018, 13.7573 100.5028)', 4326)), -- Bangkok
+('S309', 'Supermarket B4', ST_GeomFromText('LINESTRING(-37.8136 144.9631, -37.8126 144.9641)', 4326)), -- Melbourne
 
-('S426', 'Supermarket P1', ST_GeomFromText('LINESTRING(31.2304 30.0444, 31.2314 30.0454)')), -- Cairo, Egypt
-('S427', 'Supermarket P2', ST_GeomFromText('LINESTRING(32.5825 0.3476, 32.5835 0.3486)')), -- Kampala, Uganda
-('S428', 'Supermarket P3', ST_GeomFromText('LINESTRING(3.0586 36.7538, 3.0596 36.7548)')), -- Algiers, Algeria
-('S429', 'Supermarket P4', ST_GeomFromText('LINESTRING(9.7489 -0.8040, 9.7499 -0.8030)')), -- Accra, Ghana
-('S430', 'Supermarket P5', ST_GeomFromText('LINESTRING(18.4233 -33.9189, 18.4243 -33.9179)')), -- Cape Town, South Africa
 
-('S431', 'Supermarket Q1', ST_GeomFromText('LINESTRING(85.3240 27.7172, 85.3250 27.7182)')), -- Kathmandu, Nepal
-('S432', 'Supermarket Q2', ST_GeomFromText('LINESTRING(39.7294 21.3891, 39.7304 21.3901)')), -- Mecca, Saudi Arabia
-('S433', 'Supermarket Q3', ST_GeomFromText('LINESTRING(100.5018 13.7563, 100.5028 13.7573)')), -- Bangkok, Thailand
-('S434', 'Supermarket Q4', ST_GeomFromText('LINESTRING(78.9629 20.5937, 78.9639 20.5947)')), -- Mumbai, India
-('S435', 'Supermarket Q5', ST_GeomFromText('LINESTRING(106.8456 -6.2088, 106.8466 -6.2078)')), -- Jakarta, Indonesia
+-- Khu vực Châu Mỹ
+('S310', 'Supermarket B5', ST_GeomFromText('LINESTRING(-23.5505 -46.6333, -23.5495 -46.6323)', 4326)), -- São Paulo
+('S346', 'Supermarket J1', ST_GeomFromText('LINESTRING(21.3069 -157.8583, 21.3079 -157.8573)', 4326)), -- Honolulu
+('S347', 'Supermarket J2', ST_GeomFromText('LINESTRING(-22.9068 -43.1729, -22.9058 -43.1719)', 4326)), -- Rio de Janeiro
 
-('S436', 'Supermarket R1', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Tokyo, Japan
-('S437', 'Supermarket R2', ST_GeomFromText('LINESTRING(126.9780 37.5665, 126.9790 37.5675)')), -- Seoul, South Korea
-('S438', 'Supermarket R3', ST_GeomFromText('LINESTRING(121.4737 31.2304, 121.4747 31.2314)')), -- Shanghai, China
-('S439', 'Supermarket R4', ST_GeomFromText('LINESTRING(2.3522 48.8566, 2.3532 48.8576)')), -- Paris, France
-('S440', 'Supermarket R5', ST_GeomFromText('LINESTRING(-0.1276 51.5074, -0.1266 51.5084)')), -- London, UK
+-- Khu vực Châu Âu
+('S326', 'Supermarket F1', ST_GeomFromText('LINESTRING(41.9028 12.4964, 41.9038 12.4974)', 4326)), -- Rome
+('S327', 'Supermarket F2', ST_GeomFromText('LINESTRING(52.5200 13.4050, 52.5210 13.4060)', 4326)), -- Berlin
 
-('S441', 'Supermarket S1', ST_GeomFromText('LINESTRING(-118.2437 34.0522, -118.2427 34.0532)')), -- Los Angeles, USA
-('S442', 'Supermarket S2', ST_GeomFromText('LINESTRING(-74.0060 40.7128, -74.0050 40.7138)')), -- New York, USA
-('S443', 'Supermarket S3', ST_GeomFromText('LINESTRING(-87.6298 41.8781, -87.6288 41.8791)')), -- Chicago, USA
-('S444', 'Supermarket S4', ST_GeomFromText('LINESTRING(-71.0589 42.3601, -71.0579 42.3611)')), -- Boston, USA
-('S445', 'Supermarket S5', ST_GeomFromText('LINESTRING(-122.3321 47.6062, -122.3311 47.6072)')), -- Seattle, USA
+-- Khu vực Châu Phi
+('S325', 'Supermarket E5', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)', 4326)), -- Cairo
+('S324', 'Supermarket E4', ST_GeomFromText('LINESTRING(-33.9249 18.4241, -33.9239 18.4251)', 4326)), -- Cape Town
 
-('S446', 'Supermarket T1', ST_GeomFromText('LINESTRING(151.2093 -33.8688, 151.2103 -33.8678)')), -- Sydney, Australia
-('S447', 'Supermarket T2', ST_GeomFromText('LINESTRING(144.9631 -37.8136, 144.9641 -37.8126)')), -- Melbourne, Australia
-('S448', 'Supermarket T3', ST_GeomFromText('LINESTRING(106.7038 10.7769, 106.7048 10.7779)')), -- Ho Chi Minh City, Vietnam
-('S449', 'Supermarket T4', ST_GeomFromText('LINESTRING(105.8545 21.0285, 105.8555 21.0295)')), -- Hanoi, Vietnam
-('S450', 'Supermarket T5', ST_GeomFromText('LINESTRING(108.2272 16.0471, 108.2282 16.0481)')), -- Da Nang, Vietnam
+-- Các siêu thị khác
+('S311', 'Supermarket C1', ST_GeomFromText('LINESTRING(-36.8485 174.7633, -36.8475 174.7643)', 4326)), -- Auckland
+('S312', 'Supermarket C2', ST_GeomFromText('LINESTRING(35.6895 139.6917, 35.6905 139.6927)', 4326)), -- Tokyo
+('S313', 'Supermarket C3', ST_GeomFromText('LINESTRING(39.9042 116.4074, 39.9052 116.4084)', 4326)), -- Beijing
+('S314', 'Supermarket C4', ST_GeomFromText('LINESTRING(43.6532 -79.3832, 43.6542 -79.3822)', 4326)), -- Toronto
+('S315', 'Supermarket C5', ST_GeomFromText('LINESTRING(51.5074 -0.1276, 51.5084 -0.1266)', 4326)), -- London
 
-('S451', 'Supermarket K1', ST_GeomFromText('LINESTRING(37.9838 23.7275, 37.9848 23.7285)')), -- Athens, Hy Lạp
-('S452', 'Supermarket K2', ST_GeomFromText('LINESTRING(30.5234 50.4501, 30.5244 50.4511)')), -- Kyiv, Ukraine
-('S453', 'Supermarket K3', ST_GeomFromText('LINESTRING(-75.6972 45.4215, -75.6962 45.4225)')), -- Ottawa, Canada
-('S454', 'Supermarket K4', ST_GeomFromText('LINESTRING(-3.7038 40.4168, -3.7028 40.4178)')), -- Madrid, Tây Ban Nha
-('S455', 'Supermarket K5', ST_GeomFromText('LINESTRING(18.4241 -33.9249, 18.4251 -33.9239)')), -- Cape Town, Nam Phi
+-- Các siêu thị từ S316-S323
+('S316', 'Supermarket D1', ST_GeomFromText('LINESTRING(38.9072 -77.0369, 38.9082 -77.0359)', 4326)), -- Washington
+('S317', 'Supermarket D2', ST_GeomFromText('LINESTRING(34.0522 -118.2437, 34.0532 -118.2427)', 4326)), -- Los Angeles
+('S318', 'Supermarket D3', ST_GeomFromText('LINESTRING(41.8781 -87.6298, 41.8791 -87.6288)', 4326)), -- Chicago
+('S319', 'Supermarket D4', ST_GeomFromText('LINESTRING(37.7749 -122.4194, 37.7759 -122.4184)', 4326)), -- San Francisco
+('S320', 'Supermarket D5', ST_GeomFromText('LINESTRING(42.3601 -71.0589, 42.3611 -71.0579)', 4326)), -- Boston
+('S321', 'Supermarket E1', ST_GeomFromText('LINESTRING(41.0082 28.9784, 41.0092 28.9794)', 4326)), -- Istanbul
+('S322', 'Supermarket E2', ST_GeomFromText('LINESTRING(31.0461 34.8516, 31.0471 34.8526)', 4326)), -- Tel Aviv
+('S323', 'Supermarket E3', ST_GeomFromText('LINESTRING(25.2048 55.2708, 25.2058 55.2718)', 4326)), -- Dubai
 
-('S456', 'Supermarket L1', ST_GeomFromText('LINESTRING(106.8456 -6.2088, 106.8466 -6.2078)')), -- Jakarta, Indonesia
-('S457', 'Supermarket L2', ST_GeomFromText('LINESTRING(144.7469 -37.8136, 144.7479 -37.8126)')), -- Geelong, Australia
-('S458', 'Supermarket L3', ST_GeomFromText('LINESTRING(-66.9036 10.4806, -66.9026 10.4816)')), -- Caracas, Venezuela
-('S459', 'Supermarket L4', ST_GeomFromText('LINESTRING(19.0402 47.4979, 19.0412 47.4989)')), -- Budapest, Hungary
-('S460', 'Supermarket L5', ST_GeomFromText('LINESTRING(-0.1426 51.5079, -0.1416 51.5089)')), -- London, Anh
+-- Các siêu thị từ S331-S340
+('S331', 'Supermarket G1', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Yokohama
+('S332', 'Supermarket G2', ST_GeomFromText('LINESTRING(37.5665 126.9780, 37.5675 126.9790)', 4326)), -- Seoul
+('S333', 'Supermarket G3', ST_GeomFromText('LINESTRING(23.6978 120.9605, 23.6988 120.9615)', 4326)), -- Taipei
+('S334', 'Supermarket G4', ST_GeomFromText('LINESTRING(-31.9505 115.8575, -31.9495 115.8585)', 4326)), -- Perth
+('S335', 'Supermarket G5', ST_GeomFromText('LINESTRING(-32.9167 151.7833, -32.9157 151.7843)', 4326)), -- Newcastle
+('S336', 'Supermarket H1', ST_GeomFromText('LINESTRING(26.9124 70.9000, 26.9134 70.9010)', 4326)), -- Jaipur
+('S337', 'Supermarket H2', ST_GeomFromText('LINESTRING(22.5726 88.3639, 22.5736 88.3649)', 4326)), -- Kolkata
+('S338', 'Supermarket H3', ST_GeomFromText('LINESTRING(28.6139 77.2090, 28.6149 77.2100)', 4326)), -- New Delhi
+('S339', 'Supermarket H4', ST_GeomFromText('LINESTRING(19.0760 72.8777, 19.0770 72.8787)', 4326)), -- Mumbai
+('S340', 'Supermarket H5', ST_GeomFromText('LINESTRING(17.3850 78.4867, 17.3860 78.4877)', 4326)), -- Hyderabad
 
-('S461', 'Supermarket M1', ST_GeomFromText('LINESTRING(-74.8055 10.9685, -74.8045 10.9695)')), -- Barranquilla, Colombia
-('S462', 'Supermarket M2', ST_GeomFromText('LINESTRING(90.4125 23.8103, 90.4135 23.8113)')), -- Dhaka, Bangladesh
-('S463', 'Supermarket M3', ST_GeomFromText('LINESTRING(-61.2249 10.6600, -61.2239 10.6610)')), -- Port of Spain, Trinidad và Tobago
-('S464', 'Supermarket M4', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)')), -- Cairo, Ai Cập
-('S465', 'Supermarket M5', ST_GeomFromText('LINESTRING(13.4050 52.5200, 13.4060 52.5210)')), -- Berlin, Đức
+-- Các siêu thị từ S341-S350
+('S341', 'Supermarket I1', ST_GeomFromText('LINESTRING(37.9838 23.7275, 37.9848 23.7285)', 4326)), -- Athens
+('S342', 'Supermarket I2', ST_GeomFromText('LINESTRING(50.4501 30.5234, 50.4511 30.5244)', 4326)), -- Kyiv
+('S343', 'Supermarket I3', ST_GeomFromText('LINESTRING(38.7169 -9.1399, 38.7179 -9.1389)', 4326)), -- Lisbon
+('S344', 'Supermarket I4', ST_GeomFromText('LINESTRING(40.4168 -3.7038, 40.4178 -3.7028)', 4326)), -- Madrid
+('S345', 'Supermarket I5', ST_GeomFromText('LINESTRING(31.2001 29.9187, 31.2011 29.9197)', 4326)), -- Alexandria
+('S348', 'Supermarket J3', ST_GeomFromText('LINESTRING(48.1351 11.5819, 48.1361 11.5829)', 4326)), -- Munich
+('S349', 'Supermarket J4', ST_GeomFromText('LINESTRING(35.0116 135.7681, 35.0126 135.7691)', 4326)), -- Kyoto
+('S350', 'Supermarket J5', ST_GeomFromText('LINESTRING(51.5116 -0.0879, 51.5126 -0.0869)', 4326)), -- London
 
-('S466', 'Supermarket N1', ST_GeomFromText('LINESTRING(135.7681 35.0116, 135.7691 35.0126)')), -- Kyoto, Nhật Bản
-('S467', 'Supermarket N2', ST_GeomFromText('LINESTRING(-70.6483 -33.4569, -70.6473 -33.4559)')), -- Santiago, Chile
-('S468', 'Supermarket N3', ST_GeomFromText('LINESTRING(55.2823 25.2760, 55.2833 25.2770)')), -- Dubai, UAE
-('S469', 'Supermarket N4', ST_GeomFromText('LINESTRING(151.2153 -33.8568, 151.2163 -33.8558)')), -- Sydney, Úc
-('S470', 'Supermarket N5', ST_GeomFromText('LINESTRING(9.9937 53.5511, 9.9947 53.5521)')), -- Hamburg, Đức
 
-('S471', 'Supermarket O1', ST_GeomFromText('LINESTRING(-71.0589 42.3601, -71.0579 42.3611)')), -- Boston, Mỹ
-('S472', 'Supermarket O2', ST_GeomFromText('LINESTRING(28.9784 41.0082, 28.9794 41.0092)')), -- Istanbul, Thổ Nhĩ Kỳ
-('S473', 'Supermarket O3', ST_GeomFromText('LINESTRING(166.4426 -22.2758, 166.4436 -22.2748)')), -- Nouméa, New Caledonia
-('S474', 'Supermarket O4', ST_GeomFromText('LINESTRING(12.4964 41.9028, 12.4974 41.9038)')), -- Rome, Ý
-('S475', 'Supermarket O5', ST_GeomFromText('LINESTRING(103.8198 1.3521, 103.8208 1.3531)')), -- Singapore
 
-('S476', 'Supermarket P1', ST_GeomFromText('LINESTRING(102.6151 17.9757, 102.6161 17.9767)')), -- Vientiane, Lào
-('S477', 'Supermarket P2', ST_GeomFromText('LINESTRING(76.2711 9.9312, 76.2721 9.9322)')), -- Kochi, Ấn Độ
-('S478', 'Supermarket P3', ST_GeomFromText('LINESTRING(-58.3772 -34.6132, -58.3762 -34.6122)')), -- Buenos Aires, Argentina
-('S479', 'Supermarket P4', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Tokyo, Nhật Bản
-('S480', 'Supermarket P5', ST_GeomFromText('LINESTRING(77.1025 28.7041, 77.1035 28.7051)')), -- New Delhi, Ấn Độ
+-- Các siêu thị từ S351-S360
+('S351', 'Supermarket J1', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Yokohama
+('S352', 'Supermarket J2', ST_GeomFromText('LINESTRING(41.3851 2.1734, 41.3861 2.1744)', 4326)), -- Barcelona
+('S353', 'Supermarket J3', ST_GeomFromText('LINESTRING(55.7558 37.6173, 55.7568 37.6183)', 4326)), -- Moscow
+('S354', 'Supermarket J4', ST_GeomFromText('LINESTRING(12.9716 77.5946, 12.9726 77.5956)', 4326)), -- Bangalore
+('S355', 'Supermarket J5', ST_GeomFromText('LINESTRING(19.4326 -99.1332, 19.4336 -99.1322)', 4326)), -- Mexico City
+('S356', 'Supermarket K1', ST_GeomFromText('LINESTRING(39.7392 -104.9903, 39.7402 -104.9893)', 4326)), -- Denver
+('S357', 'Supermarket K2', ST_GeomFromText('LINESTRING(45.4215 -75.6972, 45.4225 -75.6962)', 4326)), -- Ottawa
+('S358', 'Supermarket K3', ST_GeomFromText('LINESTRING(42.3601 -71.0589, 42.3611 -71.0579)', 4326)), -- Boston
+('S359', 'Supermarket K4', ST_GeomFromText('LINESTRING(25.7617 -80.1918, 25.7627 -80.1908)', 4326)), -- Miami
+('S360', 'Supermarket K5', ST_GeomFromText('LINESTRING(48.4284 -123.3656, 48.4294 -123.3646)', 4326)), -- Victoria
 
-('S481', 'Supermarket Q1', ST_GeomFromText('LINESTRING(-43.2096 -22.9035, -43.2086 -22.9025)')), -- Rio de Janeiro, Brazil
-('S482', 'Supermarket Q2', ST_GeomFromText('LINESTRING(39.1919 -6.7924, 39.1929 -6.7914)')), -- Dar es Salaam, Tanzania
-('S483', 'Supermarket Q3', ST_GeomFromText('LINESTRING(-99.1332 19.4326, -99.1322 19.4336)')), -- Mexico City, Mexico
-('S484', 'Supermarket Q4', ST_GeomFromText('LINESTRING(121.4737 31.2304, 121.4747 31.2314)')), -- Thượng Hải, Trung Quốc
-('S485', 'Supermarket Q5', ST_GeomFromText('LINESTRING(27.9475 -26.2041, 27.9485 -26.2031)')), -- Johannesburg, Nam Phi
+-- Các siêu thị từ S361-S400
+('S361', 'Supermarket L1', ST_GeomFromText('LINESTRING(-16.5000 -68.1193, -16.4990 -68.1183)', 4326)), -- La Paz
+('S362', 'Supermarket L2', ST_GeomFromText('LINESTRING(-32.9468 -60.6453, -32.9458 -60.6443)', 4326)), -- Rosario
+('S363', 'Supermarket L3', ST_GeomFromText('LINESTRING(-2.1894 -79.9224, -2.1884 -79.9214)', 4326)), -- Guayaquil
+('S364', 'Supermarket L4', ST_GeomFromText('LINESTRING(-19.9227 -43.9378, -19.9217 -43.9368)', 4326)), -- Belo Horizonte
+('S365', 'Supermarket L5', ST_GeomFromText('LINESTRING(6.2442 -75.6636, 6.2452 -75.6626)', 4326)), -- Medellín
+('S366', 'Supermarket M1', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)', 4326)), -- Cairo
+('S367', 'Supermarket M2', ST_GeomFromText('LINESTRING(-28.2293 25.7479, -28.2283 25.7489)', 4326)), -- Pretoria
+('S368', 'Supermarket M3', ST_GeomFromText('LINESTRING(-18.8792 47.9186, -18.8782 47.9196)', 4326)), -- Antananarivo
+('S369', 'Supermarket M4', ST_GeomFromText('LINESTRING(-15.7875 35.7382, -15.7865 35.7392)', 4326)), -- Lilongwe
+('S370', 'Supermarket M5', ST_GeomFromText('LINESTRING(-6.7924 39.2674, -6.7914 39.2684)', 4326)), -- Zanzibar
+('S371', 'Supermarket N1', ST_GeomFromText('LINESTRING(60.1921 24.9458, 60.1931 24.9468)', 4326)), -- Helsinki
+('S372', 'Supermarket N2', ST_GeomFromText('LINESTRING(37.9838 23.7275, 37.9848 23.7285)', 4326)), -- Athens
+('S373', 'Supermarket N3', ST_GeomFromText('LINESTRING(59.9139 10.7522, 59.9149 10.7532)', 4326)), -- Oslo
+('S374', 'Supermarket N4', ST_GeomFromText('LINESTRING(47.4979 19.0402, 47.4989 19.0412)', 4326)), -- Budapest
+('S375', 'Supermarket N5', ST_GeomFromText('LINESTRING(53.3498 -6.2603, 53.3508 -6.2593)', 4326)), -- Dublin
+('S376', 'Supermarket O1', ST_GeomFromText('LINESTRING(21.4858 39.1979, 21.4868 39.1989)', 4326)), -- Jeddah
+('S377', 'Supermarket O2', ST_GeomFromText('LINESTRING(33.3152 44.3661, 33.3162 44.3671)', 4326)), -- Baghdad
+('S378', 'Supermarket O3', ST_GeomFromText('LINESTRING(24.4667 54.3667, 24.4677 54.3677)', 4326)), -- Abu Dhabi
+('S379', 'Supermarket O4', ST_GeomFromText('LINESTRING(31.9632 35.9304, 31.9642 35.9314)', 4326)), -- Amman
+('S380', 'Supermarket O5', ST_GeomFromText('LINESTRING(26.2235 50.5577, 26.2245 50.5587)', 4326)), -- Manama
+('S381', 'Supermarket P1', ST_GeomFromText('LINESTRING(1.2903 103.8519, 1.2913 103.8529)', 4326)), -- Sentosa
+('S382', 'Supermarket P2', ST_GeomFromText('LINESTRING(-6.1751 106.8650, -6.1741 106.8660)', 4326)), -- Jakarta
+('S383', 'Supermarket P3', ST_GeomFromText('LINESTRING(14.5995 120.9842, 14.6005 120.9852)', 4326)), -- Manila
+('S384', 'Supermarket P4', ST_GeomFromText('LINESTRING(39.9042 116.4074, 39.9052 116.4084)', 4326)), -- Beijing
+('S385', 'Supermarket P5', ST_GeomFromText('LINESTRING(31.2304 121.4737, 31.2314 121.4747)', 4326)), -- Shanghai
+('S386', 'Supermarket Q1', ST_GeomFromText('LINESTRING(-35.2809 149.1300, -35.2799 149.1310)', 4326)), -- Canberra
+('S387', 'Supermarket Q2', ST_GeomFromText('LINESTRING(-33.8651 151.2165, -33.8641 151.2175)', 4326)), -- Sydney
+('S388', 'Supermarket Q3', ST_GeomFromText('LINESTRING(-22.2735 166.4572, -22.2725 166.4582)', 4326)), -- Nouméa
+('S389', 'Supermarket Q4', ST_GeomFromText('LINESTRING(-9.4272 159.9670, -9.4262 159.9680)', 4326)), -- Honiara
+('S390', 'Supermarket Q5', ST_GeomFromText('LINESTRING(-34.9285 138.6007, -34.9275 138.6017)', 4326)), -- Adelaide
+('S391', 'Supermarket R1', ST_GeomFromText('LINESTRING(35.0844 -106.4454, 35.0854 -106.4444)', 4326)), -- Albuquerque
+('S392', 'Supermarket R2', ST_GeomFromText('LINESTRING(50.4501 30.5234, 50.4511 30.5244)', 4326)), -- Kyiv
+('S393', 'Supermarket R3', ST_GeomFromText('LINESTRING(41.0082 28.9784, 41.0092 28.9794)', 4326)), -- Istanbul
+('S394', 'Supermarket R4', ST_GeomFromText('LINESTRING(-23.5338 -46.6253, -23.5328 -46.6243)', 4326)), -- São Paulo
+('S395', 'Supermarket R5', ST_GeomFromText('LINESTRING(-21.2129 -159.7711, -21.2119 -159.7701)', 4326)), -- Avarua
+('S396', 'Supermarket R6', ST_GeomFromText('LINESTRING(13.9094 -61.2225, 13.9104 -61.2215)', 4326)), -- Castries
+('S397', 'Supermarket R7', ST_GeomFromText('LINESTRING(55.6761 12.5683, 55.6771 12.5693)', 4326)), -- Copenhagen
+('S398', 'Supermarket R8', ST_GeomFromText('LINESTRING(-41.2865 174.7756, -41.2855 174.7766)', 4326)), -- Wellington
+('S399', 'Supermarket R9', ST_GeomFromText('LINESTRING(-22.9068 -43.1729, -22.9058 -43.1719)', 4326)), -- Rio de Janeiro
+('S400', 'Supermarket R10', ST_GeomFromText('LINESTRING(-90.0000 -135.0000, -89.9990 -134.9990)', 4326)), -- Nam Cực
 
-('S486', 'Supermarket R1', ST_GeomFromText('LINESTRING(-86.8515 21.1619, -86.8505 21.1629)')), -- Cancún, Mexico
-('S487', 'Supermarket R2', ST_GeomFromText('LINESTRING(-47.8825 -15.7942, -47.8815 -15.7932)')), -- Brasília, Brazil
-('S488', 'Supermarket R3', ST_GeomFromText('LINESTRING(31.1330 -25.7479, 31.1340 -25.7469)')), -- Pretoria, Nam Phi
-('S489', 'Supermarket R4', ST_GeomFromText('LINESTRING(-68.1193 44.3876, -68.1183 44.3886)')), -- Maine, USA
-('S490', 'Supermarket R5', ST_GeomFromText('LINESTRING(135.5022 34.6937, 135.5032 34.6947)')), -- Osaka, Nhật Bản
 
-('S491', 'Supermarket S1', ST_GeomFromText('LINESTRING(114.1095 22.3964, 114.1105 22.3974)')), -- Hong Kong
-('S492', 'Supermarket S2', ST_GeomFromText('LINESTRING(-75.5773 6.2442, -75.5763 6.2452)')), -- Medellín, Colombia
-('S493', 'Supermarket S3', ST_GeomFromText('LINESTRING(18.0156 59.3293, 18.0166 59.3303)')), -- Stockholm, Thụy Điển
-('S494', 'Supermarket S4', ST_GeomFromText('LINESTRING(-66.5901 18.4655, -66.5891 18.4665)')), -- San Juan, Puerto Rico
-('S495', 'Supermarket S5', ST_GeomFromText('LINESTRING(13.7301 35.6895, 13.7311 35.6905)')), -- Tokyo, Nhật Bản
 
-('S496', 'Supermarket T1', ST_GeomFromText('LINESTRING(101.7072 3.1578, 101.7082 3.1588)')), -- Kuala Lumpur, Malaysia
-('S497', 'Supermarket T2', ST_GeomFromText('LINESTRING(139.6503 35.6762, 139.6513 35.6772)')), -- Tokyo, Nhật Bản
-('S498', 'Supermarket T3', ST_GeomFromText('LINESTRING(174.7762 -41.2865, 174.7772 -41.2855)')), -- Wellington, New Zealand
-('S499', 'Supermarket T4', ST_GeomFromText('LINESTRING(114.1577 22.2855, 114.1587 22.2865)')), -- Hong Kong
-('S500', 'Supermarket T5', ST_GeomFromText('LINESTRING(151.2093 -33.8688, 151.2103 -33.8678)')); -- Sydney, Úc
+-- Europe
+('S401', 'Supermarket K1', ST_GeomFromText('LINESTRING(41.9028 12.4964, 41.9038 12.4974)', 4326)), -- Rome, Italy
+('S402', 'Supermarket K2', ST_GeomFromText('LINESTRING(47.4979 19.0402, 47.4989 19.0412)', 4326)), -- Budapest, Hungary
+('S403', 'Supermarket K3', ST_GeomFromText('LINESTRING(50.4501 30.5234, 50.4511 30.5244)', 4326)), -- Kyiv, Ukraine
+('S404', 'Supermarket K4', ST_GeomFromText('LINESTRING(37.9838 23.7275, 37.9848 23.7285)', 4326)), -- Athens, Greece
+('S405', 'Supermarket K5', ST_GeomFromText('LINESTRING(59.4370 24.7536, 59.4380 24.7546)', 4326)), -- Tallinn, Estonia
+
+-- Middle East
+('S406', 'Supermarket L1', ST_GeomFromText('LINESTRING(25.2760 55.2030, 25.2770 55.2040)', 4326)), -- Abu Dhabi, UAE
+('S407', 'Supermarket L2', ST_GeomFromText('LINESTRING(23.6143 58.4032, 23.6153 58.4042)', 4326)), -- Muscat, Oman
+('S408', 'Supermarket L3', ST_GeomFromText('LINESTRING(33.3128 44.3615, 33.3138 44.3625)', 4326)), -- Baghdad, Iraq
+('S409', 'Supermarket L4', ST_GeomFromText('LINESTRING(24.4667 54.3667, 24.4677 54.3677)', 4326)), -- Al Ain, UAE
+('S410', 'Supermarket L5', ST_GeomFromText('LINESTRING(15.3530 43.7696, 15.3540 43.7706)', 4326)), -- Sanaa, Yemen
+
+-- South America
+('S411', 'Supermarket M1', ST_GeomFromText('LINESTRING(-18.4783 -70.1627, -18.4773 -70.1617)', 4326)), -- Arica, Chile
+('S412', 'Supermarket M2', ST_GeomFromText('LINESTRING(4.5709 -74.2973, 4.5719 -74.2963)', 4326)), -- Bogotá, Colombia
+('S413', 'Supermarket M3', ST_GeomFromText('LINESTRING(10.4806 -66.9036, 10.4816 -66.9026)', 4326)), -- Caracas, Venezuela
+('S414', 'Supermarket M4', ST_GeomFromText('LINESTRING(-0.9499 -80.7821, -0.9489 -80.7811)', 4326)), -- Manta, Ecuador
+('S415', 'Supermarket M5', ST_GeomFromText('LINESTRING(-12.0464 -77.0428, -12.0454 -77.0418)', 4326)), -- Lima, Peru
+
+-- Oceania
+('S416', 'Supermarket N1', ST_GeomFromText('LINESTRING(-32.9264 151.7751, -32.9254 151.7761)', 4326)), -- Newcastle, Australia
+('S417', 'Supermarket N2', ST_GeomFromText('LINESTRING(-42.8821 147.3294, -42.8811 147.3304)', 4326)), -- Hobart, Australia
+('S418', 'Supermarket N3', ST_GeomFromText('LINESTRING(-8.8968 158.7516, -8.8958 158.7526)', 4326)), -- Honiara, Solomon Islands
+('S419', 'Supermarket N4', ST_GeomFromText('LINESTRING(-22.2758 166.4250, -22.2748 166.4260)', 4326)), -- Noumea, New Caledonia
+('S420', 'Supermarket N5', ST_GeomFromText('LINESTRING(58.3019 -134.4197, 58.3029 -134.4187)', 4326)), -- Juneau, Alaska, USA
+
+-- Europe
+('S421', 'Supermarket O1', ST_GeomFromText('LINESTRING(48.7833 9.0579, 48.7843 9.0589)', 4326)), -- Stuttgart, Germany
+('S422', 'Supermarket O2', ST_GeomFromText('LINESTRING(46.0569 14.5058, 46.0579 14.5068)', 4326)), -- Ljubljana, Slovenia
+('S423', 'Supermarket O3', ST_GeomFromText('LINESTRING(44.4268 26.1025, 44.4278 26.1035)', 4326)), -- Bucharest, Romania
+('S424', 'Supermarket O4', ST_GeomFromText('LINESTRING(59.9139 10.7522, 59.9149 10.7532)', 4326)), -- Oslo, Norway
+('S425', 'Supermarket O5', ST_GeomFromText('LINESTRING(45.7640 4.8357, 45.7650 4.8367)', 4326)), -- Lyon, France
+
+-- Africa
+('S426', 'Supermarket P1', ST_GeomFromText('LINESTRING(30.0444 31.2304, 30.0454 31.2314)', 4326)), -- Cairo, Egypt
+('S427', 'Supermarket P2', ST_GeomFromText('LINESTRING(0.3476 32.5825, 0.3486 32.5835)', 4326)), -- Kampala, Uganda
+('S428', 'Supermarket P3', ST_GeomFromText('LINESTRING(36.7538 3.0586, 36.7548 3.0596)', 4326)), -- Algiers, Algeria
+('S429', 'Supermarket P4', ST_GeomFromText('LINESTRING(-0.8040 9.7489, -0.8030 9.7499)', 4326)), -- Accra, Ghana
+('S430', 'Supermarket P5', ST_GeomFromText('LINESTRING(-33.9189 18.4233, -33.9179 18.4243)', 4326)), -- Cape Town, South Africa
+
+-- Asia
+('S431', 'Supermarket Q1', ST_GeomFromText('LINESTRING(27.7172 85.3240, 27.7182 85.3250)', 4326)), -- Kathmandu, Nepal
+('S432', 'Supermarket Q2', ST_GeomFromText('LINESTRING(21.3891 39.7294, 21.3901 39.7304)', 4326)), -- Mecca, Saudi Arabia
+('S433', 'Supermarket Q3', ST_GeomFromText('LINESTRING(13.7563 100.5018, 13.7573 100.5028)', 4326)), -- Bangkok, Thailand
+('S434', 'Supermarket Q4', ST_GeomFromText('LINESTRING(20.5937 78.9629, 20.5947 78.9639)', 4326)), -- Mumbai, India
+('S435', 'Supermarket Q5', ST_GeomFromText('LINESTRING(-6.2088 106.8456, -6.2078 106.8466)', 4326)), -- Jakarta, Indonesia
+
+-- Asia/Europe
+('S436', 'Supermarket R1', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Tokyo, Japan
+('S437', 'Supermarket R2', ST_GeomFromText('LINESTRING(37.5665 126.9780, 37.5675 126.9790)', 4326)), -- Seoul, South Korea
+('S438', 'Supermarket R3', ST_GeomFromText('LINESTRING(31.2304 121.4737, 31.2314 121.4747)', 4326)), -- Shanghai, China
+('S439', 'Supermarket R4', ST_GeomFromText('LINESTRING(48.8566 2.3522, 48.8576 2.3532)', 4326)), -- Paris, France
+('S440', 'Supermarket R5', ST_GeomFromText('LINESTRING(51.5074 -0.1276, 51.5084 -0.1266)', 4326)), -- London, UK
+
+-- North America
+('S441', 'Supermarket S1', ST_GeomFromText('LINESTRING(34.0522 -118.2437, 34.0532 -118.2427)', 4326)), -- Los Angeles, USA
+('S442', 'Supermarket S2', ST_GeomFromText('LINESTRING(40.7128 -74.0060, 40.7138 -74.0050)', 4326)), -- New York, USA
+('S443', 'Supermarket S3', ST_GeomFromText('LINESTRING(41.8781 -87.6298, 41.8791 -87.6288)', 4326)), -- Chicago, USA
+('S444', 'Supermarket S4', ST_GeomFromText('LINESTRING(42.3601 -71.0589, 42.3611 -71.0579)', 4326)), -- Boston, USA
+('S445', 'Supermarket S5', ST_GeomFromText('LINESTRING(47.6062 -122.3321, 47.6072 -122.3311)', 4326)), -- Seattle, USA
+
+-- Oceania/Asia
+('S446', 'Supermarket T1', ST_GeomFromText('LINESTRING(-33.8688 151.2093, -33.8678 151.2103)', 4326)), -- Sydney, Australia
+('S447', 'Supermarket T2', ST_GeomFromText('LINESTRING(-37.8136 144.9631, -37.8126 144.9641)', 4326)), -- Melbourne, Australia
+('S448', 'Supermarket T3', ST_GeomFromText('LINESTRING(10.7769 106.7038, 10.7779 106.7048)', 4326)), -- Ho Chi Minh City, Vietnam
+('S449', 'Supermarket T4', ST_GeomFromText('LINESTRING(21.0285 105.8545, 21.0295 105.8555)', 4326)), -- Hanoi, Vietnam
+('S450', 'Supermarket T5', ST_GeomFromText('LINESTRING(16.0471 108.2272, 16.0481 108.2282)', 4326)), -- Da Nang, Vietnam
+
+-- Additional stores
+('S451', 'Supermarket K1', ST_GeomFromText('LINESTRING(37.9838 23.7275, 37.9848 23.7285)', 4326)), -- Athens, Greece
+('S452', 'Supermarket K2', ST_GeomFromText('LINESTRING(50.4501 30.5234, 50.4511 30.5244)', 4326)), -- Kyiv, Ukraine
+('S453', 'Supermarket K3', ST_GeomFromText('LINESTRING(45.4215 -75.6972, 45.4225 -75.6962)', 4326)), -- Ottawa, Canada
+('S454', 'Supermarket K4', ST_GeomFromText('LINESTRING(40.4168 -3.7038, 40.4178 -3.7028)', 4326)), -- Madrid, Spain
+('S455', 'Supermarket K5', ST_GeomFromText('LINESTRING(-33.9249 18.4241, -33.9239 18.4251)', 4326)), -- Cape Town, South Africa
+
+('S456', 'Supermarket L1', ST_GeomFromText('LINESTRING(-6.2088 106.8456, -6.2078 106.8466)', 4326)), -- Jakarta, Indonesia
+('S457', 'Supermarket L2', ST_GeomFromText('LINESTRING(-37.8136 144.7469, -37.8126 144.7479)', 4326)), -- Geelong, Australia
+('S458', 'Supermarket L3', ST_GeomFromText('LINESTRING(10.4806 -66.9036, 10.4816 -66.9026)', 4326)), -- Caracas, Venezuela
+('S459', 'Supermarket L4', ST_GeomFromText('LINESTRING(47.4979 19.0402, 47.4989 19.0412)', 4326)), -- Budapest, Hungary
+('S460', 'Supermarket L5', ST_GeomFromText('LINESTRING(51.5079 -0.1426, 51.5089 -0.1416)', 4326)), -- London, UK
+
+('S461', 'Supermarket M1', ST_GeomFromText('LINESTRING(10.9685 -74.8055, 10.9695 -74.8045)', 4326)), -- Barranquilla, Colombia
+('S462', 'Supermarket M2', ST_GeomFromText('LINESTRING(23.8103 90.4125, 23.8113 90.4135)', 4326)), -- Dhaka, Bangladesh
+('S463', 'Supermarket M3', ST_GeomFromText('LINESTRING(10.6600 -61.2249, 10.6610 -61.2239)', 4326)), -- Port of Spain, Trinidad and Tobago
+('S464', 'Supermarket M4', ST_GeomFromText('LINESTRING(31.2357 30.0444, 31.2367 30.0454)', 4326)), -- Cairo, Egypt
+('S465', 'Supermarket M5', ST_GeomFromText('LINESTRING(52.5200 13.4050, 52.5210 13.4060)', 4326)), -- Berlin, Germany
+
+('S466', 'Supermarket N1', ST_GeomFromText('LINESTRING(35.0116 135.7681, 35.0126 135.7691)', 4326)), -- Kyoto, Japan
+('S467', 'Supermarket N2', ST_GeomFromText('LINESTRING(-33.4569 -70.6483, -33.4559 -70.6473)', 4326)), -- Santiago, Chile
+('S468', 'Supermarket N3', ST_GeomFromText('LINESTRING(25.2760 55.2823, 25.2770 55.2833)', 4326)), -- Dubai, UAE
+('S469', 'Supermarket N4', ST_GeomFromText('LINESTRING(-33.8568 151.2153, -33.8558 151.2163)', 4326)), -- Sydney, Australia
+('S470', 'Supermarket N5', ST_GeomFromText('LINESTRING(53.5511 9.9937, 53.5521 9.9947)', 4326)), -- Hamburg, Germany
+
+('S471', 'Supermarket O1', ST_GeomFromText('LINESTRING(42.3601 -71.0589, 42.3611 -71.0579)', 4326)), -- Boston, USA
+('S472', 'Supermarket O2', ST_GeomFromText('LINESTRING(41.0082 28.9784, 41.0092 28.9794)', 4326)), -- Istanbul, Turkey
+('S473', 'Supermarket O3', ST_GeomFromText('LINESTRING(-22.2758 166.4426, -22.2748 166.4436)', 4326)), -- Nouméa, New Caledonia
+('S474', 'Supermarket O4', ST_GeomFromText('LINESTRING(41.9028 12.4964, 41.9038 12.4974)', 4326)), -- Rome, Italy
+('S475', 'Supermarket O5', ST_GeomFromText('LINESTRING(1.3521 103.8198, 1.3531 103.8208)', 4326)), -- Singapore
+
+('S476', 'Supermarket P1', ST_GeomFromText('LINESTRING(17.9757 102.6151, 17.9767 102.6161)', 4326)), -- Vientiane, Laos
+('S477', 'Supermarket P2', ST_GeomFromText('LINESTRING(9.9312 76.2711, 9.9322 76.2721)', 4326)), -- Kochi, India
+('S478', 'Supermarket P3', ST_GeomFromText('LINESTRING(-34.6132 -58.3772, -34.6122 -58.3762)', 4326)), -- Buenos Aires, Argentina
+('S479', 'Supermarket P4', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Tokyo, Japan
+('S480', 'Supermarket P5', ST_GeomFromText('LINESTRING(28.7041 77.1025, 28.7051 77.1035)', 4326)), -- New Delhi, India
+
+('S481', 'Supermarket Q1', ST_GeomFromText('LINESTRING(-22.9035 -43.2096, -22.9025 -43.2086)', 4326)), -- Rio de Janeiro, Brazil
+('S482', 'Supermarket Q2', ST_GeomFromText('LINESTRING(-6.7924 39.1919, -6.7914 39.1929)', 4326)), -- Dar es Salaam, Tanzania
+('S483', 'Supermarket Q3', ST_GeomFromText('LINESTRING(19.4326 -99.1332, 19.4336 -99.1322)', 4326)), -- Mexico City, Mexico
+('S484', 'Supermarket Q4', ST_GeomFromText('LINESTRING(31.2304 121.4737, 31.2314 121.4747)', 4326)), -- Shanghai, China
+('S485', 'Supermarket Q5', ST_GeomFromText('LINESTRING(-26.2041 27.9475, -26.2031 27.9485)', 4326)), -- Johannesburg, South Africa
+
+('S486', 'Supermarket R1', ST_GeomFromText('LINESTRING(21.1619 -86.8515, 21.1629 -86.8505)', 4326)), -- Cancún, Mexico
+('S487', 'Supermarket R2', ST_GeomFromText('LINESTRING(-15.7942 -47.8825, -15.7932 -47.8815)', 4326)), -- Brasília, Brazil
+('S488', 'Supermarket R3', ST_GeomFromText('LINESTRING(-25.7479 31.1330, -25.7469 31.1340)', 4326)), -- Pretoria, South Africa
+('S489', 'Supermarket R4', ST_GeomFromText('LINESTRING(44.3876 -68.1193, 44.3886 -68.1183)', 4326)), -- Maine, USA
+('S490', 'Supermarket R5', ST_GeomFromText('LINESTRING(34.6937 135.5022, 34.6947 135.5032)', 4326)), -- Osaka, Japan
+
+('S491', 'Supermarket S1', ST_GeomFromText('LINESTRING(22.3964 114.1095, 22.3974 114.1105)', 4326)), -- Hong Kong
+('S492', 'Supermarket S2', ST_GeomFromText('LINESTRING(6.2442 -75.5773, 6.2452 -75.5763)', 4326)), -- Medellín, Colombia
+('S493', 'Supermarket S3', ST_GeomFromText('LINESTRING(59.3293 18.0156, 59.3303 18.0166)', 4326)), -- Stockholm, Sweden
+('S494', 'Supermarket S4', ST_GeomFromText('LINESTRING(18.4655 -66.5901, 18.4665 -66.5891)', 4326)), -- San Juan, Puerto Rico
+('S495', 'Supermarket S5', ST_GeomFromText('LINESTRING(35.6895 13.7301, 35.6905 13.7311)', 4326)), -- Tokyo, Japan
+
+('S496', 'Supermarket T1', ST_GeomFromText('LINESTRING(3.1578 101.7072, 3.1588 101.7082)', 4326)), -- Kuala Lumpur, Malaysia
+('S497', 'Supermarket T2', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Tokyo, Japan
+('S498', 'Supermarket T3', ST_GeomFromText('LINESTRING(-41.2865 174.7762, -41.2855 174.7772)', 4326)), -- Wellington, New Zealand
+('S499', 'Supermarket T4', ST_GeomFromText('LINESTRING(22.2855 114.1577, 22.2865 114.1587)', 4326)), -- Hong Kong
+('S500', 'Supermarket T5', ST_GeomFromText('LINESTRING(-33.8688 151.2093, -33.8678 151.2103)', 4326)); -- Sydney, Australia
