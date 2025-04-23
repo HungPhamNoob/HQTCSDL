@@ -645,4 +645,574 @@ INSERT INTO Store_Locations (store_id, store_name, location) VALUES
 ('S497', 'Supermarket T2', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Tokyo, Japan
 ('S498', 'Supermarket T3', ST_GeomFromText('LINESTRING(-41.2865 174.7762, -41.2855 174.7772)', 4326)), -- Wellington, New Zealand
 ('S499', 'Supermarket T4', ST_GeomFromText('LINESTRING(22.2855 114.1577, 22.2865 114.1587)', 4326)), -- Hong Kong
-('S500', 'Supermarket T5', ST_GeomFromText('LINESTRING(-33.8688 151.2093, -33.8678 151.2103)', 4326)); -- Sydney, Australia
+('S500', 'Supermarket T5', ST_GeomFromText('LINESTRING(-33.8688 151.2093, -33.8678 151.2103)', 4326)), -- Sydney, Australia
+
+
+
+
+('S501', 'Supermarket U1', ST_GeomFromText('LINESTRING(40.7128 -74.0060, 40.7138 -74.0050)', 4326)), -- New York, USA
+('S502', 'Supermarket U2', ST_GeomFromText('LINESTRING(51.5074 -0.1278, 51.5084 -0.1268)', 4326)), -- London, UK
+('S503', 'Supermarket U3', ST_GeomFromText('LINESTRING(48.8566 2.3522, 48.8576 2.3532)', 4326)), -- Paris, France
+('S504', 'Supermarket U4', ST_GeomFromText('LINESTRING(35.6762 139.6503, 35.6772 139.6513)', 4326)), -- Tokyo, Japan
+('S505', 'Supermarket U5', ST_GeomFromText('LINESTRING(34.0522 -118.2437, 34.0532 -118.2427)', 4326)), -- Los Angeles, USA
+
+('S506', 'Supermarket V1', ST_GeomFromText('LINESTRING(41.9028 12.4964, 41.9038 12.4974)', 4326)), -- Rome, Italy
+('S507', 'Supermarket V2', ST_GeomFromText('LINESTRING(52.5200 13.4050, 52.5210 13.4060)', 4326)), -- Berlin, Germany
+('S508', 'Supermarket V3', ST_GeomFromText('LINESTRING(55.7558 37.6173, 55.7568 37.6183)', 4326)), -- Moscow, Russia
+('S509', 'Supermarket V4', ST_GeomFromText('LINESTRING(37.7749 -122.4194, 37.7759 -122.4184)', 4326)), -- San Francisco, USA
+('S510', 'Supermarket V5', ST_GeomFromText('LINESTRING(19.4326 -99.1332, 19.4336 -99.1322)', 4326)), -- Mexico City, Mexico
+
+('S511', 'Supermarket W1', ST_GeomFromText('LINESTRING(39.9042 116.4074, 39.9052 116.4084)', 4326)), -- Beijing, China
+('S512', 'Supermarket W2', ST_GeomFromText('LINESTRING(28.6139 77.2090, 28.6149 77.2100)', 4326)), -- New Delhi, India
+('S513', 'Supermarket W3', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)', 4326)), -- Cairo, Egypt
+('S514', 'Supermarket W4', ST_GeomFromText('LINESTRING(-23.5505 -46.6333, -23.5495 -46.6323)', 4326)), -- São Paulo, Brazil
+('S515', 'Supermarket W5', ST_GeomFromText('LINESTRING(1.3521 103.8198, 1.3531 103.8208)', 4326)), -- Singapore
+
+('S516', 'Supermarket X1', ST_GeomFromText('LINESTRING(43.6532 -79.3832, 43.6542 -79.3822)', 4326)), -- Toronto, Canada
+('S517', 'Supermarket X2', ST_GeomFromText('LINESTRING(-33.9249 18.4241, -33.9239 18.4251)', 4326)), -- Cape Town, South Africa
+('S518', 'Supermarket X3', ST_GeomFromText('LINESTRING(-12.0464 -77.0428, -12.0454 -77.0418)', 4326)), -- Lima, Peru
+('S519', 'Supermarket X4', ST_GeomFromText('LINESTRING(25.2048 55.2708, 25.2058 55.2718)', 4326)), -- Dubai, UAE
+('S520', 'Supermarket X5', ST_GeomFromText('LINESTRING(50.8503 4.3517, 50.8513 4.3527)', 4326)), -- Brussels, Belgium
+
+('S521', 'Supermarket Y1', ST_GeomFromText('LINESTRING(59.9139 10.7522, 59.9149 10.7532)', 4326)), -- Oslo, Norway
+('S522', 'Supermarket Y2', ST_GeomFromText('LINESTRING(60.1699 24.9384, 60.1709 24.9394)', 4326)), -- Helsinki, Finland
+('S523', 'Supermarket Y3', ST_GeomFromText('LINESTRING(38.7223 -9.1393, 38.7233 -9.1383)', 4326)), -- Lisbon, Portugal
+('S524', 'Supermarket Y4', ST_GeomFromText('LINESTRING(45.4215 -75.6972, 45.4225 -75.6962)', 4326)), -- Ottawa, Canada
+('S525', 'Supermarket Y5', ST_GeomFromText('LINESTRING(41.3851 2.1734, 41.3861 2.1744)', 4326)), -- Barcelona, Spain
+
+('S526', 'Supermarket Z1', ST_GeomFromText('LINESTRING(35.6895 139.6917, 35.6905 139.6927)', 4326)), -- Tokyo, Japan
+('S527', 'Supermarket Z2', ST_GeomFromText('LINESTRING(37.5665 126.9780, 37.5675 126.9790)', 4326)), -- Seoul, South Korea
+('S528', 'Supermarket Z3', ST_GeomFromText('LINESTRING(13.7563 100.5018, 13.7573 100.5028)', 4326)), -- Bangkok, Thailand
+('S529', 'Supermarket Z4', ST_GeomFromText('LINESTRING(39.9334 32.8597, 39.9344 32.8607)', 4326)), -- Ankara, Turkey
+('S530', 'Supermarket Z5', ST_GeomFromText('LINESTRING(-34.6037 -58.3816, -34.6027 -58.3806)', 4326)), -- Buenos Aires, Argentina
+
+('S531', 'Supermarket AA1', ST_GeomFromText('LINESTRING(24.7136 46.6753, 24.7146 46.6763)', 4326)), -- Riyadh, Saudi Arabia
+('S532', 'Supermarket AA2', ST_GeomFromText('LINESTRING(33.5138 36.2765, 33.5148 36.2775)', 4326)), -- Damascus, Syria
+('S533', 'Supermarket AA3', ST_GeomFromText('LINESTRING(33.8938 35.5018, 33.8948 35.5028)', 4326)), -- Beirut, Lebanon
+('S534', 'Supermarket AA4', ST_GeomFromText('LINESTRING(31.7683 35.2137, 31.7693 35.2147)', 4326)), -- Jerusalem, Israel
+('S535', 'Supermarket AA5', ST_GeomFromText('LINESTRING(25.2769 55.2962, 25.2779 55.2972)', 4326)), -- Dubai, UAE
+
+('S536', 'Supermarket AB1', ST_GeomFromText('LINESTRING(41.0082 28.9784, 41.0092 28.9794)', 4326)), -- Istanbul, Turkey
+('S537', 'Supermarket AB2', ST_GeomFromText('LINESTRING(50.0755 14.4378, 50.0765 14.4388)', 4326)), -- Prague, Czech Republic
+('S538', 'Supermarket AB3', ST_GeomFromText('LINESTRING(47.4979 19.0402, 47.4989 19.0412)', 4326)), -- Budapest, Hungary
+('S539', 'Supermarket AB4', ST_GeomFromText('LINESTRING(52.2297 21.0122, 52.2307 21.0132)', 4326)), -- Warsaw, Poland
+('S540', 'Supermarket AB5', ST_GeomFromText('LINESTRING(48.1486 17.1077, 48.1496 17.1087)', 4326)), -- Bratislava, Slovakia
+
+('S541', 'Supermarket AC1', ST_GeomFromText('LINESTRING(44.4268 26.1025, 44.4278 26.1035)', 4326)), -- Bucharest, Romania
+('S542', 'Supermarket AC2', ST_GeomFromText('LINESTRING(42.6977 23.3219, 42.6987 23.3229)', 4326)), -- Sofia, Bulgaria
+('S543', 'Supermarket AC3', ST_GeomFromText('LINESTRING(41.3275 19.8187, 41.3285 19.8197)', 4326)), -- Tirana, Albania
+('S544', 'Supermarket AC4', ST_GeomFromText('LINESTRING(42.4304 19.2594, 42.4314 19.2604)', 4326)), -- Podgorica, Montenegro
+('S545', 'Supermarket AC5', ST_GeomFromText('LINESTRING(44.8206 20.4626, 44.8216 20.4636)', 4326)), -- Belgrade, Serbia
+
+('S546', 'Supermarket AD1', ST_GeomFromText('LINESTRING(45.8150 15.9819, 45.8160 15.9829)', 4326)), -- Zagreb, Croatia
+('S547', 'Supermarket AD2', ST_GeomFromText('LINESTRING(46.0569 14.5058, 46.0579 14.5068)', 4326)), -- Ljubljana, Slovenia
+('S548', 'Supermarket AD3', ST_GeomFromText('LINESTRING(42.6629 21.1655, 42.6639 21.1665)', 4326)), -- Pristina, Kosovo
+('S549', 'Supermarket AD4', ST_GeomFromText('LINESTRING(47.1625 19.5033, 47.1635 19.5043)', 4326)), -- Budapest, Hungary
+('S550', 'Supermarket AD5', ST_GeomFromText('LINESTRING(56.9496 24.1052, 56.9506 24.1062)', 4326)), -- Riga, Latvia
+
+('S551', 'Supermarket AE1', ST_GeomFromText('LINESTRING(54.6872 25.2797, 54.6882 25.2807)', 4326)), -- Vilnius, Lithuania
+('S552', 'Supermarket AE2', ST_GeomFromText('LINESTRING(59.4369 24.7536, 59.4379 24.7546)', 4326)), -- Tallinn, Estonia
+('S553', 'Supermarket AE3', ST_GeomFromText('LINESTRING(55.6761 12.5683, 55.6771 12.5693)', 4326)), -- Copenhagen, Denmark
+('S554', 'Supermarket AE4', ST_GeomFromText('LINESTRING(59.3293 18.0686, 59.3303 18.0696)', 4326)), -- Stockholm, Sweden
+('S555', 'Supermarket AE5', ST_GeomFromText('LINESTRING(64.1466 -21.9426, 64.1476 -21.9416)', 4326)), -- Reykjavik, Iceland
+
+('S556', 'Supermarket AF1', ST_GeomFromText('LINESTRING(53.3498 -6.2603, 53.3508 -6.2593)', 4326)), -- Dublin, Ireland
+('S557', 'Supermarket AF2', ST_GeomFromText('LINESTRING(51.8985 -8.4756, 51.8995 -8.4746)', 4326)), -- Cork, Ireland
+('S558', 'Supermarket AF3', ST_GeomFromText('LINESTRING(55.9533 -3.1883, 55.9543 -3.1873)', 4326)), -- Edinburgh, UK
+('S559', 'Supermarket AF4', ST_GeomFromText('LINESTRING(53.8008 -1.5491, 53.8018 -1.5481)', 4326)), -- Leeds, UK
+('S560', 'Supermarket AF5', ST_GeomFromText('LINESTRING(52.4862 -1.8904, 52.4872 -1.8894)', 4326)), -- Birmingham, UK
+
+('S561', 'Supermarket AG1', ST_GeomFromText('LINESTRING(53.4084 -2.9916, 53.4094 -2.9906)', 4326)), -- Liverpool, UK
+('S562', 'Supermarket AG2', ST_GeomFromText('LINESTRING(54.9783 -1.6178, 54.9793 -1.6168)', 4326)), -- Newcastle, UK
+('S563', 'Supermarket AG3', ST_GeomFromText('LINESTRING(55.8642 -4.2518, 55.8652 -4.2508)', 4326)), -- Glasgow, UK
+('S564', 'Supermarket AG4', ST_GeomFromText('LINESTRING(51.4545 -2.5879, 51.4555 -2.5869)', 4326)), -- Bristol, UK
+('S565', 'Supermarket AG5', ST_GeomFromText('LINESTRING(50.9097 -1.4044, 50.9107 -1.4034)', 4326)), -- Southampton, UK
+
+('S566', 'Supermarket AH1', ST_GeomFromText('LINESTRING(52.6309 1.2974, 52.6319 1.2984)', 4326)), -- Norwich, UK
+('S567', 'Supermarket AH2', ST_GeomFromText('LINESTRING(53.9599 -1.0873, 53.9609 -1.0863)', 4326)), -- York, UK
+('S568', 'Supermarket AH3', ST_GeomFromText('LINESTRING(52.9225 -1.4746, 52.9235 -1.4736)', 4326)), -- Nottingham, UK
+('S569', 'Supermarket AH4', ST_GeomFromText('LINESTRING(53.3811 -1.4701, 53.3821 -1.4691)', 4326)), -- Sheffield, UK
+('S570', 'Supermarket AH5', ST_GeomFromText('LINESTRING(50.7184 -3.5339, 50.7194 -3.5329)', 4326)), -- Exeter, UK
+
+('S571', 'Supermarket AI1', ST_GeomFromText('LINESTRING(51.4816 -3.1791, 51.4826 -3.1781)', 4326)), -- Cardiff, UK
+('S572', 'Supermarket AI2', ST_GeomFromText('LINESTRING(53.7965 -1.5478, 53.7975 -1.5468)', 4326)), -- Leeds, UK
+('S573', 'Supermarket AI3', ST_GeomFromText('LINESTRING(52.4068 -1.5197, 52.4078 -1.5187)', 4326)), -- Coventry, UK
+('S574', 'Supermarket AI4', ST_GeomFromText('LINESTRING(53.4808 -2.2426, 53.4818 -2.2416)', 4326)), -- Manchester, UK
+('S575', 'Supermarket AI5', ST_GeomFromText('LINESTRING(50.3755 -4.1427, 50.3765 -4.1417)', 4326)), -- Plymouth, UK
+
+('S576', 'Supermarket AJ1', ST_GeomFromText('LINESTRING(57.1497 -2.0943, 57.1507 -2.0933)', 4326)), -- Aberdeen, UK
+('S577', 'Supermarket AJ2', ST_GeomFromText('LINESTRING(55.9502 -3.1875, 55.9512 -3.1865)', 4326)), -- Edinburgh, UK
+('S578', 'Supermarket AJ3', ST_GeomFromText('LINESTRING(51.7520 -1.2577, 51.7530 -1.2567)', 4326)), -- Oxford, UK
+('S579', 'Supermarket AJ4', ST_GeomFromText('LINESTRING(52.1942 0.1374, 52.1952 0.1384)', 4326)), -- Cambridge, UK
+('S580', 'Supermarket AJ5', ST_GeomFromText('LINESTRING(50.8225 -0.1372, 50.8235 -0.1362)', 4326)), -- Brighton, UK
+
+('S581', 'Supermarket AK1', ST_GeomFromText('LINESTRING(53.8008 -1.5491, 53.8018 -1.5481)', 4326)), -- Leeds, UK
+('S582', 'Supermarket AK2', ST_GeomFromText('LINESTRING(53.7632 -2.7031, 53.7642 -2.7021)', 4326)), -- Preston, UK
+('S583', 'Supermarket AK3', ST_GeomFromText('LINESTRING(50.9097 -1.4044, 50.9107 -1.4034)', 4326)), -- Southampton, UK
+('S584', 'Supermarket AK4', ST_GeomFromText('LINESTRING(51.4545 -2.5879, 51.4555 -2.5869)', 4326)), -- Bristol, UK
+('S585', 'Supermarket AK5', ST_GeomFromText('LINESTRING(52.9225 -1.4746, 52.9235 -1.4736)', 4326)), -- Nottingham, UK
+
+('S586', 'Supermarket AL1', ST_GeomFromText('LINESTRING(53.4808 -2.2426, 53.4818 -2.2416)', 4326)), -- Manchester, UK
+('S587', 'Supermarket AL2', ST_GeomFromText('LINESTRING(52.4862 -1.8904, 52.4872 -1.8894)', 4326)), -- Birmingham, UK
+('S588', 'Supermarket AL3', ST_GeomFromText('LINESTRING(55.8642 -4.2518, 55.8652 -4.2508)', 4326)), -- Glasgow, UK
+('S589', 'Supermarket AL4', ST_GeomFromText('LINESTRING(54.9783 -1.6178, 54.9793 -1.6168)', 4326)), -- Newcastle, UK
+('S590', 'Supermarket AL5', ST_GeomFromText('LINESTRING(53.4084 -2.9916, 53.4094 -2.9906)', 4326)), -- Liverpool, UK
+
+('S591', 'Supermarket AM1', ST_GeomFromText('LINESTRING(51.4816 -3.1791, 51.4826 -3.1781)', 4326)), -- Cardiff, UK
+('S592', 'Supermarket AM2', ST_GeomFromText('LINESTRING(50.3755 -4.1427, 50.3765 -4.1417)', 4326)), -- Plymouth, UK
+('S593', 'Supermarket AM3', ST_GeomFromText('LINESTRING(50.7184 -3.5339, 50.7194 -3.5329)', 4326)), -- Exeter, UK
+('S594', 'Supermarket AM4', ST_GeomFromText('LINESTRING(52.6309 1.2974, 52.6319 1.2984)', 4326)), -- Norwich, UK
+('S595', 'Supermarket AM5', ST_GeomFromText('LINESTRING(53.9599 -1.0873, 53.9609 -1.0863)', 4326)), -- York, UK
+
+('S596', 'Supermarket AN1', ST_GeomFromText('LINESTRING(51.7520 -1.2577, 51.7530 -1.2567)', 4326)), -- Oxford, UK
+('S597', 'Supermarket AN2', ST_GeomFromText('LINESTRING(52.1942 0.1374, 52.1952 0.1384)', 4326)), -- Cambridge, UK
+('S598', 'Supermarket AN3', ST_GeomFromText('LINESTRING(50.8225 -0.1372, 50.8235 -0.1362)', 4326)), -- Brighton, UK
+('S599', 'Supermarket AN4', ST_GeomFromText('LINESTRING(57.1497 -2.0943, 57.1507 -2.0933)', 4326)), -- Aberdeen, UK
+('S600', 'Supermarket AN5', ST_GeomFromText('LINESTRING(55.9502 -3.1875, 55.9512 -3.1865)', 4326)), -- Edinburgh, UK
+
+
+('S601', 'Supermarket AO1', ST_GeomFromText('LINESTRING(41.9028 12.4534, 41.9038 12.4544)', 4326)), -- Vatican City
+('S602', 'Supermarket AO2', ST_GeomFromText('LINESTRING(43.9356 12.4473, 43.9366 12.4483)', 4326)), -- San Marino
+('S603', 'Supermarket AO3', ST_GeomFromText('LINESTRING(47.1410 9.5209, 47.1420 9.5219)', 4326)), -- Vaduz, Liechtenstein
+('S604', 'Supermarket AO4', ST_GeomFromText('LINESTRING(42.5063 1.5218, 42.5073 1.5228)', 4326)), -- Andorra la Vella, Andorra
+('S605', 'Supermarket AO5', ST_GeomFromText('LINESTRING(49.6116 6.1319, 49.6126 6.1329)', 4326)), -- Luxembourg City, Luxembourg
+
+('S606', 'Supermarket AP1', ST_GeomFromText('LINESTRING(35.1856 33.3823, 35.1866 33.3833)', 4326)), -- Nicosia, Cyprus
+('S607', 'Supermarket AP2', ST_GeomFromText('LINESTRING(35.8989 14.5146, 35.8999 14.5156)', 4326)), -- Valletta, Malta
+('S608', 'Supermarket AP3', ST_GeomFromText('LINESTRING(64.1470 -21.9406, 64.1480 -21.9396)', 4326)), -- Reykjavik, Iceland
+('S609', 'Supermarket AP4', ST_GeomFromText('LINESTRING(55.1596 -6.6666, 55.1606 -6.6656)', 4326)), -- Belfast, UK
+('S610', 'Supermarket AP5', ST_GeomFromText('LINESTRING(53.3496 -6.2604, 53.3506 -6.2594)', 4326)), -- Dublin, Ireland
+
+('S611', 'Supermarket AQ1', ST_GeomFromText('LINESTRING(38.7071 -9.1355, 38.7081 -9.1345)', 4326)), -- Lisbon, Portugal
+('S612', 'Supermarket AQ2', ST_GeomFromText('LINESTRING(41.1579 -8.6291, 41.1589 -8.6281)', 4326)), -- Porto, Portugal
+('S613', 'Supermarket AQ3', ST_GeomFromText('LINESTRING(39.4699 -0.3763, 39.4709 -0.3753)', 4326)), -- Valencia, Spain
+('S614', 'Supermarket AQ4', ST_GeomFromText('LINESTRING(37.3891 -5.9845, 37.3901 -5.9835)', 4326)), -- Seville, Spain
+('S615', 'Supermarket AQ5', ST_GeomFromText('LINESTRING(43.2630 -2.9350, 43.2640 -2.9340)', 4326)), -- Bilbao, Spain
+
+('S616', 'Supermarket AR1', ST_GeomFromText('LINESTRING(45.4408 12.3155, 45.4418 12.3165)', 4326)), -- Venice, Italy
+('S617', 'Supermarket AR2', ST_GeomFromText('LINESTRING(43.7696 11.2558, 43.7706 11.2568)', 4326)), -- Florence, Italy
+('S618', 'Supermarket AR3', ST_GeomFromText('LINESTRING(40.8518 14.2681, 40.8528 14.2691)', 4326)), -- Naples, Italy
+('S619', 'Supermarket AR4', ST_GeomFromText('LINESTRING(38.1157 13.3613, 38.1167 13.3623)', 4326)), -- Palermo, Italy
+('S620', 'Supermarket AR5', ST_GeomFromText('LINESTRING(44.4949 11.3426, 44.4959 11.3436)', 4326)), -- Bologna, Italy
+
+('S621', 'Supermarket AS1', ST_GeomFromText('LINESTRING(52.3740 4.8897, 52.3750 4.8907)', 4326)), -- Amsterdam, Netherlands
+('S622', 'Supermarket AS2', ST_GeomFromText('LINESTRING(51.9244 4.4777, 51.9254 4.4787)', 4326)), -- Rotterdam, Netherlands
+('S623', 'Supermarket AS3', ST_GeomFromText('LINESTRING(50.8503 4.3517, 50.8513 4.3527)', 4326)), -- Brussels, Belgium
+('S624', 'Supermarket AS4', ST_GeomFromText('LINESTRING(50.8466 4.3528, 50.8476 4.3538)', 4326)), -- Brussels, Belgium
+('S625', 'Supermarket AS5', ST_GeomFromText('LINESTRING(48.5839 7.7455, 48.5849 7.7465)', 4326)), -- Strasbourg, France
+
+('S626', 'Supermarket AT1', ST_GeomFromText('LINESTRING(46.9480 7.4474, 46.9490 7.4484)', 4326)), -- Bern, Switzerland
+('S627', 'Supermarket AT2', ST_GeomFromText('LINESTRING(47.3769 8.5417, 47.3779 8.5427)', 4326)), -- Zurich, Switzerland
+('S628', 'Supermarket AT3', ST_GeomFromText('LINESTRING(46.2044 6.1432, 46.2054 6.1442)', 4326)), -- Geneva, Switzerland
+('S629', 'Supermarket AT4', ST_GeomFromText('LINESTRING(47.5596 7.5886, 47.5606 7.5896)', 4326)), -- Basel, Switzerland
+('S630', 'Supermarket AT5', ST_GeomFromText('LINESTRING(46.0037 8.9511, 46.0047 8.9521)', 4326)), -- Lugano, Switzerland
+
+('S631', 'Supermarket AU1', ST_GeomFromText('LINESTRING(48.2082 16.3738, 48.2092 16.3748)', 4326)), -- Vienna, Austria
+('S632', 'Supermarket AU2', ST_GeomFromText('LINESTRING(47.0707 15.4395, 47.0717 15.4405)', 4326)), -- Graz, Austria
+('S633', 'Supermarket AU3', ST_GeomFromText('LINESTRING(47.8095 13.0550, 47.8105 13.0560)', 4326)), -- Salzburg, Austria
+('S634', 'Supermarket AU4', ST_GeomFromText('LINESTRING(47.2692 11.4041, 47.2702 11.4051)', 4326)), -- Innsbruck, Austria
+('S635', 'Supermarket AU5', ST_GeomFromText('LINESTRING(48.3069 14.2858, 48.3079 14.2868)', 4326)), -- Linz, Austria
+
+('S636', 'Supermarket AV1', ST_GeomFromText('LINESTRING(50.0755 14.4378, 50.0765 14.4388)', 4326)), -- Prague, Czech Republic
+('S637', 'Supermarket AV2', ST_GeomFromText('LINESTRING(49.1951 16.6068, 49.1961 16.6078)', 4326)), -- Brno, Czech Republic
+('S638', 'Supermarket AV3', ST_GeomFromText('LINESTRING(49.7384 13.3736, 49.7394 13.3746)', 4326)), -- Pilsen, Czech Republic
+('S639', 'Supermarket AV4', ST_GeomFromText('LINESTRING(50.2092 15.8328, 50.2102 15.8338)', 4326)), -- Hradec Králové, Czech Republic
+('S640', 'Supermarket AV5', ST_GeomFromText('LINESTRING(49.5942 17.2519, 49.5952 17.2529)', 4326)), -- Olomouc, Czech Republic
+
+('S641', 'Supermarket AW1', ST_GeomFromText('LINESTRING(52.4064 16.9252, 52.4074 16.9262)', 4326)), -- Poznań, Poland
+('S642', 'Supermarket AW2', ST_GeomFromText('LINESTRING(54.3520 18.6466, 54.3530 18.6476)', 4326)), -- Gdańsk, Poland
+('S643', 'Supermarket AW3', ST_GeomFromText('LINESTRING(51.1079 17.0385, 51.1089 17.0395)', 4326)), -- Wrocław, Poland
+('S644', 'Supermarket AW4', ST_GeomFromText('LINESTRING(50.2649 19.0238, 50.2659 19.0248)', 4326)), -- Katowice, Poland
+('S645', 'Supermarket AW5', ST_GeomFromText('LINESTRING(53.4285 14.5528, 53.4295 14.5538)', 4326)), -- Szczecin, Poland
+
+('S646', 'Supermarket AX1', ST_GeomFromText('LINESTRING(47.0705 15.4385, 47.0715 15.4395)', 4326)), -- Graz, Austria
+('S647', 'Supermarket AX2', ST_GeomFromText('LINESTRING(46.0569 14.5058, 46.0579 14.5068)', 4326)), -- Ljubljana, Slovenia
+('S648', 'Supermarket AX3', ST_GeomFromText('LINESTRING(45.8150 15.9819, 45.8160 15.9829)', 4326)), -- Zagreb, Croatia
+('S649', 'Supermarket AX4', ST_GeomFromText('LINESTRING(44.8178 20.4569, 44.8188 20.4579)', 4326)), -- Belgrade, Serbia
+('S650', 'Supermarket AX5', ST_GeomFromText('LINESTRING(42.0029 21.4363, 42.0039 21.4373)', 4326)), -- Skopje, North Macedonia
+
+('S651', 'Supermarket AY1', ST_GeomFromText('LINESTRING(47.4979 19.0402, 47.4989 19.0412)', 4326)), -- Budapest, Hungary
+('S652', 'Supermarket AY2', ST_GeomFromText('LINESTRING(46.2530 20.1414, 46.2540 20.1424)', 4326)), -- Szeged, Hungary
+('S653', 'Supermarket AY3', ST_GeomFromText('LINESTRING(47.5316 21.6273, 47.5326 21.6283)', 4326)), -- Debrecen, Hungary
+('S654', 'Supermarket AY4', ST_GeomFromText('LINESTRING(47.6876 17.6504, 47.6886 17.6514)', 4326)), -- Győr, Hungary
+('S655', 'Supermarket AY5', ST_GeomFromText('LINESTRING(46.0759 18.2323, 46.0769 18.2333)', 4326)), -- Pécs, Hungary
+
+('S656', 'Supermarket AZ1', ST_GeomFromText('LINESTRING(44.4268 26.1025, 44.4278 26.1035)', 4326)), -- Bucharest, Romania
+('S657', 'Supermarket AZ2', ST_GeomFromText('LINESTRING(45.9432 25.0037, 45.9442 25.0047)', 4326)), -- Brașov, Romania
+('S658', 'Supermarket AZ3', ST_GeomFromText('LINESTRING(47.1585 27.6014, 47.1595 27.6024)', 4326)), -- Iași, Romania
+('S659', 'Supermarket AZ4', ST_GeomFromText('LINESTRING(45.7537 21.2257, 45.7547 21.2267)', 4326)), -- Timișoara, Romania
+('S660', 'Supermarket AZ5', ST_GeomFromText('LINESTRING(44.3302 23.7949, 44.3312 23.7959)', 4326)), -- Craiova, Romania
+
+('S661', 'Supermarket BA1', ST_GeomFromText('LINESTRING(42.6977 23.3219, 42.6987 23.3229)', 4326)), -- Sofia, Bulgaria
+('S662', 'Supermarket BA2', ST_GeomFromText('LINESTRING(43.8564 25.9707, 43.8574 25.9717)', 4326)), -- Ruse, Bulgaria
+('S663', 'Supermarket BA3', ST_GeomFromText('LINESTRING(42.1445 24.7495, 42.1455 24.7505)', 4326)), -- Plovdiv, Bulgaria
+('S664', 'Supermarket BA4', ST_GeomFromText('LINESTRING(43.2141 27.9147, 43.2151 27.9157)', 4326)), -- Varna, Bulgaria
+('S665', 'Supermarket BA5', ST_GeomFromText('LINESTRING(42.4225 25.6259, 42.4235 25.6269)', 4326)), -- Stara Zagora, Bulgaria
+
+('S666', 'Supermarket BB1', ST_GeomFromText('LINESTRING(41.3275 19.8187, 41.3285 19.8197)', 4326)), -- Tirana, Albania
+('S667', 'Supermarket BB2', ST_GeomFromText('LINESTRING(42.4304 19.2594, 42.4314 19.2604)', 4326)), -- Podgorica, Montenegro
+('S668', 'Supermarket BB3', ST_GeomFromText('LINESTRING(42.4415 19.2626, 42.4425 19.2636)', 4326)), -- Podgorica, Montenegro
+('S669', 'Supermarket BB4', ST_GeomFromText('LINESTRING(42.6629 21.1655, 42.6639 21.1665)', 4326)), -- Pristina, Kosovo
+('S670', 'Supermarket BB5', ST_GeomFromText('LINESTRING(41.9965 21.4316, 41.9975 21.4326)', 4326)), -- Skopje, North Macedonia
+
+('S671', 'Supermarket BC1', ST_GeomFromText('LINESTRING(55.1694 23.8813, 55.1704 23.8823)', 4326)), -- Šiauliai, Lithuania
+('S672', 'Supermarket BC2', ST_GeomFromText('LINESTRING(54.6872 25.2797, 54.6882 25.2807)', 4326)), -- Vilnius, Lithuania
+('S673', 'Supermarket BC3', ST_GeomFromText('LINESTRING(56.9496 24.1052, 56.9506 24.1062)', 4326)), -- Riga, Latvia
+('S674', 'Supermarket BC4', ST_GeomFromText('LINESTRING(58.3857 24.4967, 58.3867 24.4977)', 4326)), -- Pärnu, Estonia
+('S675', 'Supermarket BC5', ST_GeomFromText('LINESTRING(59.4369 24.7536, 59.4379 24.7546)', 4326)), -- Tallinn, Estonia
+
+('S676', 'Supermarket BD1', ST_GeomFromText('LINESTRING(55.6761 12.5683, 55.6771 12.5693)', 4326)), -- Copenhagen, Denmark
+('S677', 'Supermarket BD2', ST_GeomFromText('LINESTRING(57.0488 9.9217, 57.0498 9.9227)', 4326)), -- Aalborg, Denmark
+('S678', 'Supermarket BD3', ST_GeomFromText('LINESTRING(55.3959 10.3883, 55.3969 10.3893)', 4326)), -- Odense, Denmark
+('S679', 'Supermarket BD4', ST_GeomFromText('LINESTRING(56.1567 10.2108, 56.1577 10.2118)', 4326)), -- Aarhus, Denmark
+('S680', 'Supermarket BD5', ST_GeomFromText('LINESTRING(55.4787 9.4756, 55.4797 9.4766)', 4326)), -- Esbjerg, Denmark
+
+('S681', 'Supermarket BE1', ST_GeomFromText('LINESTRING(59.3293 18.0686, 59.3303 18.0696)', 4326)), -- Stockholm, Sweden
+('S682', 'Supermarket BE2', ST_GeomFromText('LINESTRING(57.7089 11.9746, 57.7099 11.9756)', 4326)), -- Gothenburg, Sweden
+('S683', 'Supermarket BE3', ST_GeomFromText('LINESTRING(55.6050 13.0038, 55.6060 13.0048)', 4326)), -- Malmö, Sweden
+('S684', 'Supermarket BE4', ST_GeomFromText('LINESTRING(59.8586 17.6389, 59.8596 17.6399)', 4326)), -- Uppsala, Sweden
+('S685', 'Supermarket BE5', ST_GeomFromText('LINESTRING(63.8258 20.2630, 63.8268 20.2640)', 4326)), -- Umeå, Sweden
+
+('S686', 'Supermarket BF1', ST_GeomFromText('LINESTRING(60.3925 5.3233, 60.3935 5.3243)', 4326)), -- Bergen, Norway
+('S687', 'Supermarket BF2', ST_GeomFromText('LINESTRING(59.9139 10.7522, 59.9149 10.7532)', 4326)), -- Oslo, Norway
+('S688', 'Supermarket BF3', ST_GeomFromText('LINESTRING(63.4305 10.3951, 63.4315 10.3961)', 4326)), -- Trondheim, Norway
+('S689', 'Supermarket BF4', ST_GeomFromText('LINESTRING(58.9700 5.7331, 58.9710 5.7341)', 4326)), -- Stavanger, Norway
+('S690', 'Supermarket BF5', ST_GeomFromText('LINESTRING(69.6492 18.9553, 69.6502 18.9563)', 4326)), -- Tromsø, Norway
+
+('S691', 'Supermarket BG1', ST_GeomFromText('LINESTRING(64.1470 -21.9406, 64.1480 -21.9396)', 4326)), -- Reykjavik, Iceland
+('S692', 'Supermarket BG2', ST_GeomFromText('LINESTRING(65.6804 -18.1004, 65.6814 -18.0994)', 4326)), -- Akureyri, Iceland
+('S693', 'Supermarket BG3', ST_GeomFromText('LINESTRING(66.0449 -17.3389, 66.0459 -17.3379)', 4326)), -- Húsavík, Iceland
+('S694', 'Supermarket BG4', ST_GeomFromText('LINESTRING(63.5330 -19.5117, 63.5340 -19.5107)', 4326)), -- Vík, Iceland
+('S695', 'Supermarket BG5', ST_GeomFromText('LINESTRING(64.9136 -23.7146, 64.9146 -23.7136)', 4326)), -- Grundarfjörður, Iceland
+
+('S696', 'Supermarket BH1', ST_GeomFromText('LINESTRING(55.1596 -6.6666, 55.1606 -6.6656)', 4326)), -- Belfast, UK
+('S697', 'Supermarket BH2', ST_GeomFromText('LINESTRING(54.5970 -5.9300, 54.5980 -5.9290)', 4326)), -- Belfast, UK
+('S698', 'Supermarket BH3', ST_GeomFromText('LINESTRING(53.3496 -6.2604, 53.3506 -6.2594)', 4326)), -- Dublin, Ireland
+('S699', 'Supermarket BH4', ST_GeomFromText('LINESTRING(51.8985 -8.4756, 51.8995 -8.4746)', 4326)), -- Cork, Ireland
+('S700', 'Supermarket BH5', ST_GeomFromText('LINESTRING(53.2707 -9.0568, 53.2717 -9.0558)', 4326)), -- Galway, Ireland
+
+
+
+('S701', 'Supermarket BI1', ST_GeomFromText('LINESTRING(12.1364 -68.9297, 12.1374 -68.9287)', 4326)), -- Willemstad, Curaçao
+('S702', 'Supermarket BI2', ST_GeomFromText('LINESTRING(17.4839 -88.1975, 17.4849 -88.1965)', 4326)), -- Belmopan, Belize
+('S703', 'Supermarket BI3', ST_GeomFromText('LINESTRING(13.0975 -59.6165, 13.0985 -59.6155)', 4326)), -- Bridgetown, Barbados
+('S704', 'Supermarket BI4', ST_GeomFromText('LINESTRING(18.0425 -63.0548, 18.0435 -63.0538)', 4326)), -- Philipsburg, Sint Maarten
+('S705', 'Supermarket BI5', ST_GeomFromText('LINESTRING(15.2976 -61.3900, 15.2986 -61.3890)', 4326)), -- Roseau, Dominica
+
+('S706', 'Supermarket BJ1', ST_GeomFromText('LINESTRING(18.4655 -66.1057, 18.4665 -66.1047)', 4326)), -- San Juan, Puerto Rico
+('S707', 'Supermarket BJ2', ST_GeomFromText('LINESTRING(17.9712 -76.7926, 17.9722 -76.7916)', 4326)), -- Kingston, Jamaica
+('S708', 'Supermarket BJ3', ST_GeomFromText('LINESTRING(25.0343 -77.3963, 25.0353 -77.3953)', 4326)), -- Nassau, Bahamas
+('S709', 'Supermarket BJ4', ST_GeomFromText('LINESTRING(18.4286 -64.6187, 18.4296 -64.6177)', 4326)), -- Road Town, British Virgin Islands
+('S710', 'Supermarket BJ5', ST_GeomFromText('LINESTRING(14.0101 -60.9875, 14.0111 -60.9865)', 4326)), -- Castries, Saint Lucia
+
+('S711', 'Supermarket BK1', ST_GeomFromText('LINESTRING(1.2833 103.8333, 1.2843 103.8343)', 4326)), -- Singapore
+('S712', 'Supermarket BK2', ST_GeomFromText('LINESTRING(3.1390 101.6869, 3.1400 101.6879)', 4326)), -- Kuala Lumpur, Malaysia
+('S713', 'Supermarket BK3', ST_GeomFromText('LINESTRING(13.7563 100.5018, 13.7573 100.5028)', 4326)), -- Bangkok, Thailand
+('S714', 'Supermarket BK4', ST_GeomFromText('LINESTRING(16.8409 96.1735, 16.8419 96.1745)', 4326)), -- Yangon, Myanmar
+('S715', 'Supermarket BK5', ST_GeomFromText('LINESTRING(10.8231 106.6297, 10.8241 106.6307)', 4326)), -- Ho Chi Minh City, Vietnam
+
+('S716', 'Supermarket BL1', ST_GeomFromText('LINESTRING(21.0285 105.8542, 21.0295 105.8552)', 4326)), -- Hanoi, Vietnam
+('S717', 'Supermarket BL2', ST_GeomFromText('LINESTRING(11.5449 104.8922, 11.5459 104.8932)', 4326)), -- Phnom Penh, Cambodia
+('S718', 'Supermarket BL3', ST_GeomFromText('LINESTRING(17.9757 102.6331, 17.9767 102.6341)', 4326)), -- Vientiane, Laos
+('S719', 'Supermarket BL4', ST_GeomFromText('LINESTRING(-6.2088 106.8456, -6.2078 106.8466)', 4326)), -- Jakarta, Indonesia
+('S720', 'Supermarket BL5', ST_GeomFromText('LINESTRING(-8.6705 115.2126, -8.6695 115.2136)', 4326)), -- Denpasar, Indonesia
+
+('S721', 'Supermarket BM1', ST_GeomFromText('LINESTRING(5.9804 116.0735, 5.9814 116.0745)', 4326)), -- Kota Kinabalu, Malaysia
+('S722', 'Supermarket BM2', ST_GeomFromText('LINESTRING(14.5995 120.9842, 14.6005 120.9852)', 4326)), -- Manila, Philippines
+('S723', 'Supermarket BM3', ST_GeomFromText('LINESTRING(10.3157 123.8854, 10.3167 123.8864)', 4326)), -- Cebu, Philippines
+('S724', 'Supermarket BM4', ST_GeomFromText('LINESTRING(16.4158 120.5936, 16.4168 120.5946)', 4326)), -- Baguio, Philippines
+('S725', 'Supermarket BM5', ST_GeomFromText('LINESTRING(7.1907 125.4553, 7.1917 125.4563)', 4326)), -- Davao, Philippines
+
+('S726', 'Supermarket BN1', ST_GeomFromText('LINESTRING(24.4539 54.3773, 24.4549 54.3783)', 4326)), -- Abu Dhabi, UAE
+('S727', 'Supermarket BN2', ST_GeomFromText('LINESTRING(26.2235 50.5876, 26.2245 50.5886)', 4326)), -- Manama, Bahrain
+('S728', 'Supermarket BN3', ST_GeomFromText('LINESTRING(23.6140 58.5922, 23.6150 58.5932)', 4326)), -- Muscat, Oman
+('S729', 'Supermarket BN4', ST_GeomFromText('LINESTRING(25.2854 51.5310, 25.2864 51.5320)', 4326)), -- Doha, Qatar
+('S730', 'Supermarket BN5', ST_GeomFromText('LINESTRING(29.3759 47.9774, 29.3769 47.9784)', 4326)), -- Kuwait City, Kuwait
+
+('S731', 'Supermarket BO1', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)', 4326)), -- Cairo, Egypt
+('S732', 'Supermarket BO2', ST_GeomFromText('LINESTRING(31.2001 29.9187, 31.2011 29.9197)', 4326)), -- Alexandria, Egypt
+('S733', 'Supermarket BO3', ST_GeomFromText('LINESTRING(24.0889 32.8998, 24.0899 32.9008)', 4326)), -- Aswan, Egypt
+('S734', 'Supermarket BO4', ST_GeomFromText('LINESTRING(26.8206 30.8025, 26.8216 30.8035)', 4326)), -- Kharga, Egypt
+('S735', 'Supermarket BO5', ST_GeomFromText('LINESTRING(27.2579 33.8116, 27.2589 33.8126)', 4326)), -- Hurghada, Egypt
+
+('S736', 'Supermarket BP1', ST_GeomFromText('LINESTRING(33.8869 9.5375, 33.8879 9.5385)', 4326)), -- Tunis, Tunisia
+('S737', 'Supermarket BP2', ST_GeomFromText('LINESTRING(36.7529 3.0420, 36.7539 3.0430)', 4326)), -- Algiers, Algeria
+('S738', 'Supermarket BP3', ST_GeomFromText('LINESTRING(34.0209 -6.8416, 34.0219 -6.8406)', 4326)), -- Rabat, Morocco
+('S739', 'Supermarket BP4', ST_GeomFromText('LINESTRING(31.6295 -7.9811, 31.6305 -7.9801)', 4326)), -- Marrakesh, Morocco
+('S740', 'Supermarket BP5', ST_GeomFromText('LINESTRING(33.9716 -6.8498, 33.9726 -6.8488)', 4326)), -- Casablanca, Morocco
+
+('S741', 'Supermarket BQ1', ST_GeomFromText('LINESTRING(14.6928 -17.4467, 14.6938 -17.4457)', 4326)), -- Dakar, Senegal
+('S742', 'Supermarket BQ2', ST_GeomFromText('LINESTRING(6.1304 1.2222, 6.1314 1.2232)', 4326)), -- Lomé, Togo
+('S743', 'Supermarket BQ3', ST_GeomFromText('LINESTRING(9.0574 7.4898, 9.0584 7.4908)', 4326)), -- Abuja, Nigeria
+('S744', 'Supermarket BQ4', ST_GeomFromText('LINESTRING(6.5244 3.3792, 6.5254 3.3802)', 4326)), -- Lagos, Nigeria
+('S745', 'Supermarket BQ5', ST_GeomFromText('LINESTRING(5.5560 -0.1969, 5.5570 -0.1959)', 4326)), -- Accra, Ghana
+
+('S746', 'Supermarket BR1', ST_GeomFromText('LINESTRING(-4.0435 39.6682, -4.0425 39.6692)', 4326)), -- Mombasa, Kenya
+('S747', 'Supermarket BR2', ST_GeomFromText('LINESTRING(-1.2921 36.8219, -1.2911 36.8229)', 4326)), -- Nairobi, Kenya
+('S748', 'Supermarket BR3', ST_GeomFromText('LINESTRING(-6.7924 39.2083, -6.7914 39.2093)', 4326)), -- Dar es Salaam, Tanzania
+('S749', 'Supermarket BR4', ST_GeomFromText('LINESTRING(-3.3722 29.3609, -3.3712 29.3619)', 4326)), -- Bujumbura, Burundi
+('S750', 'Supermarket BR5', ST_GeomFromText('LINESTRING(-1.9536 30.0605, -1.9526 30.0615)', 4326)), -- Kigali, Rwanda
+
+('S751', 'Supermarket BS1', ST_GeomFromText('LINESTRING(0.3136 32.5811, 0.3146 32.5821)', 4326)), -- Kampala, Uganda
+('S752', 'Supermarket BS2', ST_GeomFromText('LINESTRING(3.3792 8.6932, 3.3802 8.6942)', 4326)), -- Malabo, Equatorial Guinea
+('S753', 'Supermarket BS3', ST_GeomFromText('LINESTRING(-15.3875 28.3228, -15.3865 28.3238)', 4326)), -- Lusaka, Zambia
+('S754', 'Supermarket BS4', ST_GeomFromText('LINESTRING(-17.8252 31.0335, -17.8242 31.0345)', 4326)), -- Harare, Zimbabwe
+('S755', 'Supermarket BS5', ST_GeomFromText('LINESTRING(-25.9653 32.5892, -25.9643 32.5902)', 4326)), -- Maputo, Mozambique
+
+('S756', 'Supermarket BT1', ST_GeomFromText('LINESTRING(-22.9576 18.4904, -22.9566 18.4914)', 4326)), -- Windhoek, Namibia
+('S757', 'Supermarket BT2', ST_GeomFromText('LINESTRING(-24.6533 25.9060, -24.6523 25.9070)', 4326)), -- Gaborone, Botswana
+('S758', 'Supermarket BT3', ST_GeomFromText('LINESTRING(-29.3100 27.4800, -29.3090 27.4810)', 4326)), -- Maseru, Lesotho
+('S759', 'Supermarket BT4', ST_GeomFromText('LINESTRING(-26.3167 31.1333, -26.3157 31.1343)', 4326)), -- Mbabane, Eswatini
+('S760', 'Supermarket BT5', ST_GeomFromText('LINESTRING(-20.1609 28.5827, -20.1599 28.5837)', 4326)), -- Bulawayo, Zimbabwe
+
+('S761', 'Supermarket BU1', ST_GeomFromText('LINESTRING(-33.9249 18.4241, -33.9239 18.4251)', 4326)), -- Cape Town, South Africa
+('S762', 'Supermarket BU2', ST_GeomFromText('LINESTRING(-26.2041 28.0473, -26.2031 28.0483)', 4326)), -- Johannesburg, South Africa
+('S763', 'Supermarket BU3', ST_GeomFromText('LINESTRING(-29.8587 31.0218, -29.8577 31.0228)', 4326)), -- Durban, South Africa
+('S764', 'Supermarket BU4', ST_GeomFromText('LINESTRING(-25.7479 28.1878, -25.7469 28.1888)', 4326)), -- Pretoria, South Africa
+('S765', 'Supermarket BU5', ST_GeomFromText('LINESTRING(-33.9616 25.6151, -33.9606 25.6161)', 4326)), -- Port Elizabeth, South Africa
+
+('S766', 'Supermarket BV1', ST_GeomFromText('LINESTRING(-18.1416 178.4419, -18.1406 178.4429)', 4326)), -- Suva, Fiji
+('S767', 'Supermarket BV2', ST_GeomFromText('LINESTRING(-21.1343 -175.2018, -21.1333 -175.2008)', 4326)), -- Nuku'alofa, Tonga
+('S768', 'Supermarket BV3', ST_GeomFromText('LINESTRING(-13.8333 -171.7667, -13.8323 -171.7657)', 4326)), -- Apia, Samoa
+('S769', 'Supermarket BV4', ST_GeomFromText('LINESTRING(-17.5395 -149.5687, -17.5385 -149.5677)', 4326)), -- Papeete, French Polynesia
+('S770', 'Supermarket BV5', ST_GeomFromText('LINESTRING(-9.4438 147.1803, -9.4428 147.1813)', 4326)), -- Port Moresby, Papua New Guinea
+
+('S771', 'Supermarket BW1', ST_GeomFromText('LINESTRING(-41.2865 174.7762, -41.2855 174.7772)', 4326)), -- Wellington, New Zealand
+('S772', 'Supermarket BW2', ST_GeomFromText('LINESTRING(-36.8485 174.7633, -36.8475 174.7643)', 4326)), -- Auckland, New Zealand
+('S773', 'Supermarket BW3', ST_GeomFromText('LINESTRING(-43.5321 172.6362, -43.5311 172.6372)', 4326)), -- Christchurch, New Zealand
+('S774', 'Supermarket BW4', ST_GeomFromText('LINESTRING(-45.8788 170.5028, -45.8778 170.5038)', 4326)), -- Dunedin, New Zealand
+('S775', 'Supermarket BW5', ST_GeomFromText('LINESTRING(-37.6878 176.1651, -37.6868 176.1661)', 4326)), -- Tauranga, New Zealand
+
+('S776', 'Supermarket BX1', ST_GeomFromText('LINESTRING(35.7090 139.7317, 35.7100 139.7327)', 4326)), -- Shinjuku, Tokyo
+('S777', 'Supermarket BX2', ST_GeomFromText('LINESTRING(34.6937 135.5022, 34.6947 135.5032)', 4326)), -- Osaka, Japan
+('S778', 'Supermarket BX3', ST_GeomFromText('LINESTRING(35.1815 136.9066, 35.1825 136.9076)', 4326)), -- Nagoya, Japan
+('S779', 'Supermarket BX4', ST_GeomFromText('LINESTRING(43.0621 141.3544, 43.0631 141.3554)', 4326)), -- Sapporo, Japan
+('S780', 'Supermarket BX5', ST_GeomFromText('LINESTRING(35.0116 135.7681, 35.0126 135.7691)', 4326)), -- Kyoto, Japan
+
+('S781', 'Supermarket BY1', ST_GeomFromText('LINESTRING(37.5665 126.9780, 37.5675 126.9790)', 4326)), -- Seoul, South Korea
+('S782', 'Supermarket BY2', ST_GeomFromText('LINESTRING(35.1796 129.0756, 35.1806 129.0766)', 4326)), -- Busan, South Korea
+('S783', 'Supermarket BY3', ST_GeomFromText('LINESTRING(36.3504 127.3845, 36.3514 127.3855)', 4326)), -- Daejeon, South Korea
+('S784', 'Supermarket BY4', ST_GeomFromText('LINESTRING(35.5384 129.3114, 35.5394 129.3124)', 4326)), -- Ulsan, South Korea
+('S785', 'Supermarket BY5', ST_GeomFromText('LINESTRING(37.4563 126.7052, 37.4573 126.7062)', 4326)), -- Incheon, South Korea
+
+('S786', 'Supermarket BZ1', ST_GeomFromText('LINESTRING(22.2793 114.1623, 22.2803 114.1633)', 4326)), -- Hong Kong Island
+('S787', 'Supermarket BZ2', ST_GeomFromText('LINESTRING(22.1975 113.5439, 22.1985 113.5449)', 4326)), -- Macau
+('S788', 'Supermarket BZ3', ST_GeomFromText('LINESTRING(25.0330 121.5654, 25.0340 121.5664)', 4326)), -- Taipei, Taiwan
+('S789', 'Supermarket BZ4', ST_GeomFromText('LINESTRING(24.1517 120.6736, 24.1527 120.6746)', 4326)), -- Taichung, Taiwan
+('S790', 'Supermarket BZ5', ST_GeomFromText('LINESTRING(22.6209 120.3022, 22.6219 120.3032)', 4326)), -- Kaohsiung, Taiwan
+
+('S791', 'Supermarket CA1', ST_GeomFromText('LINESTRING(39.9042 116.4074, 39.9052 116.4084)', 4326)), -- Beijing, China
+('S792', 'Supermarket CA2', ST_GeomFromText('LINESTRING(31.2304 121.4737, 31.2314 121.4747)', 4326)), -- Shanghai, China
+('S793', 'Supermarket CA3', ST_GeomFromText('LINESTRING(23.1291 113.2644, 23.1301 113.2654)', 4326)), -- Guangzhou, China
+('S794', 'Supermarket CA4', ST_GeomFromText('LINESTRING(30.5728 104.0668, 30.5738 104.0678)', 4326)), -- Chengdu, China
+('S795', 'Supermarket CA5', ST_GeomFromText('LINESTRING(29.4316 106.9123, 29.4326 106.9133)', 4326)), -- Chongqing, China
+
+('S796', 'Supermarket CB1', ST_GeomFromText('LINESTRING(28.7041 77.1025, 28.7051 77.1035)', 4326)), -- New Delhi, India
+('S797', 'Supermarket CB2', ST_GeomFromText('LINESTRING(19.0760 72.8777, 19.0770 72.8787)', 4326)), -- Mumbai, India
+('S798', 'Supermarket CB3', ST_GeomFromText('LINESTRING(13.0827 80.2707, 13.0837 80.2717)', 4326)), -- Chennai, India
+('S799', 'Supermarket CB4', ST_GeomFromText('LINESTRING(12.9716 77.5946, 12.9726 77.5956)', 4326)), -- Bangalore, India
+('S800', 'Supermarket CB5', ST_GeomFromText('LINESTRING(22.5726 88.3639, 22.5736 88.3649)', 4326)), -- Kolkata, India
+
+
+('S801', 'Supermarket U1', ST_GeomFromText('LINESTRING(48.8566 2.3522, 48.8576 2.3532)', 4326)), -- Paris, France
+('S802', 'Supermarket U2', ST_GeomFromText('LINESTRING(-34.6037 -58.3816, -34.6027 -58.3806)', 4326)), -- Buenos Aires, Argentina
+('S803', 'Supermarket U3', ST_GeomFromText('LINESTRING(55.7558 37.6173, 55.7568 37.6183)', 4326)), -- Moscow, Russia
+('S804', 'Supermarket U4', ST_GeomFromText('LINESTRING(1.3521 103.8198, 1.3531 103.8208)', 4326)), -- Singapore
+('S805', 'Supermarket U5', ST_GeomFromText('LINESTRING(-22.9068 -43.1729, -22.9058 -43.1719)', 4326)), -- Rio de Janeiro, Brazil
+('S806', 'Supermarket V1', ST_GeomFromText('LINESTRING(40.7128 -74.0060, 40.7138 -74.0050)', 4326)), -- New York City, USA
+('S807', 'Supermarket V2', ST_GeomFromText('LINESTRING(51.5074 -0.1278, 51.5084 -0.1268)', 4326)), -- London, UK
+('S808', 'Supermarket V3', ST_GeomFromText('LINESTRING(-37.8136 144.9631, -37.8126 144.9641)', 4326)), -- Melbourne, Australia
+('S809', 'Supermarket V4', ST_GeomFromText('LINESTRING(43.6532 -79.3832, 43.6542 -79.3822)', 4326)), -- Toronto, Canada
+('S810', 'Supermarket V5', ST_GeomFromText('LINESTRING(25.2048 55.2708, 25.2058 55.2718)', 4326)), -- Dubai, UAE
+('S811', 'Supermarket W1', ST_GeomFromText('LINESTRING(39.9042 116.4074, 39.9052 116.4084)', 4326)), -- Beijing, China
+('S812', 'Supermarket W2', ST_GeomFromText('LINESTRING(-1.2921 36.8219, -1.2911 36.8229)', 4326)), -- Nairobi, Kenya
+('S813', 'Supermarket W3', ST_GeomFromText('LINESTRING(60.1699 24.9384, 60.1709 24.9394)', 4326)), -- Helsinki, Finland
+('S814', 'Supermarket W4', ST_GeomFromText('LINESTRING(28.6139 77.2090, 28.6149 77.2100)', 4326)), -- New Delhi, India
+('S815', 'Supermarket W5', ST_GeomFromText('LINESTRING(-12.0464 -77.0428, -12.0454 -77.0418)', 4326)), -- Lima, Peru
+('S816', 'Supermarket X1', ST_GeomFromText('LINESTRING(52.5200 13.4050, 52.5210 13.4060)', 4326)), -- Berlin, Germany
+('S817', 'Supermarket X2', ST_GeomFromText('LINESTRING(31.2304 121.4737, 31.2314 121.4747)', 4326)), -- Shanghai, China
+('S818', 'Supermarket X3', ST_GeomFromText('LINESTRING(38.7223 -9.1393, 38.7233 -9.1383)', 4326)), -- Lisbon, Portugal
+('S819', 'Supermarket X4', ST_GeomFromText('LINESTRING(-33.4489 -70.6693, -33.4479 -70.6683)', 4326)), -- Santiago, Chile
+('S820', 'Supermarket X5', ST_GeomFromText('LINESTRING(41.9028 12.4964, 41.9038 12.4974)', 4326)), -- Rome, Italy
+('S821', 'Supermarket Y1', ST_GeomFromText('LINESTRING(30.0444 31.2357, 30.0454 31.2367)', 4326)), -- Cairo, Egypt
+('S822', 'Supermarket Y2', ST_GeomFromText('LINESTRING(47.4979 19.0402, 47.4989 19.0412)', 4326)), -- Budapest, Hungary
+('S823', 'Supermarket Y3', ST_GeomFromText('LINESTRING(-36.8485 174.7633, -36.8475 174.7643)', 4326)), -- Auckland, New Zealand
+('S824', 'Supermarket Y4', ST_GeomFromText('LINESTRING(37.7749 -122.4194, 37.7759 -122.4184)', 4326)), -- San Francisco, USA
+('S825', 'Supermarket Y5', ST_GeomFromText('LINESTRING(13.7563 100.5018, 13.7573 100.5028)', 4326)), -- Bangkok, Thailand
+('S826', 'Supermarket Z1', ST_GeomFromText('LINESTRING(45.4215 -75.6972, 45.4225 -75.6962)', 4326)), -- Ottawa, Canada
+('S827', 'Supermarket Z2', ST_GeomFromText('LINESTRING(53.3498 -6.2603, 53.3508 -6.2593)', 4326)), -- Dublin, Ireland
+('S828', 'Supermarket Z3', ST_GeomFromText('LINESTRING(40.4168 -3.7038, 40.4178 -3.7028)', 4326)), -- Madrid, Spain
+('S829', 'Supermarket Z4', ST_GeomFromText('LINESTRING(35.2809 33.8547, 35.2819 33.8557)', 4326)), -- Nicosia, Cyprus
+('S830', 'Supermarket Z5', ST_GeomFromText('LINESTRING(-4.4419 36.7213, -4.4409 36.7223)', 4326)), -- Málaga, Spain
+('S831', 'Supermarket A1', ST_GeomFromText('LINESTRING(48.1351 11.5820, 48.1361 11.5830)', 4326)), -- Munich, Germany
+('S832', 'Supermarket A2', ST_GeomFromText('LINESTRING(41.0082 28.9784, 41.0092 28.9794)', 4326)), -- Istanbul, Turkey
+('S833', 'Supermarket A3', ST_GeomFromText('LINESTRING(33.5731 -7.5898, 33.5741 -7.5888)', 4326)), -- Casablanca, Morocco
+('S834', 'Supermarket A4', ST_GeomFromText('LINESTRING(59.9139 10.7522, 59.9149 10.7532)', 4326)), -- Oslo, Norway
+('S835', 'Supermarket A5', ST_GeomFromText('LINESTRING(6.7924 3.3841, 6.7934 3.3851)', 4326)), -- Lagos, Nigeria
+('S836', 'Supermarket B1', ST_GeomFromText('LINESTRING(46.2044 6.1432, 46.2054 6.1442)', 4326)), -- Geneva, Switzerland
+('S837', 'Supermarket B2', ST_GeomFromText('LINESTRING(24.7536 46.6225, 24.7546 46.6235)', 4326)), -- Riyadh, Saudi Arabia
+('S838', 'Supermarket B3', ST_GeomFromText('LINESTRING(50.0755 14.4378, 50.0765 14.4388)', 4326)), -- Prague, Czech Republic
+('S839', 'Supermarket B4', ST_GeomFromText('LINESTRING(-23.5505 -46.6333, -23.5495 -46.6323)', 4326)), -- São Paulo, Brazil
+('S840', 'Supermarket B5', ST_GeomFromText('LINESTRING(35.1856 33.3823, 35.1866 33.3833)', 4326)), -- Beirut, Lebanon
+('S841', 'Supermarket C1', ST_GeomFromText('LINESTRING(55.6761 12.5683, 55.6771 12.5693)', 4326)), -- Copenhagen, Denmark
+('S842', 'Supermarket C2', ST_GeomFromText('LINESTRING(39.7392 -104.9903, 39.7402 -104.9893)', 4326)), -- Denver, USA
+('S843', 'Supermarket C3', ST_GeomFromText('LINESTRING(64.1355 -21.8174, 64.1365 -21.8164)', 4326)), -- Reykjavik, Iceland
+('S844', 'Supermarket C4', ST_GeomFromText('LINESTRING(14.5058 46.0569, 14.5068 46.0579)', 4326)), -- Ljubljana, Slovenia
+('S845', 'Supermarket C5', ST_GeomFromText('LINESTRING(37.9838 23.7275, 37.9848 23.7285)', 4326)), -- Athens, Greece
+('S846', 'Supermarket D1', ST_GeomFromText('LINESTRING(44.4268 26.1025, 44.4278 26.1035)', 4326)), -- Bucharest, Romania
+('S847', 'Supermarket D2', ST_GeomFromText('LINESTRING(21.0278 105.8342, 21.0288 105.8352)', 4326)), -- Hanoi, Vietnam
+('S848', 'Supermarket D3', ST_GeomFromText('LINESTRING(32.0853 34.7818, 32.0863 34.7828)', 4326)), -- Tel Aviv, Israel
+('S849', 'Supermarket D4', ST_GeomFromText('LINESTRING(-8.6291 115.1321, -8.6281 115.1331)', 4326)), -- Denpasar, Indonesia
+('S850', 'Supermarket D5', ST_GeomFromText('LINESTRING(45.8150 15.9780, 45.8160 15.9790)', 4326)), -- Zagreb, Croatia
+('S851', 'Supermarket E1', ST_GeomFromText('LINESTRING(48.2082 16.3738, 48.2092 16.3748)', 4326)), -- Vienna, Austria
+('S852', 'Supermarket E2', ST_GeomFromText('LINESTRING(7.4474 134.5825, 7.4484 134.5835)', 4326)), -- Koror, Palau
+('S853', 'Supermarket E3', ST_GeomFromText('LINESTRING(26.9124 75.7873, 26.9134 75.7883)', 4326)), -- Jaipur, India
+('S854', 'Supermarket E4', ST_GeomFromText('LINESTRING(42.3601 -71.0589, 42.3611 -71.0579)', 4326)), -- Boston, USA
+('S855', 'Supermarket E5', ST_GeomFromText('LINESTRING(33.6844 73.0479, 33.6854 73.0489)', 4326)), -- Islamabad, Pakistan
+('S856', 'Supermarket F1', ST_GeomFromText('LINESTRING(9.9281 -84.0907, 9.9291 -84.0897)', 4326)), -- San José, Costa Rica
+('S857', 'Supermarket F2', ST_GeomFromText('LINESTRING(4.9041 52.3676, 4.9051 52.3686)', 4326)), -- Amsterdam, Netherlands
+('S858', 'Supermarket F3', ST_GeomFromText('LINESTRING(-0.1807 -78.4678, -0.1797 -78.4668)', 4326)), -- Quito, Ecuador
+('S859', 'Supermarket F4', ST_GeomFromText('LINESTRING(54.3773 -1.5712, 54.3783 -1.5702)', 4326)), -- Middlesbrough, UK
+('S860', 'Supermarket F5', ST_GeomFromText('LINESTRING(17.1077 -61.7964, 17.1087 -61.7954)', 4326)), -- St. John's, Antigua and Barbuda
+('S861', 'Supermarket G1', ST_GeomFromText('LINESTRING(41.3275 19.8187, 41.3285 19.8197)', 4326)), -- Tirana, Albania
+('S862', 'Supermarket G2', ST_GeomFromText('LINESTRING(5.7640 45.1885, 5.7650 45.1895)', 4326)), -- Grenoble, France
+('S863', 'Supermarket G3', ST_GeomFromText('LINESTRING(35.9078 127.7669, 35.9088 127.7679)', 4326)), -- Busan, South Korea
+('S864', 'Supermarket G4', ST_GeomFromText('LINESTRING(-13.5319 -71.9675, -13.5309 -71.9665)', 4326)), -- Cusco, Peru
+('S865', 'Supermarket G5', ST_GeomFromText('LINESTRING(36.7538 3.0588, 36.7548 3.0598)', 4326)), -- Algiers, Algeria
+('S866', 'Supermarket H1', ST_GeomFromText('LINESTRING(10.8231 106.6297, 10.8241 106.6307)', 4326)), -- Ho Chi Minh City, Vietnam
+('S867', 'Supermarket H2', ST_GeomFromText('LINESTRING(29.3759 47.9774, 29.3769 47.9784)', 4326)), -- Kuwait City, Kuwait
+('S868', 'Supermarket H3', ST_GeomFromText('LINESTRING(-25.2637 -57.5759, -25.2627 -57.5749)', 4326)), -- Asunción, Paraguay
+('S869', 'Supermarket H4', ST_GeomFromText('LINESTRING(43.7696 11.2558, 43.7706 11.2568)', 4326)), -- Florence, Italy
+('S870', 'Supermarket H5', ST_GeomFromText('LINESTRING(8.6753 -9.7310, 8.6763 -9.7300)', 4326)), -- Freetown, Sierra Leone
+('S871', 'Supermarket I1', ST_GeomFromText('LINESTRING(47.1660 27.5726, 47.1670 27.5736)', 4326)), -- Iași, Romania
+('S872', 'Supermarket I2', ST_GeomFromText('LINESTRING(-17.8134 -63.1561, -17.8124 -63.1551)', 4326)), -- Santa Cruz, Bolivia
+('S873', 'Supermarket I3', ST_GeomFromText('LINESTRING(40.1824 44.5145, 40.1834 44.5155)', 4326)), -- Yerevan, Armenia
+('S874', 'Supermarket I4', ST_GeomFromText('LINESTRING(12.3155 -1.6596, 12.3165 -1.6586)', 4326)), -- Accra, Ghana
+('S875', 'Supermarket I5', ST_GeomFromText('LINESTRING(41.7151 -44.8271, 41.7161 -44.8261)', 4326)), -- Atlanta, USA
+('S876', 'Supermarket J1', ST_GeomFromText('LINESTRING(30.5234 50.4501, 30.5244 50.4511)', 4326)), -- Kyiv, Ukraine
+('S877', 'Supermarket J2', ST_GeomFromText('LINESTRING(34.7818 32.0853, 34.7828 32.0863)', 4326)), -- Tel Aviv, Israel
+('S878', 'Supermarket J3', ST_GeomFromText('LINESTRING(-6.7924 39.2238, -6.7914 39.2248)', 4326)), -- Zanzibar City, Tanzania
+('S879', 'Supermarket J4', ST_GeomFromText('LINESTRING(51.3890 35.6892, 51.3900 35.6902)', 4326)), -- Tehran, Iran
+('S880', 'Supermarket J5', ST_GeomFromText('LINESTRING(-31.9505 115.8605, -31.9495 115.8615)', 4326)), -- Perth, Australia
+('S881', 'Supermarket K1', ST_GeomFromText('LINESTRING(38.6270 -90.1994, 38.6280 -90.1984)', 4326)), -- St. Louis, USA
+('S882', 'Supermarket K2', ST_GeomFromText('LINESTRING(14.4378 50.0755, 14.4388 50.0765)', 4326)), -- Prague, Czech Republic
+('S883', 'Supermarket K3', ST_GeomFromText('LINESTRING(-34.3970 150.6440, -34.3960 150.6450)', 4326)), -- Wollongong, Australia
+('S884', 'Supermarket K4', ST_GeomFromText('LINESTRING(11.2558 43.7696, 11.2568 43.7706)', 4326)), -- Florence, Italy
+('S885', 'Supermarket K5', ST_GeomFromText('LINESTRING(39.2904 -76.6122, 39.2914 -76.6112)', 4326)), -- Baltimore, USA
+('S886', 'Supermarket L1', ST_GeomFromText('LINESTRING(45.5017 -73.5673, 45.5027 -73.5663)', 4326)), -- Montreal, Canada
+('S887', 'Supermarket L2', ST_GeomFromText('LINESTRING(27.7172 85.3240, 27.7182 85.3250)', 4326)), -- Kathmandu, Nepal
+('S888', 'Supermarket L3', ST_GeomFromText('LINESTRING(15.2663 -4.4419, 15.2673 -4.4409)', 4326)), -- Kinshasa, DR Congo
+('S889', 'Supermarket L4', ST_GeomFromText('LINESTRING(35.7596 -5.8340, 35.7606 -5.8330)', 4326)), -- Tangier, Morocco
+('S890', 'Supermarket L5', ST_GeomFromText('LINESTRING(22.5726 88.3639, 22.5736 88.3649)', 4326)), -- Kolkata, India
+('S891', 'Supermarket M1', ST_GeomFromText('LINESTRING(19.4326 -99.1332, 19.4336 -99.1322)', 4326)), -- Mexico City, Mexico
+('S892', 'Supermarket M2', ST_GeomFromText('LINESTRING(50.0647 19.9450, 50.0657 19.9460)', 4326)), -- Krakow, Poland
+('S893', 'Supermarket M3', ST_GeomFromText('LINESTRING(-26.8927 33.3707, -26.8917 33.3717)', 4326)), -- Port Elizabeth, South Africa
+('S894', 'Supermarket M4', ST_GeomFromText('LINESTRING(18.4241 -33.9249, 18.4251 -33.9239)', 4326)), -- Cape Town, South Africa
+('S895', 'Supermarket M5', ST_GeomFromText('LINESTRING(31.7683 35.2137, 31.7693 35.2147)', 4326)), -- Jerusalem, Israel
+('S896', 'Supermarket N1', ST_GeomFromText('LINESTRING(53.4084 -2.9916, 53.4094 -2.9906)', 4326)), -- Liverpool, UK
+('S897', 'Supermarket N2', ST_GeomFromText('LINESTRING(23.1291 113.2644, 23.1301 113.2654)', 4326)), -- Guangzhou, China
+('S898', 'Supermarket N3', ST_GeomFromText('LINESTRING(-27.4698 153.0251, -27.4688 153.0261)', 4326)), -- Brisbane, Australia
+('S899', 'Supermarket N4', ST_GeomFromText('LINESTRING(46.9480 7.4474, 46.9490 7.4484)', 4326)), -- Bern, Switzerland
+('S900', 'Supermarket N5', ST_GeomFromText('LINESTRING(34.0522 -118.2437, 34.0532 -118.2427)', 4326)), -- Los Angeles, USA
+
+('S901', 'Supermarket QQ', ST_GeomFromText('LINESTRING(21.430 106.600, 21.431 106.601)', 4326)),
+('S902', 'Supermarket RR', ST_GeomFromText('LINESTRING(21.435 106.605, 21.436 106.606)', 4326)),
+('S903', 'Supermarket SS', ST_GeomFromText('LINESTRING(21.440 106.610, 21.441 106.611)', 4326)),
+('S904', 'Supermarket TT', ST_GeomFromText('LINESTRING(21.445 106.615, 21.446 106.616)', 4326)),
+('S905', 'Supermarket UU', ST_GeomFromText('LINESTRING(21.450 106.620, 21.451 106.621)', 4326)),
+('S906', 'Supermarket VV', ST_GeomFromText('LINESTRING(21.455 106.625, 21.456 106.626)', 4326)),
+('S907', 'Supermarket WW', ST_GeomFromText('LINESTRING(21.460 106.630, 21.461 106.631)', 4326)),
+('S908', 'Supermarket XX', ST_GeomFromText('LINESTRING(21.465 106.635, 21.466 106.636)', 4326)),
+('S909', 'Supermarket YY', ST_GeomFromText('LINESTRING(21.470 106.640, 21.471 106.641)', 4326)),
+('S910', 'Supermarket ZZ', ST_GeomFromText('LINESTRING(21.475 106.645, 21.476 106.646)', 4326)),
+('S911', 'Supermarket AAA', ST_GeomFromText('LINESTRING(21.480 106.650, 21.481 106.651)', 4326)),
+('S912', 'Supermarket BBB', ST_GeomFromText('LINESTRING(21.485 106.655, 21.486 106.656)', 4326)),
+('S913', 'Supermarket CCC', ST_GeomFromText('LINESTRING(21.490 106.660, 21.491 106.661)', 4326)),
+('S914', 'Supermarket DDD', ST_GeomFromText('LINESTRING(21.495 106.665, 21.496 106.666)', 4326)),
+('S915', 'Supermarket EEE', ST_GeomFromText('LINESTRING(21.500 106.670, 21.501 106.671)', 4326)),
+('S916', 'Supermarket FFF', ST_GeomFromText('LINESTRING(21.505 106.675, 21.506 106.676)', 4326)),
+('S917', 'Supermarket GGG', ST_GeomFromText('LINESTRING(21.510 106.680, 21.511 106.681)', 4326)),
+('S918', 'Supermarket HHH', ST_GeomFromText('LINESTRING(21.515 106.685, 21.516 106.686)', 4326)),
+('S919', 'Supermarket III', ST_GeomFromText('LINESTRING(21.520 106.690, 21.521 106.691)', 4326)),
+('S920', 'Supermarket JJJ', ST_GeomFromText('LINESTRING(21.525 106.695, 21.526 106.696)', 4326)),
+('S921', 'Supermarket KKK', ST_GeomFromText('LINESTRING(21.530 106.700, 21.531 106.701)', 4326)),
+('S922', 'Supermarket LLL', ST_GeomFromText('LINESTRING(21.535 106.705, 21.536 106.706)', 4326)),
+('S923', 'Supermarket MMM', ST_GeomFromText('LINESTRING(21.540 106.710, 21.541 106.711)', 4326)),
+('S924', 'Supermarket NNN', ST_GeomFromText('LINESTRING(21.545 106.715, 21.546 106.716)', 4326)),
+('S925', 'Supermarket OOO', ST_GeomFromText('LINESTRING(21.550 106.720, 21.551 106.721)', 4326)),
+('S926', 'Supermarket PPP', ST_GeomFromText('LINESTRING(21.555 106.725, 21.556 106.726)', 4326)),
+('S927', 'Supermarket QQQ', ST_GeomFromText('LINESTRING(21.560 106.730, 21.561 106.731)', 4326)),
+('S928', 'Supermarket RRR', ST_GeomFromText('LINESTRING(21.565 106.735, 21.566 106.736)', 4326)),
+('S929', 'Supermarket SSS', ST_GeomFromText('LINESTRING(21.570 106.740, 21.571 106.741)', 4326)),
+('S930', 'Supermarket TTT', ST_GeomFromText('LINESTRING(21.575 106.745, 21.576 106.746)', 4326)),
+('S931', 'Supermarket UUU', ST_GeomFromText('LINESTRING(21.580 106.750, 21.581 106.751)', 4326)),
+('S932', 'Supermarket VVV', ST_GeomFromText('LINESTRING(21.585 106.755, 21.586 106.756)', 4326)),
+('S933', 'Supermarket WWW', ST_GeomFromText('LINESTRING(21.590 106.760, 21.591 106.761)', 4326)),
+('S934', 'Supermarket XXX', ST_GeomFromText('LINESTRING(21.595 106.765, 21.596 106.766)', 4326)),
+('S935', 'Supermarket YYY', ST_GeomFromText('LINESTRING(21.600 106.770, 21.601 106.771)', 4326)),
+('S936', 'Supermarket ZZZ', ST_GeomFromText('LINESTRING(21.605 106.775, 21.606 106.776)', 4326)),
+('S937', 'Supermarket AAAA', ST_GeomFromText('LINESTRING(21.610 106.780, 21.611 106.781)', 4326)),
+('S938', 'Supermarket BBBB', ST_GeomFromText('LINESTRING(21.615 106.785, 21.616 106.786)', 4326)),
+('S939', 'Supermarket CCCC', ST_GeomFromText('LINESTRING(21.620 106.790, 21.621 106.791)', 4326)),
+('S940', 'Supermarket DDDD', ST_GeomFromText('LINESTRING(21.625 106.795, 21.626 106.796)', 4326)),
+('S941', 'Supermarket EEEE', ST_GeomFromText('LINESTRING(21.630 106.800, 21.631 106.801)', 4326)),
+('S942', 'Supermarket FFFF', ST_GeomFromText('LINESTRING(21.635 106.805, 21.636 106.806)', 4326)),
+('S943', 'Supermarket GGGG', ST_GeomFromText('LINESTRING(21.640 106.810, 21.641 106.811)', 4326)),
+('S944', 'Supermarket HHHH', ST_GeomFromText('LINESTRING(21.645 106.815, 21.646 106.816)', 4326)),
+('S945', 'Supermarket IIII', ST_GeomFromText('LINESTRING(21.650 106.820, 21.651 106.821)', 4326)),
+('S946', 'Supermarket JJJJ', ST_GeomFromText('LINESTRING(21.655 106.825, 21.656 106.826)', 4326)),
+('S947', 'Supermarket KKKK', ST_GeomFromText('LINESTRING(21.660 106.830, 21.661 106.831)', 4326)),
+('S948', 'Supermarket LLLL', ST_GeomFromText('LINESTRING(21.665 106.835, 21.666 106.836)', 4326)),
+('S949', 'Supermarket MMMM', ST_GeomFromText('LINESTRING(21.670 106.840, 21.671 106.841)', 4326)),
+('S950', 'Supermarket NNNN', ST_GeomFromText('LINESTRING(21.675 106.845, 21.676 106.846)', 4326)),
+('S951', 'Supermarket OOOO', ST_GeomFromText('LINESTRING(21.680 106.850, 21.681 106.851)', 4326)),
+('S952', 'Supermarket PPPP', ST_GeomFromText('LINESTRING(21.685 106.855, 21.686 106.856)', 4326)),
+('S953', 'Supermarket QQQQ', ST_GeomFromText('LINESTRING(21.690 106.860, 21.691 106.861)', 4326)),
+('S954', 'Supermarket RRRR', ST_GeomFromText('LINESTRING(21.695 106.865, 21.696 106.866)', 4326)),
+('S955', 'Supermarket SSSS', ST_GeomFromText('LINESTRING(21.700 106.870, 21.701 106.871)', 4326)),
+('S956', 'Supermarket TTTT', ST_GeomFromText('LINESTRING(21.705 106.875, 21.706 106.876)', 4326)),
+('S957', 'Supermarket UUUU', ST_GeomFromText('LINESTRING(21.710 106.880, 21.711 106.881)', 4326)),
+('S958', 'Supermarket VVVV', ST_GeomFromText('LINESTRING(21.715 106.885, 21.716 106.886)', 4326)),
+('S959', 'Supermarket WWWW', ST_GeomFromText('LINESTRING(21.720 106.890, 21.721 106.891)', 4326)),
+('S960', 'Supermarket XXXX', ST_GeomFromText('LINESTRING(21.725 106.895, 21.726 106.896)', 4326)),
+('S961', 'Supermarket YYYY', ST_GeomFromText('LINESTRING(21.730 106.900, 21.731 106.901)', 4326)),
+('S962', 'Supermarket ZZZZ', ST_GeomFromText('LINESTRING(21.735 106.905, 21.736 106.906)', 4326)),
+('S963', 'Supermarket AAAAA', ST_GeomFromText('LINESTRING(21.740 106.910, 21.741 106.911)', 4326)),
+('S964', 'Supermarket BBBBB', ST_GeomFromText('LINESTRING(21.745 106.915, 21.746 106.916)', 4326)),
+('S965', 'Supermarket CCCCC', ST_GeomFromText('LINESTRING(21.750 106.920, 21.751 106.921)', 4326)),
+('S966', 'Supermarket DDDDD', ST_GeomFromText('LINESTRING(21.755 106.925, 21.756 106.926)', 4326)),
+('S967', 'Supermarket EEEEE', ST_GeomFromText('LINESTRING(21.760 106.930, 21.761 106.931)', 4326)),
+('S968', 'Supermarket FFFFF', ST_GeomFromText('LINESTRING(21.765 106.935, 21.766 106.936)', 4326)),
+('S969', 'Supermarket GGGGG', ST_GeomFromText('LINESTRING(21.770 106.940, 21.771 106.941)', 4326)),
+('S970', 'Supermarket HHHHH', ST_GeomFromText('LINESTRING(21.775 106.945, 21.776 106.946)', 4326)),
+('S971', 'Supermarket IIIII', ST_GeomFromText('LINESTRING(21.780 106.950, 21.781 106.951)', 4326)),
+('S972', 'Supermarket JJJJJ', ST_GeomFromText('LINESTRING(21.785 106.955, 21.786 106.956)', 4326)),
+('S973', 'Supermarket KKKKK', ST_GeomFromText('LINESTRING(21.790 106.960, 21.791 106.961)', 4326)),
+('S974', 'Supermarket LLLLL', ST_GeomFromText('LINESTRING(21.795 106.965, 21.796 106.966)', 4326)),
+('S975', 'Supermarket MMMMM', ST_GeomFromText('LINESTRING(21.800 106.970, 21.801 106.971)', 4326)),
+('S976', 'Supermarket NNNNN', ST_GeomFromText('LINESTRING(21.805 106.975, 21.806 106.976)', 4326)),
+('S977', 'Supermarket OOOOO', ST_GeomFromText('LINESTRING(21.810 106.980, 21.811 106.981)', 4326)),
+('S978', 'Supermarket PPPPP', ST_GeomFromText('LINESTRING(21.815 106.985, 21.816 106.986)', 4326)),
+('S979', 'Supermarket QQQQQ', ST_GeomFromText('LINESTRING(21.820 106.990, 21.821 106.991)', 4326)),
+('S980', 'Supermarket RRRRR', ST_GeomFromText('LINESTRING(21.825 106.995, 21.826 106.996)', 4326)),
+('S981', 'Supermarket SSSSS', ST_GeomFromText('LINESTRING(21.830 107.000, 21.831 107.001)', 4326)),
+('S982', 'Supermarket TTTTT', ST_GeomFromText('LINESTRING(21.835 107.005, 21.836 107.006)', 4326)),
+('S983', 'Supermarket UUUUU', ST_GeomFromText('LINESTRING(21.840 107.010, 21.841 107.011)', 4326)),
+('S984', 'Supermarket VVVVV', ST_GeomFromText('LINESTRING(21.845 107.015, 21.846 107.016)', 4326)),
+('S985', 'Supermarket WWWWW', ST_GeomFromText('LINESTRING(21.850 107.020, 21.851 107.021)', 4326)),
+('S986', 'Supermarket XXXXX', ST_GeomFromText('LINESTRING(21.855 107.025, 21.856 107.026)', 4326)),
+('S987', 'Supermarket YYYYY', ST_GeomFromText('LINESTRING(21.860 107.030, 21.861 107.031)', 4326)),
+('S988', 'Supermarket ZZZZZ', ST_GeomFromText('LINESTRING(21.865 107.035, 21.866 107.036)', 4326)),
+('S989', 'Supermarket AAAAAA', ST_GeomFromText('LINESTRING(21.870 107.040, 21.871 107.041)', 4326)),
+('S990', 'Supermarket BBBBBB', ST_GeomFromText('LINESTRING(21.875 107.045, 21.876 107.046)', 4326)),
+('S991', 'Supermarket CCCCCC', ST_GeomFromText('LINESTRING(21.880 107.050, 21.881 107.051)', 4326)),
+('S992', 'Supermarket DDDDDD', ST_GeomFromText('LINESTRING(21.885 107.055, 21.886 107.056)', 4326)),
+('S993', 'Supermarket EEEEEE', ST_GeomFromText('LINESTRING(21.890 107.060, 21.891 107.061)', 4326)),
+('S994', 'Supermarket FFFFFF', ST_GeomFromText('LINESTRING(21.895 107.065, 21.896 107.066)', 4326)),
+('S995', 'Supermarket GGGGGG', ST_GeomFromText('LINESTRING(21.900 107.070, 21.901 107.071)', 4326)),
+('S996', 'Supermarket HHHHHH', ST_GeomFromText('LINESTRING(21.905 107.075, 21.906 107.076)', 4326)),
+('S997', 'Supermarket IIIIII', ST_GeomFromText('LINESTRING(21.910 107.080, 21.911 107.081)', 4326)),
+('S998', 'Supermarket JJJJJJ', ST_GeomFromText('LINESTRING(21.915 107.085, 21.916 107.086)', 4326)),
+('S999', 'Supermarket KKKKKK', ST_GeomFromText('LINESTRING(21.920 107.090, 21.921 107.091)', 4326)),
+('S1000', 'Supermarket LLLLLL', ST_GeomFromText('LINESTRING(21.925 107.095, 21.926 107.096)', 4326));
+
